@@ -195,6 +195,7 @@ def shell(url, title, main, sidebar_html=None, page_id="", desc=""):
 <script defer src="{root}assets/js/abbr-data.js"></script>
 <script defer src="{root}assets/js/search-index.js"></script>
 <script defer src="{root}assets/js/site.js"></script>
+<script defer src="{root}assets/js/tools.js"></script>
 </body>
 </html>
 """
@@ -223,11 +224,51 @@ def sidebar(root, built, current=None, current_module=None):
             else:
                 o.append(f'<span class="soon"><span class="num">{num}</span><span>{title}</span><span class="tag-soon">soon</span></span>')
         o.append("</div></details>")
-    o.append('<div class="side-h">Practice</div>')
+    def item(iid, num, title):
+        if iid in built:
+            cls = "active" if iid == current else ""
+            o.append(f'<a class="{cls}" data-progress-id="{iid}" href="{root}{item_url(iid)}"><span class="num">{num}</span>'
+                     f'<span>{title}</span><span class="tick">&#10003;</span></a>')
+        else:
+            o.append(f'<span class="soon"><span class="num">{num}</span><span>{title}</span><span class="tag-soon">soon</span></span>')
+
+    o.append('<div class="side-h">Practical labs</div>')
     for lid, _slug, title in S.LABS:
-        o.append(f'<span class="soon"><span class="num">{lid}</span><span>{title.split(" · ", 1)[1]}</span><span class="tag-soon">soon</span></span>')
-    o.append('<span class="soon"><span class="num">&#9679;</span><span>Glossary &amp; cheat sheet</span><span class="tag-soon">soon</span></span>')
+        item(lid, lid, title.split(" · ", 1)[1])
+    o.append('<div class="side-h">Reviews &amp; tests</div>')
+    for rid, title in S.REVIEWS.items():
+        item(rid, "W" + rid[1] if rid.startswith("R") else "&#9733;", title)
+    o.append('<div class="side-h">Reference</div>')
+    item("GL", "&#9679;", "Glossary")
+    item("CS", "&#9679;", "Cheat sheet")
     return "\n".join(o)
+
+
+def item_url(iid):
+    """URL (from the site root) for any item: topic page, lab, review, glossary or cheat sheet."""
+    for m in S.MODULES:
+        for pid, slug, _t in m["pages"]:
+            if pid == iid:
+                return page_url(pid, slug)
+    for lid, slug, _t in S.LABS:
+        if lid == iid:
+            return f"{LV}/labs/{slug}.html"
+    if iid == "FT":
+        return f"{LV}/reviews/final-test.html"
+    if iid in S.REVIEWS:
+        return f"{LV}/reviews/week-{iid[1]}-review.html"
+    return {"GL": f"{LV}/glossary.html", "CS": f"{LV}/cheat-sheet.html"}[iid]
+
+
+def item_title(iid):
+    for m in S.MODULES:
+        for pid, _s, title in m["pages"]:
+            if pid == iid:
+                return f'{pid.replace("-", ".")} {title}'
+    for lid, _s, title in S.LABS:
+        if lid == iid:
+            return title
+    return S.REVIEWS.get(iid, {"GL": "Glossary", "CS": "Cheat sheet"}.get(iid, iid))
 
 
 # --------------------------------------------------------------------------
@@ -244,15 +285,38 @@ def reading_minutes(p):
     return max(10, int(math.ceil(_words(txt) / 170 / 5.0) * 5))
 
 
-def scenario_html(sc, key):
+def scenario_html(sc, key, label="Fault scenario · what would you do?", cls="scenario"):
     opts = "".join(f'<button type="button" class="s-opt" data-i="{i}">{o}</button>'
                    for i, o in enumerate(sc["options"]))
-    return f"""<div class="scenario" data-answer="{sc['answer']}" id="scenario-{key}">
-<span class="label">Fault scenario · what would you do?</span>
+    return f"""<div class="{cls}" data-answer="{sc['answer']}" id="scenario-{key}">
+<span class="label">{label}</span>
 <p class="s-prompt">{sc['prompt']}</p>
 {opts}
 <div class="s-feedback" hidden><span class="verdict"></span>{sc['explain']}<br><button type="button" class="s-retry">Try again</button></div>
 </div>"""
+
+
+def quiz_html(quiz_id, items, title="Quiz"):
+    """items: [dict(prompt, options, answer, explain)] — scored in the browser, best score remembered."""
+    qs = "".join(scenario_html(q, f"{quiz_id}-{i}", f"{title} · question {i + 1} of {len(items)}", "scenario quiz-item")
+                 for i, q in enumerate(items))
+    return (f'<div class="quiz" data-quiz="{quiz_id}">{qs}'
+            '<div class="quiz-score no-abbr"><span>Score <b class="qs"></b></span><span class="qn"></span>'
+            '<span class="qbest"></span><button type="button" class="btn ghost quiz-reset">Reset quiz</button></div></div>')
+
+
+def tool(name, **data):
+    """Interactive widget rendered by assets/js/tools.js."""
+    attrs = "".join(f' data-{k}="{esc(str(v))}"' for k, v in data.items())
+    return (f'<div class="tool no-abbr" data-tool="{name}"{attrs}><span class="label">Interactive tool</span>'
+            '<noscript>This tool needs JavaScript.</noscript></div>')
+
+
+def pager_html(root, prev, nxt):
+    p = '<nav class="pager no-abbr" aria-label="Previous and next">'
+    p += (f'<a class="prev" href="{root}{prev[0]}"><small>&larr; Previous</small>{prev[1]}</a>' if prev else "<span></span>")
+    p += (f'<a class="next" href="{root}{nxt[0]}"><small>Next &rarr;</small>{nxt[1]}</a>' if nxt else "")
+    return p + "</nav>"
 
 
 def topic_page(module, page, built, prev, nxt, warmups, when):
@@ -308,12 +372,7 @@ def topic_page(module, page, built, prev, nxt, warmups, when):
         vendor = '<h2 id="vendor">Vendor notes</h2>' + "".join(
             callout("note", v, body) for v, body in page["vendor_notes"])
 
-    pager = '<nav class="pager no-abbr" aria-label="Previous and next">'
-    pager += (f'<a class="prev" href="{root}{prev[0]}"><small>&larr; Previous</small>{prev[1]}</a>'
-              if prev else "<span></span>")
-    pager += (f'<a class="next" href="{root}{nxt[0]}"><small>Next &rarr;</small>{nxt[1]}</a>'
-              if nxt else "")
-    pager += "</nav>"
+    pager = pager_html(root, prev, nxt)
 
     main = f"""<article>
 <div class="crumbs no-abbr"><a href="{root}{LV}/index.html">Level 1</a> &rsaquo; <a href="{root}{module_url(module['num'])}">Module {module['num']} · {module['title']}</a> &rsaquo; {num}</div>
@@ -356,7 +415,7 @@ def topic_page(module, page, built, prev, nxt, warmups, when):
 # Module index
 # --------------------------------------------------------------------------
 
-def module_index(module, built, when_map, intro=""):
+def module_index(module, built, when_map, intro="", quiz=None):
     url = module_url(module["num"])
     root = depth_root(url)
     ids = ",".join(p[0] for p in module["pages"] if p[0] in built)
@@ -373,6 +432,11 @@ def module_index(module, built, when_map, intro=""):
     first = next((p for p in module["pages"] if p[0] in built), None)
     start = (f'<p><a class="btn" href="{root}{page_url(first[0], first[1])}">Start with {first[0].replace("-", ".")} &rarr;</a></p>'
              if first else "")
+    quiz_block = ""
+    if quiz:
+        quiz_block = (f'<h2 id="quiz">Module {module["num"]} quiz</h2><p>{len(quiz)} questions on the whole module. '
+                      'Answer them after finishing the pages; your best score is remembered in this browser.</p>'
+                      + quiz_html(f"m{module['num']}", quiz, f"Module {module['num']} quiz"))
     main = f"""<article>
 <div class="crumbs"><a href="{root}{LV}/index.html">Level 1</a> &rsaquo; Module {module['num']}</div>
 <p class="eyebrow">Level 1 · Module {module['num']}</p>
@@ -383,6 +447,40 @@ def module_index(module, built, when_map, intro=""):
 <h2>Pages in this module</h2>
 <ol class="pagelist">{''.join(rows)}</ol>
 {start}
+{quiz_block}
 </article>"""
     side = sidebar(root, built, current=None, current_module=module["num"])
     return url, shell(url, f"Module {module['num']}: {module['title']}", main, side, desc=module["blurb"])
+
+
+# --------------------------------------------------------------------------
+# Generic page (labs, reviews, tests, glossary, cheat sheet)
+# --------------------------------------------------------------------------
+
+def simple_page(iid, eyebrow, title, body, built, prev=None, nxt=None, chips=(), lede="", done=True, wide=False,
+                desc=""):
+    url = item_url(iid)
+    root = depth_root(url)
+    chip_html = "".join(f'<span class="chip">{c}</span>' for c in chips)
+    if done:
+        chip_html += '<span class="chip ok" id="doneChip" hidden>&#10003; Done</span>'
+    main = f"""<{'div class="wide"' if wide else 'article'}>
+<div class="crumbs no-abbr"><a href="{root}{LV}/index.html">Level 1</a> &rsaquo; {eyebrow}</div>
+<p class="eyebrow no-abbr">{eyebrow}</p>
+<h1>{title}</h1>
+{f'<p class="lede">{lede}</p>' if lede else ''}
+<div class="meta no-abbr">{chip_html}</div>
+{body}
+{'<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark as done</button></div>' if done else ''}
+{pager_html(root, prev, nxt)}
+</{'div' if wide else 'article'}>"""
+    side = sidebar(root, built, current=iid)
+    return url, shell(url, re.sub(r"<[^>]+>", "", title), main, side, page_id=iid if done else "",
+                      desc=desc or re.sub(r"<[^>]+>", "", lede))
+
+
+def mcq(prompt, options, answer, explain, ref=""):
+    """A multiple-choice question for quizzes and the final test. `answer` is the 0-based index of the right
+    option; `ref` (e.g. "3.1") is shown in the explanation so learners know which page to revisit."""
+    tail = f' <em>(See page {ref}.)</em>' if ref else ""
+    return dict(prompt=prompt, options=options, answer=answer, explain=" " + explain + tail)

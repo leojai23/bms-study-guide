@@ -916,3 +916,62 @@ MODULE_INTRO = (
 )
 
 PAGES = [P1, P2, P3, P4, P5, P6]
+
+from bms_common import mcq  # noqa: E402
+
+QUIZ = [
+    mcq("Which of the five jobs of a BMS keeps a record of values over time?",
+        ["Alarm", "Schedule", "Record and report (trends)", "Control"], 2,
+        "Trend logs record values over time so you can see when and why something changed.", "1.1"),
+    mcq("Which building system does a BMS normally <strong>only monitor</strong>, never control?",
+        ["AHUs and FCUs", "The fire alarm system", "Car-park lighting schedules", "Chilled water pumps"], 1,
+        "Life-safety systems stay independent; the BMS receives their signals for monitoring only.", "1.1"),
+    mcq("A supervisory (network) controller sits at which level?",
+        ["Field", "Automation", "Management", "None — it is part of the server"], 1,
+        "It is an automation-level device that manages field controllers and routes between networks.", "1.2"),
+    mcq("The BMS server is shut down for an upgrade. What happens to AHU-01?",
+        ["It stops until the server returns", "It keeps running on DDC-AHU-01's own program, setpoints and schedule",
+         "It runs at full speed with the valve fully open", "It switches to Hand automatically"], 1,
+        "Control lives in the controller. Only visibility, central alarms and long-term trending are lost.", "1.2"),
+    mcq("Put the scan cycle in order:",
+        ["Run program → read inputs → write outputs → communicate",
+         "Read inputs → convert → run program → write outputs → communicate",
+         "Communicate → write outputs → read inputs → run program",
+         "Read inputs → write outputs → run program → convert"], 1,
+        "Read and convert the inputs, run the logic, write the outputs, then exchange data — and repeat.", "1.3"),
+    mcq("A <strong>universal input</strong> can be configured as…",
+        ["an AI or a DI", "an AO or a DO", "a Modbus or BACnet port", "a 230 V output"], 0,
+        "Universal inputs accept resistance, voltage, current or contact signals, chosen in software.", "1.3"),
+    mcq("Why is an interposing relay fitted between a controller DO and an MCC starter?",
+        ["To convert the signal to 4–20 mA", "To isolate the controller from the 230 V circuit and switch a higher rating",
+         "To measure motor current", "To slow the motor's start"], 1,
+        "The controller switches only the relay's 24 V coil; the relay's own contact switches the field circuit.", "1.5"),
+    mcq("A fan's HOA switch is in <strong>Hand</strong>. What does that mean for the BMS?",
+        ["The BMS controls the fan as normal", "The fan runs locally whatever the BMS commands",
+         "The fan is locked off", "The BMS controls only the speed"], 1,
+        "Only in Auto does the BMS have control. That is why auto/manual status is wired back as a DI.", "1.5"),
+    mcq("Following “hard-wire what must work”, which VFD signal is hard-wired rather than read over Modbus?",
+        ["kWh total", "Motor current", "Run status", "Last fault code"], 2,
+        "Start/stop, run status, fault and speed reference are hard-wired so the fan works and is monitored if comms fail.", "1.6"),
+    mcq("A chiller's CHW supply temperature shows 70 °C on the BMS and 7.0 °C on the chiller. What is wrong?",
+        ["Wrong baud rate", "Missing scaling factor (× 0.1)", "Sensor failure", "RS485 termination"], 1,
+        "Exactly ten times too large means communication works but the register's scale was not applied.", "1.6"),
+]
+
+FINAL = [
+    mcq("Which international standard describes the field / automation / management levels of building automation?",
+        ["ISO 9001", "ISO 16484", "IEC 60751", "EN 50090"], 1, "ISO 16484 covers building automation and control systems.", "1.2"),
+    mcq("The target value a controller tries to reach is the…",
+        ["process variable", "setpoint", "output", "error"], 1,
+        "The setpoint is the target; the process variable is the measured value; the error is the difference.", "1.1"),
+    mcq("After a long power cut a controller runs, but its AHU now starts at the wrong time each day. Most likely cause?",
+        ["Return air sensor drift", "The controller's clock lost time and is not synchronised", "Wrong VFD speed",
+         "A missing interposing relay"], 1,
+        "Correct schedule, wrong time — check the real-time clock battery and set up NTP time sync.", "1.3"),
+    mcq("An alarm returns to normal before anyone acknowledges it. What happens?",
+        ["It disappears from the list", "It stays on the list until acknowledged", "It becomes a critical alarm",
+         "It is converted to a trend"], 1, "Unacknowledged events stay visible so short faults are not missed.", "1.4"),
+    mcq("In a well-segregated DDC panel, which terminals sit on the 24 V signal side?",
+        ["The incoming 230 V isolator", "MCC start-circuit terminals at 230 V", "Temperature sensor (AI) terminals",
+         "The transformer primary"], 2, "Sensor, AO, DI, DO and RS485 terminals form the ELV group, kept apart from 230 V.", "1.5"),
+]

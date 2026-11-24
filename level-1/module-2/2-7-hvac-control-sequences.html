@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="2-7" data-url="level-1/module-2/2-7-hvac-control-sequences.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.7 HVAC control sequences — an overview | BMS Study Guide</title>
+<meta name="description" content="A sequence of operation is the written, step-by-step description of exactly how a piece of plant must start, run, stop and react to faults — the specification the BMS program is built from and tested against.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<span class="soon"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.4</span><span>Water flow meters</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.5</span><span>Damper actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-2/index.html">Module 2 · HVAC Control Fundamentals</a> &rsaquo; 2.7</div>
+<p class="eyebrow no-abbr">Module 2 · HVAC Control Fundamentals</p>
+<h1>2.7&ensp;HVAC control sequences — an overview</h1>
+<div class="meta no-abbr"><span class="chip">Week 2 · Day 11</span><span class="chip">About 10 min</span><span class="chip">Page 7 of 7</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain what a sequence of operation is and why it matters.</li><li>List the sections a good sequence contains.</li><li>Recognise the operating modes of a plant item.</li><li>Write sequence steps that are clear, testable and include failure behaviour.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>What is blowdown and why is it needed?<div class="from">from 2.6 Cooling tower and condenser water</div><details><summary>Show answer</summary><div class="a">Draining part of the tower water so that minerals concentrated by evaporation do not build up into scale and corrosion.</div></details></li><li>What is low ΔT syndrome and why is it costly?<div class="from">from 2.5 Chilled water system and chiller plant</div><details><summary>Show answer</summary><div class="a">Chilled water returning too cold. Each chiller can only deliver part of its capacity, so more chillers and pumps run than the load needs.</div></details></li><li>What varies in a CAV system and what varies in a VAV system?<div class="from">from 2.4 VAV and CAV systems</div><details><summary>Show answer</summary><div class="a">CAV: airflow is fixed; supply temperature varies. VAV: supply temperature is roughly constant; airflow to each zone varies.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A <strong>sequence of operation</strong> is the written, step-by-step description of exactly how a piece of plant must start, run, stop and react to faults — the specification the BMS program is built from and tested against.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>The program in a controller is only as good as the sequence behind it. A clear sequence lets the designer, the programmer, the commissioning engineer and the operator all agree on what the plant should do. A vague one (“the AHU shall be controlled as required”) leads to arguments, rework and buildings that never quite work.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>What a complete sequence covers</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Section</th><th>Answers the question</th></tr></thead><tbody><tr><td>Equipment and points</td><td>What plant and which points are involved?</td></tr><tr><td>Operating modes</td><td>Occupied, unoccupied, fire, maintenance, hand — what changes in each?</td></tr><tr><td>Enable conditions (permissives)</td><td>What must be true before it may start?</td></tr><tr><td>Start sequence</td><td>In what order do things happen, with what delays and proofs?</td></tr><tr><td>Normal control</td><td>Which loops run, to which setpoints, with what limits?</td></tr><tr><td>Stop sequence</td><td>In what order does it shut down?</td></tr><tr><td>Interlocks and safeties</td><td>What must stop it, regardless of the program?</td></tr><tr><td>Alarms</td><td>What is alarmed, with what limits, delays and priorities?</td></tr><tr><td>Failure responses</td><td>What happens if a sensor fails, communication is lost or power returns?</td></tr><tr><td>Adjustable parameters</td><td>Which setpoints and timers can an operator change, and within what limits?</td></tr></tbody></table></div><h3>Operating modes</h3><figure class="diagram"><svg viewBox="0 0 760 260" role="img" aria-label="Operating modes of a typical plant item" xmlns="http://www.w3.org/2000/svg"><defs><marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="md-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="md-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="260" y="10" width="240" height="44" rx="8" class="d-bad" /><text x="380.0" y="24.5" text-anchor="middle" class="d-t d-tb">Fire mode</text><text x="380.0" y="39.5" text-anchor="middle" class="d-ts">from ANY state · overrides everything</text><rect x="20" y="100" width="140" height="54" rx="8" class="d-box" /><text x="90.0" y="127.0" text-anchor="middle" class="d-t d-tb">Off</text><rect x="200" y="100" width="140" height="54" rx="8" class="d-acc" /><text x="270.0" y="127.0" text-anchor="middle" class="d-t d-tb">Starting</text><rect x="380" y="100" width="140" height="54" rx="8" class="d-ok" /><text x="450.0" y="127.0" text-anchor="middle" class="d-t d-tb">Running</text><rect x="560" y="100" width="140" height="54" rx="8" class="d-acc" /><text x="630.0" y="127.0" text-anchor="middle" class="d-t d-tb">Stopping</text><line x1="160" y1="127" x2="198" y2="127" class="d-line" marker-end="url(#md)"/><line x1="340" y1="127" x2="378" y2="127" class="d-line" marker-end="url(#md)"/><line x1="520" y1="127" x2="558" y2="127" class="d-line" marker-end="url(#md)"/><text x="179" y="112" text-anchor="middle" class="d-ts">start</text><text x="359" y="112" text-anchor="middle" class="d-ts">proven</text><text x="539" y="112" text-anchor="middle" class="d-ts">stop</text><path d="M630,154 L630,180 L90,180 L90,156" class="d-line" marker-end="url(#md)"/><text x="100" y="192" text-anchor="start" class="d-ts">stopped and proven off</text><rect x="290" y="210" width="180" height="44" rx="8" class="d-warn" /><text x="380.0" y="224.5" text-anchor="middle" class="d-t d-tb">Fault / locked out</text><text x="380.0" y="239.5" text-anchor="middle" class="d-ts">alarm · needs reset</text><path d="M270,154 L320,208" class="d-line d-dash" marker-end="url(#md)"/><path d="M450,154 L420,208" class="d-line d-dash" marker-end="url(#md)"/><text x="255" y="200" text-anchor="end" class="d-ts">fails to prove</text><text x="470" y="200" text-anchor="start" class="d-ts">trips</text><rect x="620" y="210" width="130" height="44" rx="8" class="d-soft" /><text x="685.0" y="224.5" text-anchor="middle" class="d-t d-tb">Hand (local)</text><text x="685.0" y="239.5" text-anchor="middle" class="d-ts">BMS not in control</text></svg><figcaption>Modes of a plant item. Fire mode overrides everything; Hand means the BMS is not in control.</figcaption></figure><h3>A short example: AHU-01</h3><ol class="steps"><li><strong>Enable:</strong> when the schedule is Occupied (or an operator override is active), and the HOA is in Auto, and there is no fire signal or latched fan fault.</li><li><strong>Start:</strong> command the fresh air damper to minimum (20 %), then start the supply fan.</li><li><strong>Prove:</strong> if run status is not received within 30 s, raise “fan fail”, stop the fan and lock out until reset.</li><li><strong>Control:</strong> after 60 s, enable the PID loop holding return air at 24 °C (adjustable 22–26 °C) by modulating the CHW valve; modulate the fresh air damper on return CO₂.</li><li><strong>Stop:</strong> at the end of occupancy, close the valve, stop the fan, then close the fresh air damper.</li><li><strong>Fire:</strong> on a fire signal the fan stops immediately via the hard-wired trip; the BMS closes the valve and damper and raises a critical alarm.</li></ol><p>Lab 3 turns this summary into a complete, testable sequence; page 6.1 explains every step.</p><h3>How to write a good sequence</h3><ul><li><strong>One action per step</strong>, in the order it happens.</li><li><strong>Give numbers</strong> — setpoints, delays, limits — and mark them “adjustable”.</li><li><strong>Say how each step is proven</strong> (“when run status is received”), not just what is commanded.</li><li><strong>Say what happens when it goes wrong</strong>: failure to prove, sensor failure, communication loss, power return.</li><li><strong>Use the point names</strong> from the points list, so programmer and tester mean the same thing.</li><li><strong>Avoid</strong> “as required”, “as necessary”, “suitable” — they cannot be tested.</li></ul><h3>Common HVAC sequences on a BMS</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Plant</th><th>Core of the sequence</th></tr></thead><tbody><tr><td>AHU (CAV)</td><td>Schedule, start/prove, valve on return or supply temperature, fresh air control, alarms</td></tr><tr><td>AHU (VAV)</td><td>As above plus fan speed on duct static pressure, often with pressure and temperature reset</td></tr><tr><td>FCU</td><td>Occupancy, setpoint with deadband, fan speed staging, valve on/off or modulating</td></tr><tr><td>VAV box</td><td>Zone temperature → airflow setpoint between min and max (page 2.4)</td></tr><tr><td>Chiller plant</td><td>Start/stop and staging, pump control, lead/lag rotation (page 2.5)</td></tr><tr><td>Cooling towers</td><td>Fan speed or staging on CW supply temperature (page 2.6)</td></tr><tr><td>Exhaust and car-park fans</td><td>Schedules; car parks often on carbon monoxide (CO) sensors</td></tr><tr><td>Water tanks and pumps</td><td>Level control with duty/standby pumps and high/low level alarms</td></tr></tbody></table></div><div class="note"><span class="label">Standard sequences</span><p>ASHRAE Guideline 36 publishes standardised, high-performance sequences for AHUs and VAV terminal units. Even when a project does not adopt it, it is an excellent reference for how good sequences are written.</p></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>The six steps above <em>are</em> AHU-01's sequence in summary. Over the next modules you will learn what is behind each one: the devices (Module 3), the wiring (Module 4), the communication (Module 5) and the logic (Module 6). In Lab 3 you write it out in full.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Get the approved sequence <strong>before</strong> programming; mark up any deviations and get them agreed.</li><li>During commissioning, test the sequence step by step and tick each one — including the failure steps.</li><li>Put the adjustable parameters (setpoints, delays) on the graphic so operators can see them.</li><li>Keep the final, as-built sequence with the O&amp;M documents; the next engineer will need it.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Plant short-cycles on and off</td><td>No deadband, minimum run time or minimum off time</td><td>Sequence timers and deadbands</td></tr><tr><td>Heating and cooling valves both open</td><td>No interlock or deadband between them</td><td>Sequence logic for both loops</td></tr><tr><td>Plant stays off after a power cut</td><td>No automatic restart in the sequence</td><td>Power-return logic</td></tr><tr><td>All plant starts at once after a power cut, overloading the generator</td><td>No staggered restart</td><td>Add restart delays per item</td></tr><tr><td>Operators and contractor disagree on how plant should run</td><td>Sequence vague or never approved</td><td>Write and agree a testable sequence</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Sequence of operation</dt><dd>Written step-by-step description of how plant must operate.</dd><dt>Permissive</dt><dd>A condition that must be true before plant may start.</dd><dt>Proving</dt><dd>Confirming that a commanded action actually happened, e.g. run status after a start command.</dd><dt>Operating mode</dt><dd>A defined state such as occupied, unoccupied, fire or hand.</dd><dt>Lockout</dt><dd>A state after a fault in which plant will not restart until reset.</dd><dt>Adjustable parameter</dt><dd>A setpoint or timer an operator can change within limits.</dd><dt>Staggered restart</dt><dd>Restarting plant items one after another after a power cut.</dd><dt>ASHRAE Guideline 36</dt><dd>Published standard sequences for high-performance AHU and VAV control.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-2-7-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">Power returns after a grid failure. Within two seconds all 40 AHUs, 12 pumps and 4 chillers try to start. The generator trips on overload. What should the sequence have included?</p>
+<button type="button" class="s-opt" data-i="0">Bigger generator fuses.</button><button type="button" class="s-opt" data-i="1">A staggered restart — each plant item waits a different delay after power returns.</button><button type="button" class="s-opt" data-i="2">Manual restart only, for every item.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Starting large motors one after another limits the inrush current. Sequences should define power-return behaviour: restart delays per item, and which plant restarts automatically.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why should every sequence step say how it is proven?</p><details><summary>Show answer</summary><div class="a">Because a command does not guarantee the action happened. The sequence must say what feedback confirms each step (e.g. run status) and what happens if it does not arrive.</div></details></li><li><p class="q">Name five sections of a complete sequence of operation.</p><details><summary>Show answer</summary><div class="a">Any five of: equipment and points, modes, enable conditions, start sequence, normal control, stop sequence, interlocks and safeties, alarms, failure responses, adjustable parameters.</div></details></li><li><p class="q">Which mode overrides every other mode?</p><details><summary>Show answer</summary><div class="a">Fire mode.</div></details></li><li><p class="q">Rewrite “the valve shall be controlled as required”.</p><details><summary>Show answer</summary><div class="a">For example: “When the supply fan is proven running, a PID loop shall modulate the CHW valve (0–100 %) to hold return air temperature at 24 °C (adjustable 22–26 °C). When the fan is off, the valve shall be closed.”</div></details></li><li><p class="q">What is ASHRAE Guideline 36?</p><details><summary>Show answer</summary><div class="a">A published set of standardised high-performance control sequences for AHUs and VAV terminal units.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-2/2-6-cooling-tower.html"><small>&larr; Previous</small>2.6 Cooling tower and condenser water</a><a class="next" href="../../level-1/glossary.html"><small>Next &rarr;</small>Glossary</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

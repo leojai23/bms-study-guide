@@ -73,24 +73,70 @@
     cont.classList.add('show');
   }
 
-  /* ---------- Fault scenarios ---------- */
+  /* ---------- Fault scenarios and quizzes ---------- */
+  function scoreQuiz(q) {
+    var items = $$('.scenario', q), done = items.filter(function (s) { return s.getAttribute('data-result'); });
+    var right = items.filter(function (s) { return s.getAttribute('data-result') === 'ok'; }).length;
+    var id = 'bms-quiz-' + q.getAttribute('data-quiz'), best = store(id) || 0;
+    if (done.length === items.length && right > best) { best = right; store(id, best); }
+    var box = $('.quiz-score', q);
+    $('.qs', box).textContent = right + ' / ' + items.length;
+    $('.qn', box).textContent = done.length < items.length ? (items.length - done.length) + ' still to answer' : 'All answered' + (right === items.length ? ' — full marks!' : '');
+    $('.qbest', box).textContent = best ? 'Best: ' + best + ' / ' + items.length : '';
+  }
   $$('.scenario').forEach(function (s) {
-    var ans = +s.getAttribute('data-answer'), opts = $$('.s-opt', s), fb = $('.s-feedback', s);
+    var ans = +s.getAttribute('data-answer'), opts = $$('.s-opt', s), fb = $('.s-feedback', s), quiz = s.closest('.quiz');
     opts.forEach(function (b) {
       b.addEventListener('click', function () {
         if (s.classList.contains('answered')) return;
         s.classList.add('answered');
         var ok = +b.getAttribute('data-i') === ans;
+        s.setAttribute('data-result', ok ? 'ok' : 'bad');
         b.classList.add(ok ? 'correct' : 'wrong');
         opts[ans].classList.add('correct');
         $('.verdict', fb).textContent = ok ? 'Correct.' : 'Not quite.';
         fb.hidden = false;
+        if (quiz) scoreQuiz(quiz);
       });
     });
     var retry = $('.s-retry', s);
     if (retry) retry.addEventListener('click', function () {
-      s.classList.remove('answered'); fb.hidden = true;
+      s.classList.remove('answered'); s.removeAttribute('data-result'); fb.hidden = true;
       opts.forEach(function (b) { b.classList.remove('correct', 'wrong'); });
+      if (quiz) scoreQuiz(quiz);
+    });
+  });
+  $$('.quiz').forEach(function (q) {
+    scoreQuiz(q);
+    var r = $('.quiz-reset', q);
+    if (r) r.addEventListener('click', function () {
+      $$('.scenario', q).forEach(function (s) {
+        s.classList.remove('answered'); s.removeAttribute('data-result'); $('.s-feedback', s).hidden = true;
+        $$('.s-opt', s).forEach(function (b) { b.classList.remove('correct', 'wrong'); });
+      });
+      scoreQuiz(q); q.scrollIntoView({ block: 'start' });
+    });
+  });
+
+  /* ---------- Lab checklists (remembered in this browser) ---------- */
+  $$('ul.checklist').forEach(function (ul) {
+    var key = 'bms-check-' + ul.getAttribute('data-key'), saved = store(key) || {};
+    $$('input[type=checkbox]', ul).forEach(function (cb, i) {
+      cb.checked = !!saved[i];
+      cb.addEventListener('change', function () { saved[i] = cb.checked; store(key, saved); });
+    });
+  });
+
+  /* ---------- Glossary filter ---------- */
+  var gf = $('#glossaryFilter');
+  if (gf) gf.addEventListener('input', function () {
+    var q = gf.value.trim().toLowerCase();
+    $$('[data-gterm]').forEach(function (dt) {
+      var dd = dt.nextElementSibling, hit = !q || (dt.textContent + ' ' + dd.textContent).toLowerCase().indexOf(q) !== -1;
+      dt.hidden = !hit; dd.hidden = !hit;
+    });
+    $$('.letter').forEach(function (h) {
+      var dl = h.nextElementSibling; h.hidden = !$$('dt', dl).some(function (dt) { return !dt.hidden; }); dl.hidden = h.hidden;
     });
   });
 
