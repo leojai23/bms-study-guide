@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="3-6" data-url="level-1/module-3/3-6-chilled-water-valve-actuators.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.6 Chilled water valves and actuators | BMS Study Guide</title>
+<meta name="description" content="A control valve and its actuator decide how much chilled water flows through a coil — and so how much cooling it gives. Choosing, sizing and setting them up correctly is what makes a temperature loop stable.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-3/index.html">Module 3 · Sensors and Field Devices</a> &rsaquo; 3.6</div>
+<p class="eyebrow no-abbr">Module 3 · Sensors and Field Devices</p>
+<h1>3.6&ensp;Chilled water valves and actuators</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 16</span><span class="chip">About 10 min</span><span class="chip">Page 6 of 8</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Compare 2-way and 3-way valves and their effect on system flow.</li><li>Recognise globe, characterised ball, butterfly and pressure-independent valves.</li><li>Explain why equal-percentage valves are used on coils and calculate Kv.</li><li>Choose and set up an actuator, including fail-safe and close-off.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Why must you add up actuator VA before choosing a transformer?<div class="from">from 3.5 Damper actuators</div><details><summary>Show answer</summary><div class="a">So the transformer can supply all actuators moving at once without the voltage dropping and actuators stalling.</div></details></li><li>Why does a magmeter need a full pipe?<div class="from">from 3.4 Water flow meters</div><details><summary>Show answer</summary><div class="a">It measures the voltage across the flowing water; with air in the pipe the measurement is wrong or lost.</div></details></li><li>Calculate air velocity for a velocity pressure of 64 Pa.<div class="from">from 3.3 Differential pressure and airflow sensors</div><details><summary>Show answer</summary><div class="a">v ≈ 1.29 × √64 = 1.29 × 8 ≈ 10.3 m/s.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A control valve and its actuator decide <strong>how much chilled water flows through a coil</strong> — and so how much cooling it gives. Choosing, sizing and setting them up correctly is what makes a temperature loop stable.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>The valve is the final control element of nearly every cooling loop. An oversized valve makes the loop hunt; a leaking one wastes energy and causes low ΔT; the wrong fail-safe can freeze a coil or flood a room with cold air. Many “PID tuning problems” are really valve problems.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>2-way or 3-way?</h3><figure class="diagram"><svg viewBox="0 0 760 175" role="img" aria-label="2-way and 3-way valves at a coil" xmlns="http://www.w3.org/2000/svg"><defs><marker id="tw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="tw-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="tw-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><text x="190" y="16" text-anchor="middle" class="d-t d-tb">2-way valve — flow varies</text><text x="570" y="16" text-anchor="middle" class="d-t d-tb">3-way valve — flow stays constant</text><rect x="160" y="40" width="60" height="90" rx="4" class="d-acc" /><text x="190" y="85" text-anchor="middle" class="d-ts d-tb">coil</text><path d="M40,60 L160,60" class="d-cold" marker-end="url(#tw-a)"/><text x="46" y="50" text-anchor="start" class="d-ts">supply</text><path d="M220,110 L340,110" class="d-warmline" marker-end="url(#tw-r)"/><rect x="540" y="40" width="60" height="90" rx="4" class="d-acc" /><text x="570" y="85" text-anchor="middle" class="d-ts d-tb">coil</text><path d="M420,60 L540,60" class="d-cold" marker-end="url(#tw-a)"/><text x="426" y="50" text-anchor="start" class="d-ts">supply</text><path d="M600,110 L720,110" class="d-warmline" marker-end="url(#tw-r)"/><path d="M260,104 L276,104 L268,116 Z M260,128 L276,128 L268,116 Z" class="d-box"/><text x="268" y="142" text-anchor="middle" class="d-ts">closes → less flow</text><text x="240" y="96" text-anchor="start" class="d-ts">return</text><path d="M640,60 L700,60 L700,98" class="d-line d-dash" marker-end="url(#tw)"/><text x="705" y="76" text-anchor="start" class="d-ts">bypass</text><path d="M692,104 L708,104 L700,116 Z M692,128 L708,128 L700,116 Z" class="d-box"/><text x="700" y="160" text-anchor="middle" class="d-ts">mixes coil flow + bypass</text><text x="620" y="96" text-anchor="start" class="d-ts">return</text></svg><figcaption>A 2-way valve reduces flow; a 3-way valve diverts the unused water round the coil.</figcaption></figure><div class="tbl-wrap"><table class="plain"><thead><tr><th></th><th>2-way valve</th><th>3-way valve</th></tr></thead><tbody><tr><td>Flow in the system</td><td>Variable — falls as valves close</td><td>Constant — unused water bypasses the coil</td></tr><tr><td>Pumps</td><td>Can slow down (VFD) — saves energy</td><td>Run at constant flow</td></tr><tr><td>Return water</td><td>Warm — good ΔT</td><td>Mixed with bypass water — low ΔT</td></tr><tr><td>Use today</td><td>Most modern systems</td><td>Older systems; end-of-line units to keep minimum flow</td></tr></tbody></table></div><h3>Valve types</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Type</th><th>Movement</th><th>Typical use</th></tr></thead><tbody><tr><td>Globe valve</td><td>Linear — a plug moves up and down</td><td>Classic coil control valve</td></tr><tr><td>Characterised ball valve</td><td>Rotary (quarter-turn); a shaped disc gives the right characteristic</td><td>Coil control in smaller sizes</td></tr><tr><td>Butterfly valve</td><td>Rotary</td><td>Large pipes; isolation and chiller/tower changeover</td></tr><tr><td>Pressure-independent control valve (PICV)</td><td>Control valve + built-in pressure regulator</td><td>Modern coil control; flow does not change with system pressure</td></tr></tbody></table></div><h3>Sizing: Kv</h3><div class="note"><span class="label">Valve flow coefficient</span><p><strong>Kv</strong> = flow in m³/h through the fully open valve with a 1 bar pressure drop.</p><p><strong>Flow (m³/h) = Kv × √ΔP (bar)</strong> &nbsp;→&nbsp; <strong>Kv = Flow ÷ √ΔP</strong></p><p>Example: a coil needs 9 m³/h and the valve should take 0.25 bar → Kv = 9 ÷ 0.5 = <strong>18</strong>. Choose the nearest standard Kvs at or just below.</p></div><p>A valve must take a decent share of the circuit's pressure drop to control well. This share is its <strong>authority</strong>: ΔP(valve) ÷ [ΔP(valve) + ΔP(rest of the circuit)]. Aim for about 0.5. A valve with low authority does nothing for most of its stroke, then everything at once.</p><h3>Why equal-percentage?</h3><figure class="diagram"><svg viewBox="0 0 760 225" role="img" aria-label="Equal-percentage valve characteristic and coil heat output curve" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="200" x2="360" y2="200" class="d-line"/><line x1="60" y1="200" x2="60" y2="30" class="d-line"/><text x="210" y="16" text-anchor="middle" class="d-ts d-tb">Valve: equal-percentage</text><text x="210" y="218" text-anchor="middle" class="d-ts">valve opening %</text><text x="66" y="32" text-anchor="start" class="d-ts">flow %</text><polyline points="60.0,200.0 72.0,193.5 84.0,192.6 96.0,191.5 108.0,190.2 120.0,188.8 132.0,187.2 144.0,185.3 156.0,183.2 168.0,180.7 180.0,177.9 192.0,174.7 204.0,171.0 216.0,166.8 228.0,161.9 240.0,156.4 252.0,150.0 264.0,142.8 276.0,134.4 288.0,124.8 300.0,113.9 312.0,101.3 324.0,87.0 336.0,70.5 348.0,51.6 360.0,30.0" class="d-aline" style="stroke-width:2.4"/><polyline points="60.0,200.0 360.0,30.0" class="d-line d-dash d-thin"/><line x1="420" y1="200" x2="720" y2="200" class="d-line"/><line x1="420" y1="200" x2="420" y2="30" class="d-line"/><text x="570" y="16" text-anchor="middle" class="d-ts d-tb">Coil: heat output vs flow</text><text x="570" y="218" text-anchor="middle" class="d-ts">flow %</text><text x="426" y="32" text-anchor="start" class="d-ts">heat output %</text><polyline points="420.0,200.0 432.0,178.0 444.0,158.7 456.0,141.9 468.0,127.1 480.0,114.2 492.0,102.9 504.0,93.0 516.0,84.4 528.0,76.8 540.0,70.2 552.0,64.4 564.0,59.3 576.0,54.9 588.0,51.0 600.0,47.6 612.0,44.6 624.0,42.0 636.0,39.7 648.0,37.7 660.0,36.0 672.0,34.4 684.0,33.1 696.0,31.9 708.0,30.9 720.0,30.0" class="d-warmline" style="stroke-width:2.4"/><polyline points="420.0,200.0 720.0,30.0" class="d-line d-dash d-thin"/></svg><figcaption>Left: an equal-percentage valve passes little flow until well open. Right: a coil gives most of its output at low flow. Together they give a near-linear response.</figcaption></figure><p>A cooling coil gives a large part of its capacity at a small part of its flow. If the valve were linear, the first 20 % of opening would deliver most of the cooling and the loop would be twitchy at low load. An <strong>equal-percentage</strong> valve does the opposite, so the combined valve-plus-coil response is roughly linear — and the PID loop behaves the same at every load.</p><h3>Actuators for valves</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Specification</th><th>What to check</th></tr></thead><tbody><tr><td>Linear or rotary</td><td>Linear (force in N) for globe valves; rotary (torque in Nm) for ball and butterfly</td></tr><tr><td>Signal</td><td>0–10 V, 2–10 V or floating, matching the controller output</td></tr><tr><td>Fail-safe</td><td>Spring return or capacitor return to open or closed — a design decision</td></tr><tr><td>Close-off pressure</td><td>The highest ΔP against which it can close tightly. Exceed it and the valve leaks</td></tr><tr><td>Direct / reverse action</td><td>Whether increasing signal opens or closes</td></tr><tr><td>Feedback and manual override</td><td>Position feedback to an AI; hand wheel or lever for manual operation</td></tr></tbody></table></div><div class="tip"><span class="label">Pressure-independent valves</span><p>A <strong>PICV</strong> holds the flow for a given opening constant even when pump pressure changes — so when other valves close, this coil is not suddenly over-supplied. Its maximum flow is set with a dial, replacing a separate balancing valve. It needs a minimum ΔP across it (from the datasheet) to work.</p></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01's CHW valve is a <strong>2-way, equal-percentage valve with a modulating actuator</strong> (24 V AC, 0–10 V control from an AO). On power loss it stays where it is (non-spring-return). The program closes it whenever the fan is off, so the coil does not get cold and sweat when there is no airflow.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Look at the flow arrow on the valve body — globe valves fitted backwards chatter and leak.</li><li>Check the actuator is fully coupled: command 0 % and 100 % and watch the stem or indicator move the full stroke.</li><li>To test for passing (leaking), command 0 % with the AHU running: supply air and the pipe after the valve should warm up.</li><li>Note the PICV's maximum-flow dial setting and check it against the balancing schedule.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Valve at 100 % but little cooling</td><td>Isolation valve shut, blocked strainer, air in coil, actuator decoupled</td><td>Feel the pipes; isolation valves; strainer</td></tr><tr><td>Loop hunts at low load</td><td>Oversized valve or low authority</td><td>Valve Kvs vs required; consider a PICV or smaller valve</td></tr><tr><td>Room cold with valve commanded closed</td><td>Valve passing: worn seat, or close-off pressure exceeded</td><td>Pipe temperature after the valve; close-off rating vs pump head</td></tr><tr><td>Valve opens when the BMS closes it</td><td>Direct/reverse action wrong</td><td>Actuator setting; signal type</td></tr><tr><td>Valve moves only part of its stroke</td><td>Actuator not adapted, or wrong 0–10 / 2–10 V setting</td><td>Adaptation; signal range</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>2-way valve</dt><dd>Valve that varies flow through the coil; system flow varies.</dd><dt>3-way valve</dt><dd>Valve that diverts unused flow through a bypass; system flow stays constant.</dd><dt>Kv / Kvs</dt><dd>Flow (m³/h) at 1 bar drop; Kvs is the value when fully open.</dd><dt>Valve authority</dt><dd>Share of circuit pressure drop taken by the valve; about 0.5 is good.</dd><dt>Equal-percentage</dt><dd>Valve characteristic where each step of opening increases flow by the same percentage.</dd><dt>PICV</dt><dd>Pressure-independent control valve — flow set by opening, unaffected by system pressure.</dd><dt>Close-off pressure</dt><dd>Maximum ΔP against which a valve and actuator can shut tight.</dd><dt>Passing valve</dt><dd>A valve that leaks flow when commanded closed.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-3-6-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">AHU-01's return air temperature swings ±1.5 °C every few minutes at light load, but is steady at full load. The valve was replaced last month with a much larger one “to be safe”. What is the likely cause?</p>
+<button type="button" class="s-opt" data-i="0">The return air sensor is faulty.</button><button type="button" class="s-opt" data-i="1">The new valve is oversized, so a tiny movement gives a big change in cooling at low load.</button><button type="button" class="s-opt" data-i="2">The chiller is short-cycling.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> An oversized valve works in the bottom few percent of its stroke at low load, where small movements make large changes — the loop hunts. Size the valve to the coil (Kv), or use a PICV.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why do most modern systems use 2-way valves?</p><details><summary>Show answer</summary><div class="a">System flow then varies with load, so pumps can slow down (saving energy) and return water stays warm (good ΔT).</div></details></li><li><p class="q">A coil needs 4 m³/h with a 0.16 bar valve drop. What Kv is needed?</p><details><summary>Show answer</summary><div class="a">Kv = 4 ÷ √0.16 = 4 ÷ 0.4 = 10.</div></details></li><li><p class="q">Why are equal-percentage valves used on coils?</p><details><summary>Show answer</summary><div class="a">Coils give most of their output at low flow; an equal-percentage valve compensates, so the combined response is close to linear and the loop is stable at every load.</div></details></li><li><p class="q">What does close-off pressure mean?</p><details><summary>Show answer</summary><div class="a">The maximum pressure difference against which the valve and actuator can close tightly; above it the valve passes.</div></details></li><li><p class="q">What is the advantage of a PICV?</p><details><summary>Show answer</summary><div class="a">Its flow depends only on its opening, not on changes in system pressure, so coils are not over- or under-supplied as other valves move; it also replaces the balancing valve.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-3/3-5-damper-actuators.html"><small>&larr; Previous</small>3.5 Damper actuators</a><a class="next" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><small>Next &rarr;</small>3.7 Variable frequency drives (VFD)</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

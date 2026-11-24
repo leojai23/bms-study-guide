@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="3-4" data-url="level-1/module-3/3-4-water-flow-meters.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4 Water flow meters | BMS Study Guide</title>
+<meta name="description" content="Flow meters measure how much water passes through a pipe; add a pair of temperature sensors and a calculator and you have an energy (BTU) meter that tells you how much cooling was delivered.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-3/index.html">Module 3 · Sensors and Field Devices</a> &rsaquo; 3.4</div>
+<p class="eyebrow no-abbr">Module 3 · Sensors and Field Devices</p>
+<h1>3.4&ensp;Water flow meters</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 15</span><span class="chip">About 10 min</span><span class="chip">Page 4 of 8</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Compare electromagnetic, ultrasonic and mechanical flow meters.</li><li>Explain how an energy (BTU) meter calculates cooling energy.</li><li>Configure a pulse output and convert between flow units.</li><li>Recognise installation errors that spoil flow readings.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Where are the ports of a duct static pressure sensor connected?<div class="from">from 3.3 Differential pressure and airflow sensors</div><details><summary>Show answer</summary><div class="a">+ to a tap inside the duct, − open to the surroundings (plant room or ceiling space).</div></details></li><li>When does automatic baseline calibration give wrong readings?<div class="from">from 3.2 Humidity and CO₂ sensors</div><details><summary>Show answer</summary><div class="a">When the space never empties (24/7 occupancy), so the lowest reading over the period is not really outdoor air.</div></details></li><li>Where should the tip of an immersion sensor sit?<div class="from">from 3.1 Temperature sensors (NTC, PT1000)</div><details><summary>Show answer</summary><div class="a">In the middle third of the pipe, in a thermowell filled with thermal paste.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>Flow meters measure <strong>how much water passes</strong> through a pipe; add a pair of temperature sensors and a calculator and you have an <strong>energy (BTU) meter</strong> that tells you how much cooling was delivered.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Flow and energy data turn a BMS from a control system into an energy-management system: you can see what each plant item or tenant really uses, bill for it, and spot waste such as low ΔT. Meters are also used to prove flow before starting chillers. They are expensive, and a badly installed one is worse than none — it gives confident, wrong numbers.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<div class="tbl-wrap"><table class=""><thead><tr><th>Meter type</th><th>How it works</th><th>Strengths</th><th>Watch out for</th></tr></thead><tbody><tr><td>Electromagnetic (magmeter)</td><td>Conductive water moving through a magnetic field generates a voltage proportional to velocity</td><td>Accurate, no moving parts, no pressure drop</td><td>Pipe must be full; needs conductive liquid; straight pipe before and after</td></tr><tr><td>Ultrasonic, clamp-on</td><td>Measures the difference in transit time of sound with and against the flow</td><td>Fits outside the pipe — no cutting</td><td>Needs good pipe data and more straight pipe; less accurate</td></tr><tr><td>Ultrasonic, in-line</td><td>Same principle, built into a pipe section</td><td>Accurate; common in energy meters</td><td>Straight runs; air bubbles</td></tr><tr><td>Mechanical (turbine, multi-jet)</td><td>Water turns a rotor</td><td>Cheap; good for domestic water</td><td>Wear, debris, pressure drop</td></tr><tr><td>Vortex</td><td>Counts vortices shed by a bluff body</td><td>Robust</td><td>Not good at low velocities</td></tr></tbody></table></div><div class="tip"><span class="label">Straight pipe</span><p>Bends, valves and pumps disturb the flow profile. Meters need straight pipe upstream and downstream — for magmeters typically about 5 pipe diameters before and 2–3 after; clamp-on ultrasonic meters usually need more. Use the maker's figures.</p></div><h3>Energy (BTU) meters</h3><figure class="diagram"><svg viewBox="0 0 760 290" role="img" aria-label="An energy (BTU) meter: flow meter, matched temperature pair and calculator" xmlns="http://www.w3.org/2000/svg"><defs><marker id="bt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="bt-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="bt-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="290" y="60" width="180" height="90" rx="8" class="d-soft" /><text x="380.0" y="97.5" text-anchor="middle" class="d-t d-tb">AHU coil</text><text x="380.0" y="112.5" text-anchor="middle" class="d-ts">or a building / tenant</text><line x1="20" y1="80" x2="288" y2="80" class="d-cold" marker-end="url(#bt-a)"/><text x="30" y="66" text-anchor="start" class="d-ts d-ta">CHW supply 7 °C</text><line x1="472" y1="130" x2="740" y2="130" class="d-warmline" marker-end="url(#bt-r)"/><text x="735" y="100" text-anchor="end" class="d-ts">CHW return 12.5 °C</text><circle cx="150" cy="80" r="12" class="d-box"/><text x="150" y="80" text-anchor="middle" class="d-ts d-tb">T1</text><circle cx="560" cy="130" r="12" class="d-box"/><text x="560" y="130" text-anchor="middle" class="d-ts d-tb">T2</text><rect x="620" y="118" width="50" height="24" rx="5" class="d-acc" /><text x="645" y="130" text-anchor="middle" class="d-ts d-tb">flow</text><rect x="320" y="190" width="180" height="60" rx="8" class="d-acc" /><text x="410.0" y="212.5" text-anchor="middle" class="d-t d-tb">Energy calculator</text><text x="410.0" y="227.5" text-anchor="middle" class="d-ts">kW = 4.19 × L/s × (T2 − T1)</text><path d="M150,92 L150,220 L318,220" class="d-line d-dash d-thin" marker-end="url(#bt)"/><path d="M560,142 L560,220 L502,220" class="d-line d-dash d-thin" marker-end="url(#bt)"/><path d="M645,142 L645,236 L502,236" class="d-line d-dash d-thin" marker-end="url(#bt)"/><line x1="410" y1="250" x2="410" y2="278" class="d-aline d-dash"/><text x="420" y="272" text-anchor="start" class="d-ts d-ta">kW, kWh, flow, temps → BMS (Modbus, M-Bus, BACnet or pulse)</text></svg><figcaption>The calculator multiplies flow by the temperature difference to give cooling power and energy.</figcaption></figure><div class="note"><span class="label">Cooling power</span><p><strong>kW = 4.19 × flow (L/s) × ΔT (K)</strong></p><p>Example: 5 L/s with 7 °C in and 12.5 °C out → 4.19 × 5 × 5.5 ≈ <strong>115 kW</strong>. Over 10 hours that is 1,150 kWh of cooling.</p></div><p>The two temperature sensors are a <strong>matched pair</strong> (often PT500 or PT1000), calibrated together, because a small error in ΔT gives a big error in energy: on a 5.5 K ΔT, a 0.1 K error is about 2 %.</p><h3>Getting data out of the meter</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Output</th><th>How the BMS uses it</th></tr></thead><tbody><tr><td>4–20 mA / 0–10 V</td><td>Instantaneous flow (or power) on an AI — fine for control, no totals.</td></tr><tr><td>Pulse output</td><td>Each pulse = a fixed volume or energy (e.g. 1 pulse = 10 L). The BMS counts pulses on a DI to build totals.</td></tr><tr><td>Modbus, BACnet, M-Bus</td><td>Everything: flow, temperatures, power, totals, alarms. Best for energy monitoring.</td></tr></tbody></table></div><p>When counting pulses, set the <strong>pulse weight</strong> (litres or kWh per pulse) in the BMS to match the meter, and check the input can count fast enough at maximum flow.</p><div class="tbl-wrap"><table class="plain"><thead><tr><th>Convert</th><th>Multiply by</th></tr></thead><tbody><tr><td>L/s → m³/h</td><td>3.6</td></tr><tr><td>m³/h → L/s</td><td>0.2778 (÷ 3.6)</td></tr><tr><td>L/s → US gpm</td><td>15.85</td></tr><tr><td>kW → TR</td><td>÷ 3.517</td></tr></tbody></table></div><h3>Flow switches</h3><p>Where you only need to know that water <em>is</em> flowing — chiller and pump proving — a <strong>flow switch</strong> (paddle or thermal) closes a contact above a set flow. It is a DI, and part of the chiller's safety interlocks.</p>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01 has no meter of its own, but the 3rd floor has an <strong>energy meter on its chilled water branch</strong>, read over Modbus, so the floor's cooling energy can be compared with AHU-01's valve position and run-hours. A floor using more energy for the same weather and occupancy is a sign of a fault.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Check the flow-direction arrow on the meter body — reversed meters read zero or negative.</li><li>Magmeters must be in a pipe that is always full: not at a high point where air collects.</li><li>Check which pipe each temperature sensor is in. Swapped sensors give negative energy.</li><li>Compare pulse totals with the meter's own display over a few days to prove the pulse weight.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Flow reads zero although the pump runs</td><td>Empty or part-full pipe, reversed meter, or air</td><td>Meter position, direction arrow, air vents</td></tr><tr><td>Energy reads negative</td><td>Supply and return temperature sensors swapped</td><td>Sensor positions vs meter configuration</td></tr><tr><td>Flow reading unsteady</td><td>Not enough straight pipe; air bubbles</td><td>Installation against maker's requirements</td></tr><tr><td>BMS total is 10× the meter display</td><td>Pulse weight set wrong</td><td>Pulse weight in meter and BMS</td></tr><tr><td>Energy too low at high load</td><td>Temperature sensors not fully immersed / no paste</td><td>Sensor pockets</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Magmeter</dt><dd>Electromagnetic flow meter for conductive liquids; no moving parts.</dd><dt>Ultrasonic meter</dt><dd>Flow meter using the transit time of sound waves with and against the flow.</dd><dt>Energy (BTU) meter</dt><dd>Flow meter + matched temperature pair + calculator that totals thermal energy.</dd><dt>Matched pair</dt><dd>Two temperature sensors calibrated together for an accurate ΔT.</dd><dt>Pulse weight</dt><dd>Quantity represented by one output pulse, e.g. 10 L or 1 kWh.</dd><dt>M-Bus</dt><dd>Meter-Bus: a standard for reading utility meters.</dd><dt>Flow switch</dt><dd>Device that closes a contact when flow exceeds a set value.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-3-4-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">A new BTU meter on the 3rd-floor branch shows −110 kW during the working day. Flow looks right. What is wrong?</p>
+<button type="button" class="s-opt" data-i="0">The chilled water is flowing backwards.</button><button type="button" class="s-opt" data-i="1">The supply and return temperature sensors are in each other's pipes.</button><button type="button" class="s-opt" data-i="2">The meter is reading heating energy.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> With a correct flow, a negative power of a believable size means the meter sees the return as colder than the supply: the sensors are swapped (or the configuration says the wrong pipe).<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why does a magmeter need a full pipe?</p><details><summary>Show answer</summary><div class="a">It measures the voltage across the flowing water; with air in the pipe the measurement is wrong or lost.</div></details></li><li><p class="q">Calculate the cooling for 8 L/s with a 5 K ΔT.</p><details><summary>Show answer</summary><div class="a">4.19 × 8 × 5 ≈ 168 kW.</div></details></li><li><p class="q">What is a pulse weight, and why must it match?</p><details><summary>Show answer</summary><div class="a">The quantity one pulse represents (e.g. 10 L). If the BMS uses a different value, all totals are wrong by that factor.</div></details></li><li><p class="q">Convert 36 m³/h to L/s.</p><details><summary>Show answer</summary><div class="a">36 ÷ 3.6 = 10 L/s.</div></details></li><li><p class="q">Why do energy meters use a matched temperature pair?</p><details><summary>Show answer</summary><div class="a">Because energy depends on a small ΔT; matched sensors keep the ΔT error tiny.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/reviews/week-2-review.html"><small>&larr; Previous</small>Week 2 review + Module 2 quiz</a><a class="next" href="../../level-1/module-3/3-5-damper-actuators.html"><small>Next &rarr;</small>3.5 Damper actuators</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

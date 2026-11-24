@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="3-8" data-url="level-1/module-3/3-8-status-devices.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.8 Status devices: current switches and DP switches | BMS Study Guide</title>
+<meta name="description" content="A status device gives the BMS independent proof that equipment is really running — because a start command only shows what the BMS asked for, not what happened.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-3/index.html">Module 3 · Sensors and Field Devices</a> &rsaquo; 3.8</div>
+<p class="eyebrow no-abbr">Module 3 · Sensors and Field Devices</p>
+<h1>3.8&ensp;Status devices: current switches and DP switches</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 17</span><span class="chip">About 10 min</span><span class="chip">Page 8 of 8</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain why a start command is not proof that equipment is running.</li><li>Compare the ways of proving a fan or pump is running and what each really proves.</li><li>Set up a current switch and a fan ΔP switch correctly.</li><li>Write the logic for fan-fail and unexpected-running alarms.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>List four hard-wired signals between the BMS and a VFD.<div class="from">from 3.7 Variable frequency drives (VFD)</div><details><summary>Show answer</summary><div class="a">Start (DO), speed reference (AO), run status (DI), fault (DI).</div></details></li><li>Why are equal-percentage valves used on coils?<div class="from">from 3.6 Chilled water valves and actuators</div><details><summary>Show answer</summary><div class="a">Coils give most of their output at low flow; an equal-percentage valve compensates, so the combined response is close to linear and the loop is stable at every load.</div></details></li><li>What is actuator adaptation?<div class="from">from 3.5 Damper actuators</div><details><summary>Show answer</summary><div class="a">A function where the actuator runs end to end to learn the real stroke of the damper or valve, so 0–100 % maps to the full real movement.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A status device gives the BMS <strong>independent proof</strong> that equipment is really running — because a start command only shows what the BMS asked for, not what happened.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Contactors stick, belts break, drives trip and fans spin backwards. If the BMS only knows what it commanded, it will show a fan as “running” while the floor overheats. Good status devices — and alarms comparing command with status — catch these failures in seconds.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<figure class="diagram"><svg viewBox="0 0 760 255" role="img" aria-label="Ways to prove that a fan is really running" xmlns="http://www.w3.org/2000/svg"><defs><marker id="pv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="pv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="pv-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="20" y="30" width="150" height="80" rx="8" class="d-soft" /><text x="95.0" y="62.5" text-anchor="middle" class="d-t d-tb">MCC / VFD</text><text x="95.0" y="77.5" text-anchor="middle" class="d-ts">contactor or drive</text><circle cx="420" cy="150" r="40" class="d-box"/><text x="420" y="150" text-anchor="middle" class="d-t d-tb">Fan</text><path d="M170,70 L300,70 L300,150 L378,150" class="d-warmline" marker-end="url(#pv-r)"/><text x="240" y="60" text-anchor="middle" class="d-ts">motor cable</text><circle cx="300" cy="110" r="13" class="d-acc"/><text x="300" y="110" text-anchor="middle" class="d-ts d-tb">CT</text><line x1="462" y1="150" x2="740" y2="150" class="d-aline" marker-end="url(#pv-a)"/><text x="740" y="136" text-anchor="end" class="d-ts">air</text><rect x="390" y="40" width="60" height="30" rx="6" class="d-acc" /><text x="420.0" y="55.0" text-anchor="middle" class="d-t d-tb">ΔP</text><path d="M400,70 L380,112" class="d-line d-thin"/><path d="M440,70 L470,145" class="d-line d-thin"/><text x="95" y="140" text-anchor="middle" class="d-ts d-tb">① Contactor aux / VFD run relay</text><text x="95" y="155" text-anchor="middle" class="d-ts">proves the drive is ON</text><text x="210" y="230" text-anchor="middle" class="d-ts d-tb">② Current switch (CT)</text><text x="210" y="245" text-anchor="middle" class="d-ts">proves the motor draws current</text><text x="520" y="60" text-anchor="middle" class="d-ts d-tb">③ Fan ΔP switch</text><text x="520" y="75" text-anchor="middle" class="d-ts">proves the fan moves air</text><text x="620" y="205" text-anchor="middle" class="d-ts d-tb">④ Airflow switch / sensor</text><text x="620" y="220" text-anchor="middle" class="d-ts">proves air reaches the duct</text><circle cx="620" cy="150" r="10" class="d-box"/></svg><figcaption>Each device proves a different link in the chain. The further down the chain, the stronger the proof.</figcaption></figure><div class="tbl-wrap"><table class=""><thead><tr><th>Device</th><th>Proves…</th><th>Does NOT prove…</th></tr></thead><tbody><tr><td>Contactor auxiliary contact</td><td>The contactor pulled in</td><td>Motor turning; belt intact; air moving</td></tr><tr><td>VFD run relay</td><td>The drive's output is on</td><td>Belt intact; fan moving air</td></tr><tr><td>Current switch / sensor</td><td>The motor draws current</td><td>Air moving (unless set above no-load current)</td></tr><tr><td>Fan ΔP switch</td><td>The fan is building pressure — moving air</td><td>Exact airflow</td></tr><tr><td>Airflow switch or sensor</td><td>Air is flowing in the duct</td><td>—</td></tr><tr><td>Water flow switch</td><td>Water flowing in a pipe</td><td>Exact flow rate</td></tr><tr><td>Damper end switch</td><td>Damper reached its end position</td><td>Blades sealed</td></tr></tbody></table></div><h3>Current switches</h3><p>A current switch is a small current transformer (CT) clipped round <strong>one</strong> phase conductor of the motor cable, with a contact that closes when the current rises above an adjustable threshold. Split-core versions clip on without disconnecting the cable.</p><ol class="steps"><li>Run the motor normally and note the current (from the drive display or a clamp meter).</li><li>Break the load if you can do so safely — e.g. with the belt removed the motor draws only its <strong>no-load</strong> current.</li><li>Set the threshold <strong>between</strong> the no-load current and the lowest normal running current. Now a broken belt shows as “not running”.</li><li>On VFD motors, use a current switch rated for variable frequency and check it still trips at minimum speed — or read the current from the drive over the network.</li></ol><h3>Fan ΔP switches</h3><p>A ΔP switch across the fan — + to the outlet side, − to the inlet — closes when the fan builds pressure. Set it well below the lowest normal running ΔP (at minimum speed) but clearly above zero, so it proves airflow without chattering. Filter ΔP switches use the same device to a different purpose (page 3.3).</p><h3>Using status in logic</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Condition</th><th>Meaning</th><th>Action</th></tr></thead><tbody><tr><td>Command ON, status OFF for > 30 s</td><td>Failed to start or stopped unexpectedly</td><td>“Fan fail” alarm; stop command; lock out until reset</td></tr><tr><td>Command OFF, status ON for > 60 s</td><td>Running when it should not — Hand mode, welded contactor</td><td>“Running unexpectedly” alarm</td></tr><tr><td>Status flickers on and off</td><td>Threshold too close to running value, loose wiring</td><td>Maintenance alarm; check set point</td></tr></tbody></table></div><div class="tip"><span class="label">Delays matter</span><p>Every status check needs a delay: a fan takes a few seconds to prove after a start command, and some seconds to stop. Too short and you get nuisance alarms; too long and failures go unnoticed.</p></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01 proves its fan with the <strong>VFD run relay</strong> (DI) — which shows the drive is on — and checks the <strong>VFD motor current over Modbus</strong>: if the drive runs but the current is close to no-load, the BMS raises a “possible belt failure” alarm. The supply duct pressure sensor gives a third, independent check that air is moving.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Find out what the status point is really wired to — an auxiliary contact proves much less than a ΔP switch.</li><li>Test the proving: stop the fan locally with the BMS command still on — the fan-fail alarm must appear after its delay.</li><li>Re-check current-switch thresholds after motor or belt changes.</li><li>For DP switches, check the tubes are on the right sides and not blocked.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>BMS shows “running” but the floor is hot and air is still</td><td>Status from a contactor or drive relay; belt broken</td><td>Look at the fan; motor current</td></tr><tr><td>Fan-fail alarm on every start</td><td>Proving delay too short, or ΔP switch set too high</td><td>Delay and switch setting</td></tr><tr><td>Status flickers at low speed</td><td>Current or ΔP threshold too close to the low-speed value</td><td>Threshold vs value at minimum speed</td></tr><tr><td>“Running unexpectedly” alarm</td><td>Fan in Hand, contactor welded, or another system started it</td><td>HOA, contactor, fire/smoke control</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Status / proving</dt><dd>Independent feedback that equipment is really running.</dd><dt>Auxiliary contact</dt><dd>Extra contact on a contactor that changes state when it pulls in.</dd><dt>Current switch</dt><dd>CT with a contact that closes above an adjustable current.</dd><dt>No-load current</dt><dd>Current a motor draws with no mechanical load, e.g. with the belt off.</dd><dt>Fan ΔP switch</dt><dd>Pressure switch across a fan that proves it is building pressure.</dd><dt>Fan fail</dt><dd>Alarm when a fan is commanded on but status is not proven.</dd><dt>Proving delay</dt><dd>Time allowed between a command and the expected status.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-3-8-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">An AHU's status comes from the contactor's auxiliary contact. The fan belt snaps at 11:00. What does the BMS show, and how would you prevent this blind spot?</p>
+<button type="button" class="s-opt" data-i="0">It shows fan fail immediately — no change needed.</button><button type="button" class="s-opt" data-i="1">It still shows “running”, because the contactor is still pulled in. Use a correctly-set current switch or a fan ΔP switch for status.</button><button type="button" class="s-opt" data-i="2">It shows the fan off, because the motor stops.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> The contactor stays energised and the motor keeps spinning, so the auxiliary contact stays closed. Only a device further down the chain — current above no-load, or fan ΔP — detects the broken belt.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why is a DO start command not proof that a fan is running?</p><details><summary>Show answer</summary><div class="a">It only shows what the BMS asked for. Tripped overloads, Hand switches, broken belts and failed drives all leave the command ON while the fan is not moving air.</div></details></li><li><p class="q">Where should a current switch threshold be set?</p><details><summary>Show answer</summary><div class="a">Between the motor's no-load current and its lowest normal running current, so a broken belt reads as “not running”.</div></details></li><li><p class="q">What does a fan ΔP switch prove that a VFD run relay does not?</p><details><summary>Show answer</summary><div class="a">That the fan is actually building pressure — moving air — not just that the drive output is on.</div></details></li><li><p class="q">Write the logic for a fan-fail alarm.</p><details><summary>Show answer</summary><div class="a">If the start command is ON and run status is OFF for more than the proving delay (e.g. 30 s), raise “fan fail”, stop the fan and lock out until reset.</div></details></li><li><p class="q">What does a “running unexpectedly” alarm usually mean?</p><details><summary>Show answer</summary><div class="a">The equipment runs while the BMS commands it off — often a Hand switch, a welded contactor, or another system (e.g. fire control) starting it.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><small>&larr; Previous</small>3.7 Variable frequency drives (VFD)</a><a class="next" href="../../level-1/glossary.html"><small>Next &rarr;</small>Glossary</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

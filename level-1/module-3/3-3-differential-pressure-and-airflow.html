@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="3-3" data-url="level-1/module-3/3-3-differential-pressure-and-airflow.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.3 Differential pressure and airflow sensors | BMS Study Guide</title>
+<meta name="description" content="A differential pressure (ΔP) sensor measures the difference in pressure between its two ports — across a filter, between a duct and a room, or between two points in an airflow probe to work out velocity.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-3/index.html">Module 3 · Sensors and Field Devices</a> &rsaquo; 3.3</div>
+<p class="eyebrow no-abbr">Module 3 · Sensors and Field Devices</p>
+<h1>3.3&ensp;Differential pressure and airflow sensors</h1>
+<div class="meta no-abbr"><span class="chip">Week 2 · Day 13</span><span class="chip">About 10 min</span><span class="chip">Page 3 of 8</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain what a differential pressure sensor measures and how its ports are connected.</li><li>List the main uses of ΔP sensors and switches in HVAC.</li><li>Explain static, total and velocity pressure, and calculate air velocity.</li><li>Diagnose common ΔP faults from the readings.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>What does a CO₂ sensor tell a BMS?<div class="from">from 3.2 Humidity and CO₂ sensors</div><details><summary>Show answer</summary><div class="a">How much fresh air is needed for the people present — CO₂ rises with occupancy.</div></details></li><li>An NTC input reads a very high temperature. Open or short circuit?<div class="from">from 3.1 Temperature sensors (NTC, PT1000)</div><details><summary>Show answer</summary><div class="a">Short circuit — the resistance has dropped to near zero, which an NTC reports as very hot.</div></details></li><li>Rewrite “the valve shall be controlled as required”.<div class="from">from 2.7 HVAC control sequences — an overview</div><details><summary>Show answer</summary><div class="a">For example: “When the supply fan is proven running, a PID loop shall modulate the CHW valve (0–100 %) to hold return air temperature at 24 °C (adjustable 22–26 °C). When the fan is off, the valve shall be closed.”</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A differential pressure (ΔP) sensor measures the <strong>difference in pressure between its two ports</strong> — across a filter, between a duct and a room, or between two points in an airflow probe to work out velocity.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>ΔP sensors are everywhere in HVAC: they tell you when filters are dirty, they control VAV fans, they prove fans are moving air, they keep clean rooms at the right pressure and they measure airflow. They are simple devices — but a swapped or loose tube gives readings that send whole systems the wrong way.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Two ports, one difference</h3><p>A ΔP sensor has a <strong>high (+)</strong> and a <strong>low (−)</strong> port, each connected by plastic tube to a measuring point. It outputs the difference in pascals (Pa), as 0–10 V, 4–20 mA, or over a bus. A <strong>ΔP switch</strong> does the same job but only closes a contact above a set pressure.</p><figure class="diagram"><svg viewBox="0 0 760 175" role="img" aria-label="Two common uses of a differential pressure sensor" xmlns="http://www.w3.org/2000/svg"><defs><marker id="du" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="du-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="du-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="20" y="70" width="300" height="70" rx="4" class="d-soft" /><text x="170" y="84" text-anchor="middle" class="d-ts d-tb">Filter ΔP</text><path d="M170,92 L158,104 L182,116 L158,128 L170,136" class="d-line"/><line x1="30" y1="105" x2="140" y2="105" class="d-aline" marker-end="url(#du-a)"/><rect x="130" y="6" width="80" height="34" rx="6" class="d-acc" /><text x="170.0" y="23.0" text-anchor="middle" class="d-t d-tb">ΔP</text><path d="M145,40 L145,56 L100,56 L100,70" class="d-line d-thin"/><text x="92" y="50" text-anchor="middle" class="d-t d-tb">+</text><path d="M195,40 L195,56 L240,56 L240,70" class="d-line d-thin"/><text x="250" y="50" text-anchor="middle" class="d-t d-tb">−</text><text x="170" y="160" text-anchor="middle" class="d-ts">+ before the filter, − after it</text><rect x="380" y="70" width="180" height="70" rx="4" class="d-soft" /><text x="470" y="84" text-anchor="middle" class="d-ts d-tb">Duct static pressure</text><line x1="390" y1="105" x2="550" y2="105" class="d-aline" marker-end="url(#du-a)"/><rect x="580" y="6" width="80" height="34" rx="6" class="d-acc" /><text x="620.0" y="23.0" text-anchor="middle" class="d-t d-tb">ΔP</text><path d="M595,40 L595,56 L470,56 L470,70" class="d-line d-thin"/><text x="480" y="50" text-anchor="middle" class="d-t d-tb">+</text><path d="M645,40 L645,110" class="d-line d-thin"/><text x="655" y="116" text-anchor="start" class="d-ts">− open to the</text><text x="655" y="130" text-anchor="start" class="d-ts">plant room</text><text x="470" y="160" text-anchor="middle" class="d-ts">+ inside the duct, − to the surroundings</text></svg><figcaption>Filter monitoring and duct static pressure — the two uses you will meet first.</figcaption></figure><div class="tbl-wrap"><table class=""><thead><tr><th>Use</th><th>Measures</th><th>Typical range</th><th>Sensor or switch</th></tr></thead><tbody><tr><td>Filter monitoring</td><td>Across a filter</td><td>0–500 Pa or more</td><td>Either</td></tr><tr><td>Duct static pressure (VAV)</td><td>Duct relative to surroundings</td><td>0–500 Pa / 0–1,000 Pa</td><td>Sensor (control)</td></tr><tr><td>Fan proving</td><td>Across the fan</td><td>0–1,000 Pa or more</td><td>Usually a switch</td></tr><tr><td>Room pressure</td><td>Room relative to corridor</td><td>± 50 Pa (often only a few pascals)</td><td>Sensor</td></tr><tr><td>Airflow measurement</td><td>Velocity pressure from a probe</td><td>0–250 Pa or so</td><td>Sensor</td></tr><tr><td>Water ΔP (pumps, index circuit)</td><td>Between supply and return pipes</td><td>In kPa or bar</td><td>Water-rated sensor</td></tr></tbody></table></div><p>Units: <strong>1 Pa</strong> is tiny — 100 Pa = 1 mbar; 1 kPa = 1,000 Pa; 1 bar = 100 kPa. Many ΔP sensors have a selectable range (DIP switch or menu) — the controller's scaling must match the range selected.</p><h3>Static, total and velocity pressure</h3><figure class="diagram"><svg viewBox="0 0 760 175" role="img" aria-label="Static, total and velocity pressure in a duct" xmlns="http://www.w3.org/2000/svg"><defs><marker id="pr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="pr-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="pr-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="40" y="60" width="520" height="80" rx="4" class="d-soft" /><line x1="60" y1="100" x2="540" y2="100" class="d-aline" marker-end="url(#pr-a)"/><text x="470" y="86" text-anchor="middle" class="d-ts">airflow</text><line x1="140" y1="60" x2="140" y2="30" class="d-line"/><circle cx="140" cy="24" r="6" class="d-box"/><text x="140" y="8" text-anchor="middle" class="d-ts d-tb">Static</text><path d="M340,100 L300,100 L300,30" class="d-line"/><circle cx="300" cy="24" r="6" class="d-box"/><text x="300" y="8" text-anchor="middle" class="d-ts d-tb">Total</text><rect x="380" y="6" width="160" height="38" rx="8" class="d-acc" /><text x="460.0" y="17.5" text-anchor="middle" class="d-t d-tb">Velocity pressure</text><text x="460.0" y="32.5" text-anchor="middle" class="d-ts">= total − static</text><text x="300" y="160" text-anchor="middle" class="d-ts">pitot facing the flow → total</text><text x="50" y="160" text-anchor="start" class="d-ts">wall tap → static</text><rect x="590" y="60" width="150" height="80" rx="8" class="d-box" /><text x="665.0" y="85.0" text-anchor="middle" class="d-t d-tb">Velocity</text><text x="665.0" y="100.0" text-anchor="middle" class="d-ts">v ≈ 1.29 × √Pv  (m/s)</text><text x="665.0" y="115.0" text-anchor="middle" class="d-ts">flow = v × duct area</text></svg><figcaption>A pitot tube facing the flow sees total pressure; a wall tap sees static pressure; the difference is velocity pressure.</figcaption></figure><div class="note"><span class="label">Air velocity from velocity pressure (air at about 1.2 kg/m³)</span><p><strong>v ≈ 1.29 × √Pv</strong> (m/s, with Pv in Pa) &nbsp;·&nbsp; <strong>Airflow = v × duct area</strong></p><p>Example: Pv = 100 Pa → v ≈ 1.29 × 10 = 12.9 m/s. In a 0.5 × 0.4 m duct (0.2 m²): 12.9 × 0.2 ≈ <strong>2.6 m³/s (2,600 L/s)</strong>.</p></div><h3>Measuring airflow in practice</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Device</th><th>How it works</th><th>Notes</th></tr></thead><tbody><tr><td>Averaging pitot array / flow station</td><td>Many total and static holes across the duct, averaged</td><td>Needs a straight duct run upstream; low pressures at low velocity</td></tr><tr><td>VAV flow cross</td><td>Cross-shaped probe in the box inlet; flow = K × √ΔP</td><td>The box's K-factor comes from the manufacturer</td></tr><tr><td>Fan inlet ring (piezometer)</td><td>Pressure taps in the fan inlet cone</td><td>Fan maker supplies the K-factor</td></tr><tr><td>Thermal dispersion</td><td>Heated element cooled by the airflow</td><td>Good at low velocities; no pressure drop</td></tr><tr><td>Airflow (paddle) switch</td><td>Paddle pushed by the airflow closes a contact</td><td>On/off proving only</td></tr></tbody></table></div><div class="tip"><span class="label">Straight runs</span><p>Bends, dampers and fans make the airflow uneven. Airflow probes and duct static sensors need a stretch of straight duct before them — the maker states how much. Poor placement gives jumpy or biased readings.</p></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01 has two pressure devices: a <strong>filter ΔP switch</strong> (contact closes when the filter is dirty → DI) and a <strong>supply duct static pressure sensor, 0–500 Pa, 4–20 mA</strong> (→ AI), with its + port in the duct and its − port open to the plant room. Lab 4 wires and scales this sensor.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Check the tubes: + to the higher pressure, − to the lower. Swapped tubes give negative readings, or zero on sensors that cannot read negative.</li><li>Run tubes without kinks or sags where condensate can collect; use rigid connectors through the duct wall.</li><li>Most ΔP sensors have a zero (auto-zero) function — use it with both ports open to the same pressure during commissioning.</li><li>Check the range jumper or menu against the controller's scaling.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Reading negative or stuck at zero</td><td>Tubes swapped (+ and −)</td><td>Tube connections at the sensor</td></tr><tr><td>Duct static reads 0 Pa; fan runs at maximum</td><td>Tube disconnected or blocked</td><td>Tubes and duct connection</td></tr><tr><td>Reading jumps around</td><td>Probe in turbulent air (too close to a bend or fan)</td><td>Location; straight run; output damping</td></tr><tr><td>Small, constant error even with no flow</td><td>Zero drift</td><td>Auto-zero / recalibrate</td></tr><tr><td>Filter alarm never comes, even with filters black</td><td>Switch set too high, or tubes not connected</td><td>Switch setpoint and tubes</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Differential pressure (ΔP)</dt><dd>Difference in pressure between two points.</dd><dt>Static pressure</dt><dd>Pressure the air exerts on the duct walls.</dd><dt>Total pressure</dt><dd>Static pressure plus velocity pressure, seen by a probe facing the flow.</dd><dt>Velocity pressure</dt><dd>Pressure due to air movement: total minus static.</dd><dt>Pitot tube</dt><dd>Probe facing the airflow that measures total (and often static) pressure.</dd><dt>K-factor</dt><dd>Constant relating ΔP to flow for a specific probe or box: flow = K × √ΔP.</dd><dt>ΔP switch</dt><dd>Device that closes a contact when the pressure difference exceeds a setpoint.</dd><dt>Pa (pascal)</dt><dd>Unit of pressure; 100 Pa = 1 mbar.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-3-3-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">A new filter ΔP sensor on AHU-03 reads −120 Pa while the fan runs. What has happened?</p>
+<button type="button" class="s-opt" data-i="0">The filter is torn.</button><button type="button" class="s-opt" data-i="1">The + and − tubes have been connected the wrong way round.</button><button type="button" class="s-opt" data-i="2">The fan is running backwards.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Air pressure is higher before the filter than after it, so + must go before the filter. A negative reading of a sensible size means the tubes are swapped.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">What do the + and − ports of a ΔP sensor mean?</p><details><summary>Show answer</summary><div class="a">+ is the high-pressure port and − the low-pressure port; the output is the + pressure minus the − pressure.</div></details></li><li><p class="q">Calculate air velocity for a velocity pressure of 64 Pa.</p><details><summary>Show answer</summary><div class="a">v ≈ 1.29 × √64 = 1.29 × 8 ≈ 10.3 m/s.</div></details></li><li><p class="q">Where are the ports of a duct static pressure sensor connected?</p><details><summary>Show answer</summary><div class="a">+ to a tap inside the duct, − open to the surroundings (plant room or ceiling space).</div></details></li><li><p class="q">Name four uses of ΔP sensors or switches in HVAC.</p><details><summary>Show answer</summary><div class="a">Any four of: filter monitoring, duct static pressure control, fan proving, room pressure, airflow measurement, water ΔP for pumps.</div></details></li><li><p class="q">Why do airflow probes need a straight duct run?</p><details><summary>Show answer</summary><div class="a">Bends, fans and dampers make the airflow uneven and turbulent, which gives jumpy or biased readings.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><small>&larr; Previous</small>3.2 Humidity and CO₂ sensors</a><a class="next" href="../../level-1/reviews/week-2-review.html"><small>Next &rarr;</small>Week 2 review + Module 2 quiz</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

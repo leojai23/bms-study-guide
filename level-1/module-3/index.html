@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="" data-url="level-1/module-3/index.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 3: Sensors and Field Devices | BMS Study Guide</title>
+<meta name="description" content="The devices that measure and move: sensors, meters, actuators, drives and status switches.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs"><a href="../../level-1/index.html">Level 1</a> &rsaquo; Module 3</div>
+<p class="eyebrow">Level 1 · Module 3</p>
+<h1>Sensors and Field Devices</h1>
+<p class="lede">The devices that measure and move: sensors, meters, actuators, drives and status switches.</p>
+<div class="progress" data-progress-of="3-1,3-2,3-3,3-4,3-5,3-6,3-7,3-8"><div class="bar"><i></i></div><span class="plabel"></span></div>
+<p>Field devices are where the BMS meets the physical building. This module covers what each common sensor and actuator measures or moves, how to choose and mount it, the signals it uses, and how it fails. Two interactive tools help: the NTC/PT1000 calculator on page 3.1, and the scaling calculator you will meet in Module 4.</p>
+<h2>Pages in this module</h2>
+<ol class="pagelist"><li data-progress-id="3-1"><a href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="n">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="d">Week 2 · Day 12 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-2"><a href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="n">3.2</span><span>Humidity and CO₂ sensors</span><span class="d">Week 2 · Day 13 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-3"><a href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="n">3.3</span><span>Differential pressure and airflow sensors</span><span class="d">Week 2 · Day 13 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-4"><a href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="n">3.4</span><span>Water flow meters</span><span class="d">Week 3 · Day 15 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-5"><a href="../../level-1/module-3/3-5-damper-actuators.html"><span class="n">3.5</span><span>Damper actuators</span><span class="d">Week 3 · Day 15 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-6"><a href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="n">3.6</span><span>Chilled water valves and actuators</span><span class="d">Week 3 · Day 16 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-7"><a href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="n">3.7</span><span>Variable frequency drives (VFD)</span><span class="d">Week 3 · Day 16 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="3-8"><a href="../../level-1/module-3/3-8-status-devices.html"><span class="n">3.8</span><span>Status devices: current switches and DP switches</span><span class="d">Week 3 · Day 17 <span class="tick">&#10003;</span></span></a></li></ol>
+<p><a class="btn" href="../../level-1/module-3/3-1-temperature-sensors.html">Start with 3.1 &rarr;</a></p>
+<h2 id="quiz">Module 3 quiz</h2><p>10 questions on the whole module. Answer them after finishing the pages; your best score is remembered in this browser.</p><div class="quiz" data-quiz="m3"><div class="scenario quiz-item" data-answer="1" id="scenario-m3-0">
+<span class="label">Module 3 quiz · question 1 of 10</span>
+<p class="s-prompt">What happens to a PT1000's resistance as temperature rises?</p>
+<button type="button" class="s-opt" data-i="0">It falls sharply</button><button type="button" class="s-opt" data-i="1">It rises about 3.85 Ω per °C</button><button type="button" class="s-opt" data-i="2">It stays the same</button><button type="button" class="s-opt" data-i="3">It rises 440 Ω per °C</button>
+<div class="s-feedback" hidden><span class="verdict"></span> PT1000: 1,000 Ω at 0 °C, rising about 3.85 Ω/°C. <em>(See page 3.1.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-1">
+<span class="label">Module 3 quiz · question 2 of 10</span>
+<p class="s-prompt">An NTC sensor input suddenly reads −40 °C. Most likely cause?</p>
+<button type="button" class="s-opt" data-i="0">Short circuit</button><button type="button" class="s-opt" data-i="1">Open circuit</button><button type="button" class="s-opt" data-i="2">Wrong setpoint</button><button type="button" class="s-opt" data-i="3">Sun on the sensor</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Open circuit → infinite resistance → an NTC reads very cold. <em>(See page 3.1.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-2">
+<span class="label">Module 3 quiz · question 3 of 10</span>
+<p class="s-prompt">A 0–10 V CO₂ sensor scaled 0–2,000 ppm reads 5 V. CO₂ is…</p>
+<button type="button" class="s-opt" data-i="0">500 ppm</button><button type="button" class="s-opt" data-i="1">1,000 ppm</button><button type="button" class="s-opt" data-i="2">2,000 ppm</button><button type="button" class="s-opt" data-i="3">5,000 ppm</button>
+<div class="s-feedback" hidden><span class="verdict"></span> 5 V × 200 ppm/V = 1,000 ppm. <em>(See page 3.2.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-3">
+<span class="label">Module 3 quiz · question 4 of 10</span>
+<p class="s-prompt">Why can automatic baseline calibration fail in a hospital ward?</p>
+<button type="button" class="s-opt" data-i="0">The sensor is too old</button><button type="button" class="s-opt" data-i="1">The space is never empty, so it never sees outdoor-level CO₂</button><button type="button" class="s-opt" data-i="2">Hospitals use CO instead</button><button type="button" class="s-opt" data-i="3">NDIR does not work indoors</button>
+<div class="s-feedback" hidden><span class="verdict"></span> ABC assumes the lowest recent reading is outdoor air. <em>(See page 3.2.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-4">
+<span class="label">Module 3 quiz · question 5 of 10</span>
+<p class="s-prompt">A filter ΔP sensor reads −90 Pa with the fan running. What is wrong?</p>
+<button type="button" class="s-opt" data-i="0">Filter torn</button><button type="button" class="s-opt" data-i="1">Tubes swapped</button><button type="button" class="s-opt" data-i="2">Sensor range too high</button><button type="button" class="s-opt" data-i="3">Nothing</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Pressure is higher before the filter; + belongs there. <em>(See page 3.3.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="2" id="scenario-m3-5">
+<span class="label">Module 3 quiz · question 6 of 10</span>
+<p class="s-prompt">Velocity pressure is 100 Pa. Air velocity is about…</p>
+<button type="button" class="s-opt" data-i="0">1.3 m/s</button><button type="button" class="s-opt" data-i="1">10 m/s</button><button type="button" class="s-opt" data-i="2">12.9 m/s</button><button type="button" class="s-opt" data-i="3">129 m/s</button>
+<div class="s-feedback" hidden><span class="verdict"></span> v ≈ 1.29 × √100 = 12.9 m/s. <em>(See page 3.3.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-6">
+<span class="label">Module 3 quiz · question 7 of 10</span>
+<p class="s-prompt">An energy meter reads negative power with correct flow. Most likely?</p>
+<button type="button" class="s-opt" data-i="0">Meter reversed</button><button type="button" class="s-opt" data-i="1">Temperature sensors swapped</button><button type="button" class="s-opt" data-i="2">Pipe empty</button><button type="button" class="s-opt" data-i="3">Pulse weight wrong</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Return reading colder than supply gives negative energy. <em>(See page 3.4.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-7">
+<span class="label">Module 3 quiz · question 8 of 10</span>
+<p class="s-prompt">A floating (3-point) actuator needs…</p>
+<button type="button" class="s-opt" data-i="0">one AO</button><button type="button" class="s-opt" data-i="1">two DOs</button><button type="button" class="s-opt" data-i="2">one DI</button><button type="button" class="s-opt" data-i="3">a 4–20 mA loop</button>
+<div class="s-feedback" hidden><span class="verdict"></span> One output drives open, the other drives close. <em>(See page 3.5.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m3-8">
+<span class="label">Module 3 quiz · question 9 of 10</span>
+<p class="s-prompt">Why are equal-percentage valves used on cooling coils?</p>
+<button type="button" class="s-opt" data-i="0">They are cheaper</button><button type="button" class="s-opt" data-i="1">They compensate for the coil's non-linear output</button><button type="button" class="s-opt" data-i="2">They never leak</button><button type="button" class="s-opt" data-i="3">They need no actuator</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Valve + coil together give a near-linear response. <em>(See page 3.6.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="2" id="scenario-m3-9">
+<span class="label">Module 3 quiz · question 10 of 10</span>
+<p class="s-prompt">A belt breaks. Which status device will still say the fan is running?</p>
+<button type="button" class="s-opt" data-i="0">Fan ΔP switch</button><button type="button" class="s-opt" data-i="1">Correctly set current switch</button><button type="button" class="s-opt" data-i="2">Contactor auxiliary contact</button><button type="button" class="s-opt" data-i="3">Airflow switch</button>
+<div class="s-feedback" hidden><span class="verdict"></span> The contactor stays pulled in even though no air moves. <em>(See page 3.8.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="quiz-score no-abbr"><span>Score <b class="qs"></b></span><span class="qn"></span><span class="qbest"></span><button type="button" class="btn ghost quiz-reset">Reset quiz</button></div></div>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

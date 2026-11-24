@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="3-7" data-url="level-1/module-3/3-7-variable-frequency-drives.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.7 Variable frequency drives (VFD) | BMS Study Guide</title>
+<meta name="description" content="A VFD (variable frequency drive, also called an inverter or variable speed drive) changes a motor&#x27;s speed by changing the frequency of its supply — so fans and pumps deliver only what is needed, using far less energy.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-3/index.html">Module 3 · Sensors and Field Devices</a> &rsaquo; 3.7</div>
+<p class="eyebrow no-abbr">Module 3 · Sensors and Field Devices</p>
+<h1>3.7&ensp;Variable frequency drives (VFD)</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 16</span><span class="chip">About 10 min</span><span class="chip">Page 7 of 8</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain how a VFD changes motor speed.</li><li>List the hard-wired and network signals between a BMS and a VFD.</li><li>Name the VFD parameters that matter for BMS control.</li><li>Diagnose common VFD control and communication faults.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Why do most modern systems use 2-way valves?<div class="from">from 3.6 Chilled water valves and actuators</div><details><summary>Show answer</summary><div class="a">System flow then varies with load, so pumps can slow down (saving energy) and return water stays warm (good ΔT).</div></details></li><li>How many BMS outputs does a floating actuator need?<div class="from">from 3.5 Damper actuators</div><details><summary>Show answer</summary><div class="a">Two digital outputs: one to drive open, one to drive close.</div></details></li><li>What is a pulse weight, and why must it match?<div class="from">from 3.4 Water flow meters</div><details><summary>Show answer</summary><div class="a">The quantity one pulse represents (e.g. 10 L). If the BMS uses a different value, all totals are wrong by that factor.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A VFD (variable frequency drive, also called an inverter or variable speed drive) <strong>changes a motor's speed by changing the frequency of its supply</strong> — so fans and pumps deliver only what is needed, using far less energy.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Almost every new fan and pump in a commercial building has a VFD, and the fan laws (page 2.4) mean they save a lot of energy. For the BMS engineer a VFD is a busy interface: hard-wired start, status and speed signals plus a communication link — and several parameters that decide whether the BMS is actually in control.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<figure class="diagram"><svg viewBox="0 0 760 240" role="img" aria-label="VFD power stages and the signals exchanged with the BMS" xmlns="http://www.w3.org/2000/svg"><defs><marker id="vf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="vf-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="vf-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="20" y="40" width="130" height="190" rx="10" class="d-acc" /><text x="85" y="60" text-anchor="middle" class="d-t d-tb">DDC-AHU-01</text><rect x="380" y="40" width="230" height="190" rx="10" class="d-box" /><text x="495" y="60" text-anchor="middle" class="d-t d-tb">VFD</text><rect x="395" y="80" width="62" height="60" rx="8" class="d-soft" /><text x="426.0" y="102.5" text-anchor="middle" class="d-ts d-tb">Rectifier</text><text x="426.0" y="117.5" text-anchor="middle" class="d-ts">AC → DC</text><rect x="464" y="80" width="62" height="60" rx="8" class="d-warn" /><text x="495.0" y="102.5" text-anchor="middle" class="d-ts d-tb">DC bus</text><text x="495.0" y="117.5" text-anchor="middle" class="d-ts">capacitors</text><rect x="533" y="80" width="62" height="60" rx="8" class="d-soft" /><text x="564.0" y="95.0" text-anchor="middle" class="d-ts d-tb">Inverter</text><text x="564.0" y="110.0" text-anchor="middle" class="d-ts">DC → AC</text><text x="564.0" y="125.0" text-anchor="middle" class="d-ts">0–50 Hz</text><text x="495" y="170" text-anchor="middle" class="d-ts">control terminals · relays</text><text x="495" y="186" text-anchor="middle" class="d-ts">keypad · fieldbus port</text><text x="140" y="92" text-anchor="end" class="d-ts d-tb">DO</text><line x1="150" y1="92" x2="376" y2="92" class="d-line" marker-end="url(#vf)"/><text x="264" y="84" text-anchor="middle" class="d-ts">start (via interposing relay)</text><text x="140" y="118" text-anchor="end" class="d-ts d-tb">DI</text><line x1="378" y1="118" x2="152" y2="118" class="d-line" marker-end="url(#vf)"/><text x="264" y="110" text-anchor="middle" class="d-ts">run status relay</text><text x="140" y="144" text-anchor="end" class="d-ts d-tb">DI</text><line x1="378" y1="144" x2="152" y2="144" class="d-line" marker-end="url(#vf)"/><text x="264" y="136" text-anchor="middle" class="d-ts">fault relay</text><text x="140" y="170" text-anchor="end" class="d-ts d-tb">AO</text><line x1="150" y1="170" x2="376" y2="170" class="d-line" marker-end="url(#vf)"/><text x="264" y="162" text-anchor="middle" class="d-ts">speed 0–10 V or 4–20 mA</text><text x="140" y="204" text-anchor="end" class="d-ts d-tb">RS485</text><line x1="150" y1="204" x2="378" y2="204" class="d-aline d-dash" marker-end="url(#vf-a)" marker-start="url(#vf-a)"/><text x="264" y="196" text-anchor="middle" class="d-ts">Modbus RTU / BACnet MS/TP</text><line x1="495" y1="40" x2="495" y2="18" class="d-line"/><text x="503" y="18" text-anchor="start" class="d-ts">415 V supply in</text><line x1="610" y1="110" x2="658" y2="110" class="d-warmline" marker-end="url(#vf-r)"/><text x="634" y="96" text-anchor="middle" class="d-ts">out</text><circle cx="700" cy="110" r="38" class="d-box"/><text x="700" y="110" text-anchor="middle" class="d-t d-tb">Motor</text></svg><figcaption>Inside a VFD and the signals between it and the controller.</figcaption></figure><h3>How it works</h3><ol class="steps"><li>The <strong>rectifier</strong> turns the incoming AC supply (e.g. 415 V, 50 Hz) into DC.</li><li>The <strong>DC bus</strong> capacitors smooth and store that DC.</li><li>The <strong>inverter</strong> switches the DC very fast to build a new AC supply at whatever frequency is required.</li><li>Motor speed is proportional to frequency: 50 Hz = full speed, 25 Hz ≈ half speed.</li></ol><h3>The BMS interface</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Signal</th><th>Direction</th><th>Type</th><th>Notes</th></tr></thead><tbody><tr><td>Run / start</td><td>BMS → VFD</td><td>DO via interposing relay to a VFD digital input</td><td>Contact closed = run</td></tr><tr><td>Speed reference</td><td>BMS → VFD</td><td>AO, 0–10 V or 4–20 mA</td><td>VFD input type and scaling must match</td></tr><tr><td>Run status</td><td>VFD → BMS</td><td>Relay output → DI</td><td>Means the drive output is on</td></tr><tr><td>Fault</td><td>VFD → BMS</td><td>Relay output → DI</td><td>Often normally-closed for fail-safe</td></tr><tr><td>Speed / current feedback</td><td>VFD → BMS</td><td>Analogue output → AI (optional)</td><td></td></tr><tr><td>Network</td><td>Both ways</td><td>Modbus RTU, BACnet MS/TP or IP</td><td>Frequency, current, kW, kWh, fault codes, run-hours</td></tr></tbody></table></div><h3>Parameters that matter to the BMS</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Parameter</th><th>Why it matters</th></tr></thead><tbody><tr><td>Control (command) source</td><td>Keypad/local, terminals, or fieldbus. If it is set to keypad, the BMS start command is ignored.</td></tr><tr><td>Reference (speed) source</td><td>Which input sets the speed: AI, keypad, fieldbus.</td></tr><tr><td>Analogue input type and scaling</td><td>0–10 V or 4–20 mA, and what 0 % and 100 % mean in Hz.</td></tr><tr><td>Minimum / maximum frequency</td><td>Minimum keeps airflow and motor cooling (often around 20–25 Hz for fans); maximum usually 50 Hz.</td></tr><tr><td>Acceleration / deceleration ramps</td><td>Too short and the drive trips on over-current or over-voltage.</td></tr><tr><td>Loss-of-reference action</td><td>What the drive does if the 4–20 mA signal disappears: stop, hold, or go to a preset speed.</td></tr><tr><td>Auto-restart</td><td>Whether it restarts by itself after a power dip or a fault reset.</td></tr><tr><td>Skip frequencies</td><td>Speeds to avoid because they make the fan or ductwork resonate.</td></tr><tr><td>Motor nameplate data</td><td>Voltage, current, power, speed — needed for protection and good control.</td></tr></tbody></table></div><div class="warn"><span class="label">Stored energy</span><p>The DC bus capacitors stay charged for minutes after isolation. Wait for the time printed on the drive (often 5–15 minutes) and check the DC bus has discharged before touching power terminals. Motor cables are screened; keep BMS signal cables away from them and land screens as the maker says, or the drive's switching noise will appear on your analogue signals.</p></div><h3>Hand–Off–Auto on the keypad</h3><p>Most drives have their own Hand/Off/Auto keys. In <strong>Hand</strong> the speed comes from the keypad; in <strong>Auto</strong> the BMS controls start and speed. A drive left in Hand after maintenance is a very common reason for “the BMS has lost control”. The drive's relay or a network value can report which mode it is in.</p><h3>Bypass</h3><p>Some critical fans and pumps have a <strong>bypass</strong> starter so the motor can run direct-on-line at full speed if the drive fails. The BMS should know which path is running (a DI from the bypass contactor).</p>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01's supply fan VFD gets: <strong>start</strong> from a DO via an interposing relay, <strong>speed</strong> from an AO (0–10 V = 0–50 Hz), and returns <strong>run</strong> and <strong>fault</strong> relays to DIs. Over <strong>Modbus RTU</strong> the BMS reads frequency, current, kW, kWh and the last fault code. Control source: terminals; minimum frequency 20 Hz; it normally runs at 42 Hz.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>When the BMS “has no control”, look at the keypad first: Hand or Auto? Local or remote?</li><li>Check that the AI type on the drive (voltage or current, often a switch as well as a parameter) matches the BMS output.</li><li>Record the key parameters after commissioning; a drive replacement then takes minutes, not hours.</li><li>Compare the frequency on the drive display with what the BMS commands — a mismatch points at scaling.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Drive runs from its keypad but ignores the BMS</td><td>Control source set to local/keypad, or drive in Hand</td><td>Keypad mode; control source parameter</td></tr><tr><td>BMS commands 100 %, drive sits at 20 Hz</td><td>Speed input misconfigured (V vs mA), broken wire, or reference source wrong</td><td>AI type switch/parameter; voltage at the terminal</td></tr><tr><td>Trips on over-current when starting</td><td>Acceleration ramp too short, or mechanical problem</td><td>Ramp time; fan/belt/bearing</td></tr><tr><td>Trips on over-voltage when stopping</td><td>Deceleration ramp too short</td><td>Decel time or braking setting</td></tr><tr><td>Unstable analogue readings across the plant room</td><td>Drive noise coupled into signal cables</td><td>Cable routes, screened motor cable, earthing</td></tr><tr><td>Modbus values all zero</td><td>Wrong address, baud rate or register map</td><td>Module 5</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>VFD</dt><dd>Variable frequency drive: varies motor speed by varying supply frequency.</dd><dt>DC bus</dt><dd>Internal DC stage of the drive; stays charged after power is removed.</dd><dt>Speed reference</dt><dd>Analogue or network signal telling the drive what speed to run.</dd><dt>Control source</dt><dd>Parameter deciding whether start/stop comes from keypad, terminals or fieldbus.</dd><dt>Ramp time</dt><dd>Time the drive takes to accelerate or decelerate.</dd><dt>Minimum frequency</dt><dd>Lowest speed the drive will run at.</dd><dt>Skip frequency</dt><dd>A speed band the drive avoids because of resonance.</dd><dt>Bypass</dt><dd>Contactor arrangement to run the motor directly if the drive fails.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-3-7-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">The BMS shows AHU-01's speed command at 100 %, but the VFD display shows 20 Hz and the fan is slow. Run status is ON. What is the most likely cause?</p>
+<button type="button" class="s-opt" data-i="0">The VFD is in Hand.</button><button type="button" class="s-opt" data-i="1">The drive's speed input does not match the signal — e.g. set for 4–20 mA while the BMS sends 0–10 V — so it sits at minimum speed.</button><button type="button" class="s-opt" data-i="2">The fan belt is broken.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> The drive is running (status ON) and obeying the start, but reads no useful speed reference, so it holds minimum frequency. Check the AI type (switch and parameter), the reference source and the voltage at the terminals.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Explain in three steps how a VFD makes a variable-frequency supply.</p><details><summary>Show answer</summary><div class="a">Rectifier converts AC to DC → DC bus stores and smooths it → inverter switches the DC to make AC at the required frequency.</div></details></li><li><p class="q">List four hard-wired signals between the BMS and a VFD.</p><details><summary>Show answer</summary><div class="a">Start (DO), speed reference (AO), run status (DI), fault (DI).</div></details></li><li><p class="q">Why does a fan VFD have a minimum frequency?</p><details><summary>Show answer</summary><div class="a">To keep enough airflow and motor cooling, and avoid running the fan too slowly to be useful.</div></details></li><li><p class="q">What is the danger of the DC bus after isolation?</p><details><summary>Show answer</summary><div class="a">The capacitors remain charged for several minutes; touching power terminals before they discharge can be lethal.</div></details></li><li><p class="q">The drive ignores the BMS start command. Name two settings to check.</p><details><summary>Show answer</summary><div class="a">Whether the keypad is in Hand/local, and the control (command) source parameter.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><small>&larr; Previous</small>3.6 Chilled water valves and actuators</a><a class="next" href="../../level-1/module-3/3-8-status-devices.html"><small>Next &rarr;</small>3.8 Status devices: current switches and DP switches</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>
