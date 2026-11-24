@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="1-6" data-url="level-1/module-1/1-6-hvac-system-integration.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.6 HVAC system integration | BMS Study Guide</title>
+<meta name="description" content="Integration means connecting equipment that has its own controller — chillers, VFDs, energy meters, VRF systems — to the BMS, so it can be monitored and commanded alongside everything else.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details open><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<span class="soon"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<span class="soon"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.4</span><span>Water flow meters</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.5</span><span>Damper actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practice</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9679;</span><span>Glossary &amp; cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-1/index.html">Module 1 · BMS Architecture</a> &rsaquo; 1.6</div>
+<p class="eyebrow no-abbr">Module 1 · BMS Architecture</p>
+<h1>1.6&ensp;HVAC system integration</h1>
+<div class="meta no-abbr"><span class="chip">Week 1 · Day 4</span><span class="chip">About 10 min</span><span class="chip">Page 6 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain what integration means in a BMS.</li><li>Compare hard-wired interfaces with high-level (protocol) interfaces.</li><li>List the steps to integrate third-party equipment such as a chiller or VFD.</li><li>Decide which signals should be hard-wired and which integrated over a protocol.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Give three reasons for using interposing relays.<div class="from">from 1.5 BMS control panel architecture</div><details><summary>Show answer</summary><div class="a">Isolation of the controller from 230 V circuits, higher contact rating, cheap and quick replacement, and a visible LED showing the command.</div></details></li><li>Give two ways to reduce nuisance alarms.<div class="from">from 1.4 BMS server, workstation and operator interface</div><details><summary>Show answer</summary><div class="a">Add time delays; suppress dependent alarms when plant is off by schedule; set sensible limits; review alarm counts regularly.</div></details></li><li>What happens to AHU-01's outputs if DDC-AHU-01 loses power?<div class="from">from 1.3 The DDC controller and how it works</div><details><summary>Show answer</summary><div class="a">They go to their fail-safe state: the fan start relay drops out so the fan stops, and spring-return actuators drive the valve and damper to their designed safe positions — for example the fresh air damper closes.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>Integration means connecting equipment that has <strong>its own controller</strong> — chillers, VFDs, energy meters, VRF systems — to the BMS, so it can be monitored and commanded alongside everything else.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Modern buildings are full of packaged equipment with built-in controls. One chiller can offer hundreds of values. Integration is how the BMS gets that information without hundreds of wires — and it is one of the most common, and most error-prone, jobs a BMS engineer does.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Two ways to connect</h3><figure class="diagram"><svg viewBox="0 0 760 240" role="img" aria-label="Hard-wired interface compared with a high-level interface" xmlns="http://www.w3.org/2000/svg"><defs><marker id="hw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="hw-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="hw-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><text x="190" y="18" text-anchor="middle" class="d-t d-tb">Hard-wired</text><text x="570" y="18" text-anchor="middle" class="d-t d-tb">High-level interface (HLI)</text><line x1="380" y1="34" x2="380" y2="232" class="d-line d-dash d-thin"/><rect x="20" y="44" width="115" height="160" rx="8" class="d-box" /><text x="77.5" y="116.5" text-anchor="middle" class="d-t d-tb">Chiller</text><text x="77.5" y="131.5" text-anchor="middle" class="d-ts">control panel</text><rect x="245" y="44" width="115" height="160" rx="8" class="d-acc" /><text x="302.5" y="116.5" text-anchor="middle" class="d-t d-tb">DDC</text><text x="302.5" y="131.5" text-anchor="middle" class="d-ts">controller</text><line x1="243" y1="72" x2="137" y2="72" class="d-line" marker-end="url(#hw)"/><text x="190" y="62" text-anchor="middle" class="d-ts">Enable · DO</text><line x1="137" y1="106" x2="243" y2="106" class="d-line" marker-end="url(#hw)"/><text x="190" y="96" text-anchor="middle" class="d-ts">Run · DI</text><line x1="137" y1="140" x2="243" y2="140" class="d-line" marker-end="url(#hw)"/><text x="190" y="130" text-anchor="middle" class="d-ts">Fault · DI</text><line x1="243" y1="174" x2="137" y2="174" class="d-line" marker-end="url(#hw)"/><text x="190" y="164" text-anchor="middle" class="d-ts">Setpoint · AO</text><text x="190" y="224" text-anchor="middle" class="d-ts">4 values = 4 pairs of wires</text><rect x="400" y="44" width="115" height="160" rx="8" class="d-box" /><text x="457.5" y="116.5" text-anchor="middle" class="d-t d-tb">Chiller</text><text x="457.5" y="131.5" text-anchor="middle" class="d-ts">controller</text><rect x="625" y="44" width="115" height="160" rx="8" class="d-acc" /><text x="682.5" y="116.5" text-anchor="middle" class="d-t d-tb">BMS</text><text x="682.5" y="131.5" text-anchor="middle" class="d-ts">controller / server</text><line x1="517" y1="124" x2="623" y2="124" class="d-aline" marker-end="url(#hw-a)" marker-start="url(#hw-a)"/><text x="570" y="106" text-anchor="middle" class="d-ts d-ta">BACnet / Modbus</text><text x="570" y="142" text-anchor="middle" class="d-ts">one cable</text><text x="570" y="224" text-anchor="middle" class="d-ts">100+ values over one cable</text></svg><figcaption>Left: one pair of wires per signal. Right: one communication cable carrying many values.</figcaption></figure><div class="tbl-wrap"><table class=""><thead><tr><th></th><th>Hard-wired</th><th>High-level interface (HLI)</th></tr></thead><tbody><tr><td>How</td><td>One pair of wires per signal</td><td>One communication cable carries many values</td></tr><tr><td>Values available</td><td>Few — limited by I/O count and cost</td><td>Many — whatever the equipment publishes</td></tr><tr><td>Reliability</td><td>Very high; easy to test with a multimeter</td><td>Depends on settings, addressing and the device's software</td></tr><tr><td>Speed</td><td>Immediate</td><td>Values are polled — a few seconds' delay is normal</td></tr><tr><td>Cost per value</td><td>High</td><td>Low</td></tr><tr><td>Typical use</td><td>Critical commands and status: enable, run, trip</td><td>Detail: temperatures, kW, alarms, fault codes</td></tr></tbody></table></div><h3>Common protocols</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Protocol</th><th>Where you will find it</th></tr></thead><tbody><tr><td>BACnet (IP and MS/TP)</td><td>The main open BMS protocol: controllers, chillers, VRF gateways. Module 5.</td></tr><tr><td>Modbus (RTU and TCP)</td><td>VFDs, energy meters, generators, UPS, many chillers. Module 5.</td></tr><tr><td>M-Bus</td><td>Heat (BTU) and water meters, especially in Europe.</td></tr><tr><td>KNX, DALI</td><td>Lighting and room control.</td></tr><tr><td>LonWorks</td><td>Older installations.</td></tr><tr><td>OPC UA, MQTT, web APIs</td><td>Links to IT systems, analytics and cloud platforms.</td></tr></tbody></table></div><p>When two systems speak different protocols, a <strong>gateway</strong> (protocol converter) translates — for example from a VRF manufacturer's own protocol to BACnet/IP.</p><h3>The rule of thumb</h3><div class="tip"><span class="label">Hard-wire what must work, integrate what you want to know</span><p>Commands and status that the plant depends on — enable, start/stop, run status, common fault, fire shutdown — are hard-wired. Detail — internal temperatures, kW, alarm codes, run-hours — comes over the high-level interface. If communication fails, the plant still works and the BMS still knows whether it is running.</p></div><h3>Integration step by step</h3><ol class="steps"><li><strong>Get the documents</strong> — the device's register map (Modbus) or PICS and object list (BACnet), and the communication settings it supports.</li><li><strong>Agree the interface</strong> — an interface (responsibility) matrix lists which points are needed, read or write, and who supplies the cable, gateway and configuration.</li><li><strong>Set the communication parameters</strong> on both sides — protocol, address or device ID, baud rate, IP settings (Module 5).</li><li><strong>Connect and discover</strong> — wire the bus or network and check the BMS can see the device.</li><li><strong>Map the points</strong> — create a BMS point for each register or object, with the correct scaling and units.</li><li><strong>Test point to point</strong> — compare every value on the BMS with the device's own display, and test every write (change the setpoint, see it change on the chiller).</li><li><strong>Finish the front end</strong> — add the integrated points to graphics, alarms and trends.</li></ol><h3>Typical integrated equipment</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Equipment</th><th>Usually hard-wired</th><th>Usually over the HLI</th></tr></thead><tbody><tr><td>Chiller</td><td>Enable, run status, common fault</td><td>CHW supply/return temperatures, setpoint, load %, kW, alarms</td></tr><tr><td>VFD</td><td>Start/stop, run, fault, speed reference</td><td>Frequency, current, kW, kWh, fault code</td></tr><tr><td>Energy meter</td><td>—</td><td>kW, kWh, voltage, current, power factor</td></tr><tr><td>Generator (DG)</td><td>Running, fault</td><td>Fuel level, voltage, load, run-hours</td></tr><tr><td>VRF system</td><td>—</td><td>On/off, mode, setpoint and room temperature for each indoor unit (via gateway)</td></tr><tr><td>Fire alarm panel</td><td>Fire signal to AHU shutdown; fire status to BMS</td><td>Zone status (in an integrated BMS)</td></tr></tbody></table></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01's VFD uses both methods. <strong>Hard-wired:</strong> start/stop (DO), run status and fault (DI), speed reference (AO). <strong>Modbus RTU:</strong> output frequency, motor current, kW, kWh and the last fault code. If the Modbus link fails, AHU-01 keeps running and the BMS still knows whether the fan is on.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Get the register map or object list for the <strong>exact model and firmware</strong> — tables change between versions.</li><li>Check the scaling of every value: a Modbus register reading 2415 might mean 241.5 V or 24.15 Hz.</li><li>Test writes carefully on live plant. Changing a chiller setpoint or a VFD parameter has real effects.</li><li>Keep a table of every integrated device: address or device ID, baud rate, parity, IP address.</li><li>Agree in writing who configures the third-party side. Many integration delays are spent waiting for another vendor's engineer.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Device not found on the network</td><td>Wrong address, baud rate or parity, or wiring fault</td><td>Settings on both sides, A/B polarity, termination</td></tr><tr><td>All values read 0 or nonsense</td><td>Wrong register addresses (often off by one) or wrong data type</td><td>Register map, address base (0 or 1), data type</td></tr><tr><td>Values 10× or 100× too big or small</td><td>Scaling factor missing</td><td>Units and scale in the register map</td></tr><tr><td>Values update slowly</td><td>Too many points on a slow bus</td><td>Poll rate, number of points, baud rate</td></tr><tr><td>Writes have no effect</td><td>Point is read-only, device is in local mode, or needs a remote-enable</td><td>Register map; device's local/remote setting</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Integration</dt><dd>Connecting equipment that has its own controller to the BMS.</dd><dt>HLI</dt><dd>High-level interface: a data link that carries many values over one protocol connection.</dd><dt>Gateway</dt><dd>A device that translates between two protocols.</dd><dt>Register map</dt><dd>A Modbus device's list of registers, their meaning, data type and scaling.</dd><dt>PICS</dt><dd>A BACnet device's statement of which BACnet features it supports.</dd><dt>Interface matrix</dt><dd>A table agreeing which points are exchanged and who is responsible for each part.</dd><dt>Point-to-point test</dt><dd>Checking every value and command end to end, from device to BMS screen.</dd><dt>Polling</dt><dd>The BMS asking each device for its values in turn.</dd><dt>Scaling</dt><dd>Converting a raw value into engineering units, e.g. 70 → 7.0 °C.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-1-6-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">A chiller is integrated over Modbus. The BMS shows the chilled water supply temperature as 70 °C, while the chiller's own display shows 7.0 °C. What is wrong?</p>
+<button type="button" class="s-opt" data-i="0">The chiller's sensor is faulty.</button><button type="button" class="s-opt" data-i="1">The scaling factor (× 0.1) is missing in the BMS point.</button><button type="button" class="s-opt" data-i="2">The baud rate is set incorrectly.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> The value is exactly ten times too large and otherwise correct, so communication is fine. The register holds tenths of a degree; apply a scale of 0.1 to the BMS point. A baud-rate error would stop communication completely.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">What is the difference between a hard-wired interface and a high-level interface?</p><details><summary>Show answer</summary><div class="a">Hard-wired uses one pair of wires per signal — few values, very reliable. A high-level interface uses one communication cable and a protocol to carry many values — cheap per value, but it depends on communication settings and software.</div></details></li><li><p class="q">Which AHU-01 VFD signals are hard-wired, and why?</p><details><summary>Show answer</summary><div class="a">Start/stop, run status, fault and speed reference — so the fan can be controlled and monitored even if the Modbus link fails.</div></details></li><li><p class="q">What is a gateway used for?</p><details><summary>Show answer</summary><div class="a">To translate between two different protocols, e.g. a manufacturer's own protocol to BACnet/IP.</div></details></li><li><p class="q">List the seven steps of integrating a device.</p><details><summary>Show answer</summary><div class="a">Get documents → agree the interface → set communication parameters → connect and discover → map points → point-to-point test → graphics, alarms and trends.</div></details></li><li><p class="q">Why must you be careful when testing writes on live plant?</p><details><summary>Show answer</summary><div class="a">Writing a setpoint or parameter changes how real equipment runs; a mistake can trip plant or affect occupants.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-1/1-5-control-panel-architecture.html"><small>&larr; Previous</small>1.5 BMS control panel architecture</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+</body>
+</html>

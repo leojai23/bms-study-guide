@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="" data-url="level-1/module-1/index.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 1: BMS Architecture | BMS Study Guide</title>
+<meta name="description" content="What a BMS is, how it is layered, and the controllers, servers and panels that make it work.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details open><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<span class="soon"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<span class="soon"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.4</span><span>Water flow meters</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.5</span><span>Damper actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<span class="soon"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practice</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">&#9679;</span><span>Glossary &amp; cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs"><a href="../../level-1/index.html">Level 1</a> &rsaquo; Module 1</div>
+<p class="eyebrow">Level 1 · Module 1</p>
+<h1>BMS Architecture</h1>
+<p class="lede">What a BMS is, how it is layered, and the controllers, servers and panels that make it work.</p>
+<div class="progress" data-progress-of="1-1,1-2,1-3,1-4,1-5,1-6"><div class="bar"><i></i></div><span class="plabel"></span></div>
+<p>This module gives you the big picture before the detail. By the end you will be able to sketch a BMS from the sensors up to the operator's screen, explain what a DDC controller does on every scan, and describe what is inside a control panel.</p>
+<h2>Pages in this module</h2>
+<ol class="pagelist"><li data-progress-id="1-1"><a href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="n">1.1</span><span>What is a BMS?</span><span class="d">Week 1 · Day 1 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="1-2"><a href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="n">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="d">Week 1 · Day 1 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="1-3"><a href="../../level-1/module-1/1-3-ddc-controller.html"><span class="n">1.3</span><span>The DDC controller and how it works</span><span class="d">Week 1 · Day 2 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="1-4"><a href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="n">1.4</span><span>BMS server, workstation and operator interface</span><span class="d">Week 1 · Day 3 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="1-5"><a href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="n">1.5</span><span>BMS control panel architecture</span><span class="d">Week 1 · Day 3 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="1-6"><a href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="n">1.6</span><span>HVAC system integration</span><span class="d">Week 1 · Day 4 <span class="tick">&#10003;</span></span></a></li></ol>
+<p><a class="btn" href="../../level-1/module-1/1-1-what-is-a-bms.html">Start with 1.1 &rarr;</a></p>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+</body>
+</html>

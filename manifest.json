@@ -1,0 +1,13 @@
+{
+  "name": "BMS Study Guide",
+  "short_name": "BMS Guide",
+  "description": "Vendor-neutral study guides for Building Management Systems.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#2160a3",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-root="" data-page="" data-url="index.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMS Study Guide</title>
+<meta name="description" content="Vendor-neutral BMS study guides.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  
+  <a class="brand" href="index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+
+<main class="content" id="main">
+<div class="wide">
+<p class="eyebrow">Building Management Systems</p>
+<h1>BMS Study Guide</h1>
+<p class="lede">Practical, vendor-neutral study guides for Building Management Systems — from sensors and wiring to protocols and control logic, explained step by step with one example air handling unit followed all the way through.</p>
+<div class="continue" id="continue"><a class="btn" href="#">Continue: <span class="ct"></span> &rarr;</a></div>
+<div class="cards">
+  <a class="mcard" href="level-1/index.html"><span class="k">Level 1 · 4 weeks</span><h3>BMS Fundamentals</h3>
+  <p>Architecture, HVAC plant, sensors and field devices, DI/DO/AI/AO wiring, BACnet and Modbus, and basic control logic. 38 pages and 5 practical labs.</p>
+  <div class="foot progress" data-progress-of="1-1,1-2,1-3,1-4,1-5,1-6"><div class="bar"><i></i></div><span class="plabel"></span></div></a>
+  <div class="mcard soon"><span class="k">Level 2</span><h3>Planned</h3><p>The next level will build on Level 1. Its topics will be added here.</p><div class="foot"><span class="chip">Coming later</span></div></div>
+  <div class="mcard soon"><span class="k">Vendor notes</span><h3>Planned</h3><p>Brand-specific notes for controllers and tools, added to the relevant pages.</p><div class="foot"><span class="chip">Coming later</span></div></div>
+</div>
+<p style="color:var(--muted);font-size:.86rem">Works offline once opened, prints cleanly, and keeps your progress in this browser only.</p>
+</div>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="assets/js/abbr-data.js"></script>
+<script defer src="assets/js/search-index.js"></script>
+<script defer src="assets/js/site.js"></script>
+</body>
+</html>
