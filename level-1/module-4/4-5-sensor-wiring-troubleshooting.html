@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="4-5" data-url="level-1/module-4/4-5-sensor-wiring-troubleshooting.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.5 Sensor wiring and troubleshooting | BMS Study Guide</title>
+<meta name="description" content="Good wiring — the right cable, kept away from power, screened and terminated neatly — prevents most faults; a systematic method finds the rest quickly: check the point, measure at the controller, then split the problem in half until it is found.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-4/index.html">Module 4 · Digital and Analog I/O</a> &rsaquo; 4.5</div>
+<p class="eyebrow no-abbr">Module 4 · Digital and Analog I/O</p>
+<h1>4.5&ensp;Sensor wiring and troubleshooting</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 20</span><span class="chip">About 10 min</span><span class="chip">Page 5 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Choose cable types and apply segregation, screening and termination good practice.</li><li>Calculate voltage drop on 24 V supplies and signal commons.</li><li>Follow a systematic method to find the cause of a wrong reading.</li><li>Know what to measure for every signal type.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Why should a fire shutdown signal be closed when healthy?<div class="from">from 4.4 Dry contacts, relay outputs, NO and NC</div><details><summary>Show answer</summary><div class="a">So that a broken wire or loss of the signal opens the contact and stops the plant (fail-safe), instead of hiding a real fire.</div></details></li><li>Why is 4–20 mA better than 0–10 V for long cable runs?<div class="from">from 4.3 Analog signals: 0–10 V, 4–20 mA, 0–20 mA</div><details><summary>Show answer</summary><div class="a">Current is the same everywhere in a series loop, so cable resistance does not change the reading, and the live zero shows wire breaks.</div></details></li><li>Give two examples of software points.<div class="from">from 4.2 The four I/O types: DI, DO, AI, AO</div><details><summary>Show answer</summary><div class="a">Any two of: setpoints, occupancy mode, calculated values (e.g. fresh air fraction), alarm flags, schedules' outputs.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>Good wiring — the right cable, kept away from power, screened and terminated neatly — prevents most faults; a <strong>systematic method</strong> finds the rest quickly: check the point, measure at the controller, then split the problem in half until it is found.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Field wiring faults are the most common BMS faults on site, and the most time-wasting if you hunt randomly. A standard method means you can walk up to any system, from any manufacturer, and find the fault with a multimeter and the drawings.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Cables</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Signal</th><th>Typical cable</th><th>Notes</th></tr></thead><tbody><tr><td>AI (resistive, 0–10 V, 4–20 mA), AO</td><td>Twisted pair, overall screen, about 0.5–1.0 mm²</td><td>Twisting and screening reject noise</td></tr><tr><td>DI, DO (24 V)</td><td>Multicore, about 0.75–1.5 mm²</td><td>Screen needed near VFDs or long runs</td></tr><tr><td>RS485 field bus</td><td>Dedicated twisted pair, ~120 Ω characteristic impedance, screened</td><td>Module 5</td></tr><tr><td>24 V AC actuator supply</td><td>Sized for voltage drop (see below)</td><td>Often the limiting factor</td></tr><tr><td>230 V / motor</td><td>Power cable; screened for VFD outputs</td><td>Never in the same containment as signals</td></tr></tbody></table></div><h3>Segregation, screens and terminations</h3><ul><li>Run signal cables in <strong>separate containment</strong> from power cables, or keep a clear gap — specifications often ask for around 300 mm. Cross power cables at right angles.</li><li>Earth cable screens at <strong>one end only</strong>, normally the panel. Earthing both ends lets current flow in the screen (an earth loop) and adds noise.</li><li>Keep the screen continuous through junction boxes and cut back neatly at the device.</li><li>Use <strong>ferrules</strong> on stranded wires, tighten to the terminal's torque, and leave no stray strands.</li><li>Label both ends of every cable with the number on the drawings.</li></ul><h3>Voltage drop</h3><div class="note"><span class="label">Two-wire supply voltage drop</span><p><strong>V<sub>drop</sub> = 2 × length (m) × current (A) × resistance (Ω/m)</strong></p><p>Copper is roughly 0.0245 Ω/m for 0.75 mm², 0.018 Ω/m for 1.0 mm² and 0.012 Ω/m for 1.5 mm².</p><p>Example: three actuators drawing 0.8 A in total, 40 m away on 0.75 mm²: 2 × 40 × 0.8 × 0.0245 ≈ <strong>1.6 V</strong>. A 24 V AC supply arrives at about 22.4 V — usually fine, but check the actuators' minimum (often around −20 %). Long runs or many actuators need a bigger cable or a local transformer.</p></div><h3>A method that always works</h3><figure class="diagram"><svg viewBox="0 0 760 390" role="img" aria-label="Troubleshooting a wrong reading" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ts" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="ts-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="ts-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="250" y="6" width="260" height="40" rx="8" class="d-warn" /><text x="380.0" y="26.0" text-anchor="middle" class="d-t d-tb">A reading looks wrong</text><line x1="380" y1="46" x2="380" y2="64" class="d-line" marker-end="url(#ts)"/><rect x="200" y="64" width="360" height="44" rx="8" class="d-box" /><text x="380.0" y="78.5" text-anchor="middle" class="d-t d-tb">1 · Check the BMS point</text><text x="380.0" y="93.5" text-anchor="middle" class="d-ts">override? out of service? type and range?</text><line x1="380" y1="108" x2="380" y2="126" class="d-line" marker-end="url(#ts)"/><rect x="200" y="126" width="360" height="44" rx="8" class="d-box" /><text x="380.0" y="140.5" text-anchor="middle" class="d-t d-tb">2 · Measure at the controller terminals</text><text x="380.0" y="155.5" text-anchor="middle" class="d-ts">what does the controller actually receive?</text><line x1="380" y1="170" x2="380" y2="188" class="d-line" marker-end="url(#ts)"/><rect x="270" y="188" width="220" height="44" rx="8" class="d-acc" /><text x="380.0" y="210.0" text-anchor="middle" class="d-t d-tb">Does it match the BMS?</text><path d="M270,210 L150,210 L150,250" class="d-line" marker-end="url(#ts)"/><text x="208" y="200" text-anchor="middle" class="d-ts d-tb">no</text><path d="M490,210 L610,210 L610,250" class="d-line" marker-end="url(#ts)"/><text x="550" y="200" text-anchor="middle" class="d-ts d-tb">yes</text><rect x="30" y="250" width="240" height="54" rx="8" class="d-box" /><text x="150.0" y="269.5" text-anchor="middle" class="d-t d-tb">Controller side</text><text x="150.0" y="284.5" text-anchor="middle" class="d-ts">configuration, scaling, input card</text><rect x="490" y="250" width="240" height="54" rx="8" class="d-box" /><text x="610.0" y="269.5" text-anchor="middle" class="d-t d-tb">Field side</text><text x="610.0" y="284.5" text-anchor="middle" class="d-ts">disconnect · measure cable · then device</text><path d="M610,304 L610,322 L380,322 L380,340" class="d-line" marker-end="url(#ts)"/><path d="M150,304 L150,322 L380,322" class="d-line"/><rect x="230" y="340" width="300" height="40" rx="8" class="d-ok" /><text x="380.0" y="360.0" text-anchor="middle" class="d-t d-tb">Fix → verify on BMS → record what you did</text></svg><figcaption>Start at the BMS, find which side of the controller terminals the fault is on, then split again.</figcaption></figure><ol class="steps"><li><strong>Confirm the symptom</strong> against something independent — a hand-held thermometer, the device's own display, your own eyes.</li><li><strong>Check the point</strong> on the BMS: is it overridden, out of service, or configured with the wrong type, range or units?</li><li><strong>Measure at the controller terminals.</strong> If the signal there is correct but the BMS is wrong, the fault is in configuration or the controller.</li><li>If the signal at the terminals is wrong, <strong>disconnect the field cable</strong> and measure the field side — cable plus device.</li><li><strong>Measure at the device.</strong> Correct at the device but wrong at the panel → cable or junction box. Wrong at the device → the device or its supply.</li><li><strong>Fix, then verify</strong> on the BMS — and write down what you found and did.</li></ol><h3>What to measure</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Signal</th><th>Measure</th><th>Expect</th></tr></thead><tbody><tr><td>NTC / PT1000</td><td>Resistance, sensor disconnected, power off</td><td>Value matching the temperature (page 3.1 table)</td></tr><tr><td>0–10 V input</td><td>DC volts, signal to the input's own common</td><td>Value ÷ range × 10 V</td></tr><tr><td>4–20 mA input</td><td>mA in series, or volts across the input resistor (250 Ω: 1–5 V)</td><td>4 + value ÷ range × 16 mA</td></tr><tr><td>Loop supply</td><td>DC volts at the transmitter terminals</td><td>Above the transmitter's minimum</td></tr><tr><td>DI</td><td>Volts across the open contact (wetting voltage); continuity with power off</td><td>Wetting voltage when open; ~0 V when closed</td></tr><tr><td>DO</td><td>Contact continuity, or voltage switched downstream</td><td>Changes with the command</td></tr><tr><td>AO</td><td>DC volts, output to its common</td><td>Command % × span (+ live zero)</td></tr><tr><td>24 V AC actuator supply</td><td>AC volts at the actuator while it moves</td><td>Within the actuator's tolerance</td></tr></tbody></table></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>Worked example: AHU-01's CO₂ reads 0 ppm. (1) The point is not overridden and is set for 0–10 V, 0–2,000 ppm. (2) At the controller terminals: 0.0 V. (3) Disconnected, the field cable shows 0 V from the sensor. (4) At the sensor: no 24 V supply. (5) The 24 V supply's fuse in the panel has blown — a shorted cable to a second sensor. Fix the short, replace the fuse, check the BMS shows a sensible value, and note it in the log.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Carry the drawings — the terminal numbers and cable numbers save you from guessing.</li><li>Change one thing at a time, and put back anything you change that does not fix the problem.</li><li>Photograph terminations before you disconnect anything.</li><li>Intermittent faults: trend the point at a short interval and wiggle-test terminations while watching.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Analogue value noisy near VFDs</td><td>Unscreened cable, screen not earthed, or cable alongside motor cables</td><td>Cable type, route, screen earth</td></tr><tr><td>Value correct at the device, wrong at the panel</td><td>Cable fault, junction box, or wrong terminal</td><td>Continuity and insulation of the cable; terminal numbers</td></tr><tr><td>Several sensors fail together</td><td>Shared 24 V supply or fuse</td><td>Supply voltage and fuses</td></tr><tr><td>Actuators slow or stop when many move</td><td>Voltage drop on the 24 V AC supply</td><td>Voltage at the actuator while moving</td></tr><tr><td>Fault comes and goes</td><td>Loose terminal or damaged cable</td><td>Trend + wiggle test; re-terminate</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Segregation</dt><dd>Physical separation of signal and power cables.</dd><dt>Screen (shield)</dt><dd>Conductive layer around signal pairs that intercepts electrical noise.</dd><dt>Earth loop</dt><dd>Unwanted current flowing in a screen earthed at both ends.</dd><dt>Ferrule</dt><dd>Crimped sleeve on a stranded wire end for a reliable termination.</dd><dt>Voltage drop</dt><dd>Loss of voltage along a cable due to its resistance and the current.</dd><dt>Half-split</dt><dd>Troubleshooting by testing in the middle of the chain to halve the search each time.</dd><dt>Wiggle test</dt><dd>Gently moving cables and terminals while watching a value to find intermittent faults.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-4-5-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">AHU-01's supply air temperature reads 3 °C higher on the BMS than a hand-held thermometer at the sensor. You disconnect the sensor and measure its resistance: it matches the hand-held temperature. What next?</p>
+<button type="button" class="s-opt" data-i="0">Replace the sensor.</button><button type="button" class="s-opt" data-i="1">Check the point configuration (curve type, offset) and the cable — the sensor itself is correct.</button><button type="button" class="s-opt" data-i="2">Retune the valve PID loop.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> The device is proven correct, so the error is between the sensor and the BMS value: a wrong NTC curve or offset in the configuration, or extra resistance in the cable or a terminal. Measure resistance at the controller end next.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why earth a cable screen at one end only?</p><details><summary>Show answer</summary><div class="a">Earthing both ends lets current circulate in the screen (an earth loop), which adds noise instead of removing it.</div></details></li><li><p class="q">Calculate the voltage drop for 1 A over 30 m of 1.0 mm² (0.018 Ω/m).</p><details><summary>Show answer</summary><div class="a">2 × 30 × 1 × 0.018 = 1.08 V.</div></details></li><li><p class="q">You measure the correct signal at the controller terminals but the BMS value is wrong. Where is the fault?</p><details><summary>Show answer</summary><div class="a">On the controller side: point configuration (type, range, scaling, offset), an override, or the controller/input itself.</div></details></li><li><p class="q">How do you measure a PT1000 sensor?</p><details><summary>Show answer</summary><div class="a">Power off or disconnect it, and measure its resistance; compare with the PT1000 table at the actual temperature.</div></details></li><li><p class="q">What is the first thing to check on the BMS when a reading is wrong?</p><details><summary>Show answer</summary><div class="a">Whether the point is overridden or out of service, and that its type, range and units are configured correctly.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><small>&larr; Previous</small>4.4 Dry contacts, relay outputs, NO and NC</a><a class="next" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><small>Next &rarr;</small>4.6 Reading BMS drawings and point names</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

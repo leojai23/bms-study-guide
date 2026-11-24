@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="4-1" data-url="level-1/module-4/4-1-electrical-safety.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.1 Electrical safety for BMS work | BMS Study Guide</title>
+<meta name="description" content="BMS work mixes 415 V motor circuits, 230 V panel supplies and 24 V controls in the same rooms and sometimes the same panel — so you isolate, lock, and prove dead before you touch, and you never trust a screen that says equipment is “off”.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="active" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-4/index.html">Module 4 · Digital and Analog I/O</a> &rsaquo; 4.1</div>
+<p class="eyebrow no-abbr">Module 4 · Digital and Analog I/O</p>
+<h1>4.1&ensp;Electrical safety for BMS work</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 17</span><span class="chip">About 10 min</span><span class="chip">Page 1 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Name the voltages found in BMS panels and why “24 V” areas are not automatically safe.</li><li>Follow the safe-isolation steps, including prove–test–prove.</li><li>Recognise BMS-specific hazards: remote starts, foreign voltages, stored energy, spring returns.</li><li>Use a multimeter safely for BMS measurements.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>What does a fan ΔP switch prove that a VFD run relay does not?<div class="from">from 3.8 Status devices: current switches and DP switches</div><details><summary>Show answer</summary><div class="a">That the fan is actually building pressure — moving air — not just that the drive output is on.</div></details></li><li>What is the danger of the DC bus after isolation?<div class="from">from 3.7 Variable frequency drives (VFD)</div><details><summary>Show answer</summary><div class="a">The capacitors remain charged for several minutes; touching power terminals before they discharge can be lethal.</div></details></li><li>What is the advantage of a PICV?<div class="from">from 3.6 Chilled water valves and actuators</div><details><summary>Show answer</summary><div class="a">Its flow depends only on its opening, not on changes in system pressure, so coils are not over- or under-supplied as other valves move; it also replaces the balancing valve.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>BMS work mixes 415 V motor circuits, 230 V panel supplies and 24 V controls in the same rooms and sometimes the same panel — so you <strong>isolate, lock, and prove dead</strong> before you touch, and you never trust a screen that says equipment is “off”.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Most BMS signals are low voltage, which makes it easy to forget that the panel next to them — or a terminal in the same row — can be at 230 V, and that the fan you are working on can be started by a schedule on a server in another building. This page comes before wiring on purpose. Read it, and follow your site's rules and permits: they always take precedence over this guide.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Voltages you will meet</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Voltage</th><th>Where</th><th>Notes</th></tr></thead><tbody><tr><td>415 V AC, 3-phase</td><td>MCCs, VFDs, motors, chillers</td><td>Lethal; arc-flash risk in large panels — authorised people only</td></tr><tr><td>230 V AC, single-phase</td><td>Panel supplies, transformer primaries, some actuators and contactor coils, lighting</td><td>Lethal</td></tr><tr><td>24 V AC / DC</td><td>Controllers, actuators, sensors</td><td>Extra-low voltage (ELV) — but shares panels with 230 V</td></tr><tr><td>0–10 V, 4–20 mA, RS485</td><td>Signals</td><td>Low energy — but can carry dangerous voltage under fault conditions</td></tr></tbody></table></div><div class="warn"><span class="label">“Volt-free” is not always volt-free</span><p>Contacts that should be volt-free sometimes carry a <strong>foreign voltage</strong> — for example a 230 V control circuit from the MCC looped through BMS terminals. A DI terminal that reads 230 V will destroy the input card and can kill. Measure before you touch, and label any foreign voltage in a panel clearly.</p></div><h3>Safe isolation</h3><figure class="diagram"><svg viewBox="0 0 770 170" role="img" aria-label="Safe isolation steps" xmlns="http://www.w3.org/2000/svg"><defs><marker id="pt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="pt-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="pt-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="8" y="40" width="112" height="70" rx="8" class="d-box" /><text x="64.0" y="60.0" text-anchor="middle" class="d-t d-tb">1 · Identify</text><text x="64.0" y="75.0" text-anchor="middle" class="d-ts">drawings, labels</text><text x="64.0" y="90.0" text-anchor="middle" class="d-ts">all sources</text><line x1="120" y1="75" x2="132" y2="75" class="d-aline" marker-end="url(#pt-a)"/><rect x="134" y="40" width="112" height="70" rx="8" class="d-box" /><text x="190.0" y="60.0" text-anchor="middle" class="d-t d-tb">2 · Isolate</text><text x="190.0" y="75.0" text-anchor="middle" class="d-ts">switch off</text><text x="190.0" y="90.0" text-anchor="middle" class="d-ts">isolator / MCB</text><line x1="246" y1="75" x2="258" y2="75" class="d-aline" marker-end="url(#pt-a)"/><rect x="260" y="40" width="112" height="70" rx="8" class="d-warn" /><text x="316.0" y="60.0" text-anchor="middle" class="d-t d-tb">3 · Lock + tag</text><text x="316.0" y="75.0" text-anchor="middle" class="d-ts">personal padlock</text><text x="316.0" y="90.0" text-anchor="middle" class="d-ts">and tag</text><line x1="372" y1="75" x2="384" y2="75" class="d-aline" marker-end="url(#pt-a)"/><rect x="386" y="40" width="112" height="70" rx="8" class="d-acc" /><text x="442.0" y="60.0" text-anchor="middle" class="d-t d-tb">4 · Prove tester</text><text x="442.0" y="75.0" text-anchor="middle" class="d-ts">on a known</text><text x="442.0" y="90.0" text-anchor="middle" class="d-ts">live source</text><line x1="498" y1="75" x2="510" y2="75" class="d-aline" marker-end="url(#pt-a)"/><rect x="512" y="40" width="112" height="70" rx="8" class="d-acc" /><text x="568.0" y="60.0" text-anchor="middle" class="d-t d-tb">5 · Test dead</text><text x="568.0" y="75.0" text-anchor="middle" class="d-ts">every conductor</text><text x="568.0" y="90.0" text-anchor="middle" class="d-ts">pair</text><line x1="624" y1="75" x2="636" y2="75" class="d-aline" marker-end="url(#pt-a)"/><rect x="638" y="40" width="112" height="70" rx="8" class="d-acc" /><text x="694.0" y="60.0" text-anchor="middle" class="d-t d-tb">6 · Re-prove</text><text x="694.0" y="75.0" text-anchor="middle" class="d-ts">tester still</text><text x="694.0" y="90.0" text-anchor="middle" class="d-ts">works</text><path d="M384,110 L384,140 L760,140" class="d-line d-dash"/><text x="574" y="154" text-anchor="middle" class="d-ts d-ta">steps 4–6: “prove – test – prove”</text><text x="380" y="22" text-anchor="middle" class="d-ts d-tb">Only after step 6 is the circuit treated as dead</text></svg><figcaption>The safe-isolation sequence. Testing a circuit dead with an unproven tester proves nothing.</figcaption></figure><ol class="steps"><li><strong>Identify</strong> every source feeding what you will work on — drawings, labels, and back-feeds such as UPS supplies or MCC control circuits.</li><li><strong>Isolate</strong> at the correct isolator or MCB.</li><li><strong>Lock off and tag</strong> with your own padlock and a tag giving your name and the date. You keep the key.</li><li><strong>Prove</strong> your voltage tester on a known live source or proving unit.</li><li><strong>Test dead</strong> between every pair of conductors: L–N, L–E, N–E (and between phases on 3-phase).</li><li><strong>Re-prove</strong> the tester to show it did not fail during the test.</li></ol><h3>Hazards specific to BMS</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Hazard</th><th>Why it happens</th><th>Control</th></tr></thead><tbody><tr><td>Remote start</td><td>Schedules, overrides, other operators, fire or smoke control can start fans and pumps at any time</td><td>Isolate and lock the local isolator before touching fans, belts, pumps or dampers</td></tr><tr><td>Foreign voltage</td><td>Control circuits from other panels looped into BMS terminals</td><td>Measure first; label; isolate at the source too</td></tr><tr><td>Stored energy in VFDs</td><td>DC bus capacitors stay charged for minutes</td><td>Wait the time on the label; measure the DC bus</td></tr><tr><td>Spring-return actuators</td><td>Dampers and valves snap to their safe position when power is removed</td><td>Keep fingers out of damper blades and linkages</td></tr><tr><td>Back-feed</td><td>UPS or generator supplies; neutral shared between circuits</td><td>Identify all sources; test every conductor</td></tr><tr><td>Working at height, confined spaces</td><td>Ceiling voids, AHU rooms, shafts</td><td>Correct access equipment and permits</td></tr></tbody></table></div><h3>Using a multimeter safely</h3><ul><li>Use a meter and leads rated for the panel: at least <strong>CAT III 600 V</strong> for building distribution work.</li><li>Select the function <strong>before</strong> connecting. Never put a meter in current (A or mA) mode across a voltage — it is a short circuit through the meter.</li><li>To measure a 4–20 mA loop, put the meter <strong>in series</strong> at a test point or terminal designed to be opened, or use a mA clamp meter — never across the loop supply.</li><li>Measure resistance only on <strong>de-energised</strong> circuits, with the device disconnected.</li><li>Keep one hand away from the panel when probing live terminals, and use insulated probe tips.</li></ul><div class="note"><span class="label">Live work</span><p>Some diagnosis needs measurements on live circuits. That is done only when it is necessary, by a competent person, with a risk assessment and the right PPE — never as a short-cut. Your site's permit-to-work system and local electrical regulations decide who may do what.</p></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>Before changing AHU-01's fan belt: the BMS shows the fan off by schedule — that is <strong>not</strong> isolation. Turn off and lock the AHU's local isolator (and the VFD supply), prove dead at the motor terminals, wait for the VFD's DC bus to discharge, and only then open the fan section. In panel DDC-AHU-01, remember that the incoming 230 V terminals stay live even with the controller's MCB off.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Carry your own padlock, tags and a proving unit; a tester you cannot prove is not a tester.</li><li>Treat every unidentified terminal as live until measured.</li><li>Tell the operators before isolating plant — and put the BMS point in a maintenance state so alarms do not flood.</li><li>After work: remove your own lock only, restore, and test the plant in Hand and Auto.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>A DI terminal in the BMS panel measures 230 V</td><td>Foreign voltage from an MCC control circuit</td><td>Stop; identify source; isolate; fit interposing relay or proper interface</td></tr><tr><td>Fan is “off” on the BMS and you need to change the belt</td><td>Remote start possible at any time</td><td>Isolate and lock locally before touching</td></tr><tr><td>Meter fuse blows when probing a terminal</td><td>Meter left in current mode</td><td>Always set the function first</td></tr><tr><td>VFD display is dark after isolation</td><td>DC bus may still be charged</td><td>Wait the labelled time and measure</td></tr><tr><td>Damper snaps shut when you remove the actuator supply</td><td>Spring return</td><td>Keep hands clear of blades and linkage</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>ELV</dt><dd>Extra-low voltage — not exceeding 50 V AC or 120 V DC.</dd><dt>Isolation</dt><dd>Disconnecting a circuit from all sources of supply.</dd><dt>Lock-out / tag-out (LOTO)</dt><dd>Securing an isolator with a personal lock and tag so nobody can re-energise it.</dd><dt>Prove – test – prove</dt><dd>Check the tester, test the circuit dead, check the tester again.</dd><dt>Foreign voltage</dt><dd>A voltage from another system present on terminals expected to be volt-free.</dd><dt>CAT rating</dt><dd>Measurement category of a meter, e.g. CAT III 600 V, showing where it may safely be used.</dd><dt>Permit to work</dt><dd>Formal written authorisation for a specific job under controlled conditions.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="2" id="scenario-4-1-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">You need to replace AHU-01's fan belt. The BMS shows the fan OFF and the schedule says it will not start until tomorrow. What must you do before opening the fan section?</p>
+<button type="button" class="s-opt" data-i="0">Nothing — the BMS shows it is off.</button><button type="button" class="s-opt" data-i="1">Put the fan in manual OFF on the BMS.</button><button type="button" class="s-opt" data-i="2">Isolate and lock off the local isolator (and VFD supply), prove dead, and wait for the VFD to discharge.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Software states are not isolation: an operator override, fire mode or a schedule change can start the fan. Only a locked-off isolator, proven dead, makes it safe.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why is a “24 V panel” not automatically safe?</p><details><summary>Show answer</summary><div class="a">It often contains 230 V supplies (transformer primary, incoming terminals) and can carry foreign voltages from other panels.</div></details></li><li><p class="q">List the six safe-isolation steps.</p><details><summary>Show answer</summary><div class="a">Identify sources → isolate → lock and tag → prove tester → test dead on all conductors → re-prove tester.</div></details></li><li><p class="q">Why must you isolate locally even though the BMS shows a fan as off?</p><details><summary>Show answer</summary><div class="a">The fan can be started at any moment by a schedule, override, another operator or another system.</div></details></li><li><p class="q">How do you measure a 4–20 mA loop current safely?</p><details><summary>Show answer</summary><div class="a">Put the meter in series at a designed test point or openable terminal, or use a mA clamp — never connect a meter in current mode across a supply.</div></details></li><li><p class="q">What is a foreign voltage?</p><details><summary>Show answer</summary><div class="a">A voltage from another system present on terminals that should be volt-free, e.g. a 230 V control circuit looped through BMS terminals.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-3/3-8-status-devices.html"><small>&larr; Previous</small>3.8 Status devices: current switches and DP switches</a><a class="next" href="../../level-1/module-4/4-2-io-types.html"><small>Next &rarr;</small>4.2 The four I/O types: DI, DO, AI, AO</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

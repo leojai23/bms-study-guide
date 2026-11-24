@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="4-3" data-url="level-1/module-4/4-3-analog-signals.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3 Analog signals: 0–10 V, 4–20 mA, 0–20 mA | BMS Study Guide</title>
+<meta name="description" content="An analogue signal carries a value as a voltage (0–10 V) or a current (4–20 mA) that is scaled across a range — 12 mA on a 0–500 Pa sensor means 250 Pa.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<span class="soon"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tag-soon">soon</span></span>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-4/index.html">Module 4 · Digital and Analog I/O</a> &rsaquo; 4.3</div>
+<p class="eyebrow no-abbr">Module 4 · Digital and Analog I/O</p>
+<h1>4.3&ensp;Analog signals: 0–10 V, 4–20 mA, 0–20 mA</h1>
+<div class="meta no-abbr"><span class="chip">Week 3 · Day 18</span><span class="chip">About 10 min</span><span class="chip">Page 3 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain how voltage and current signals carry a value.</li><li>Scale any analogue signal to engineering units — and back.</li><li>Wire 2-, 3- and 4-wire transmitters and check a loop's voltage budget.</li><li>Use the live zero of 4–20 mA to detect faults.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Why add 10–20 % spare I/O?<div class="from">from 4.2 The four I/O types: DI, DO, AI, AO</div><details><summary>Show answer</summary><div class="a">To allow for design changes during the project and future additions without new controllers.</div></details></li><li>Why is a “24 V panel” not automatically safe?<div class="from">from 4.1 Electrical safety for BMS work</div><details><summary>Show answer</summary><div class="a">It often contains 230 V supplies (transformer primary, incoming terminals) and can carry foreign voltages from other panels.</div></details></li><li>Where should a current switch threshold be set?<div class="from">from 3.8 Status devices: current switches and DP switches</div><details><summary>Show answer</summary><div class="a">Between the motor's no-load current and its lowest normal running current, so a broken belt reads as “not running”.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>An analogue signal carries a value as a <strong>voltage (0–10 V)</strong> or a <strong>current (4–20 mA)</strong> that is scaled across a range — 12 mA on a 0–500 Pa sensor means 250 Pa.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Most transmitters and almost every modulating actuator use these signals. Scaling mistakes, wrong signal types and voltage drops cause a large share of commissioning faults — and they are easy to find once you can calculate what the signal <em>should</em> be and measure what it is.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>The three common signals</h3><div class="tbl-wrap"><table class="plain"><thead><tr><th></th><th>0–10 V (and 2–10 V)</th><th>4–20 mA</th><th>0–20 mA</th></tr></thead><tbody><tr><td>Carries the value as</td><td>Voltage</td><td>Current</td><td>Current</td></tr><tr><td>Live zero</td><td>No (2–10 V: yes)</td><td>Yes — 4 mA = bottom of range</td><td>No</td></tr><tr><td>Wire-break detection</td><td>No — 0 V looks like a real minimum</td><td>Yes — 0 mA is clearly a fault</td><td>No</td></tr><tr><td>Effect of long cables</td><td>Voltage drop and noise cause errors</td><td>Immune to voltage drop (same current everywhere in the loop)</td><td>Same as 4–20 mA</td></tr><tr><td>Typical use</td><td>Actuators, short sensor runs inside buildings</td><td>Pressure and flow transmitters, long or noisy runs, industrial devices</td><td>Rare in HVAC</td></tr></tbody></table></div><h3>Scaling</h3><div class="note"><span class="label">Signal → value</span><p><strong>Value = Min + (Signal − Signal<sub>min</sub>) ÷ (Signal span) × (Max − Min)</strong></p><p>4–20 mA, 0–500 Pa, 12 mA → 0 + (12 − 4) ÷ 16 × 500 = <strong>250 Pa</strong><br>0–10 V, 0–100 % RH, 6.2 V → 6.2 ÷ 10 × 100 = <strong>62 % RH</strong></p></div><div class="note"><span class="label">Value → signal (outputs)</span><p><strong>Signal = Signal<sub>min</sub> + (Value ÷ 100 %) × Signal span</strong></p><p>Valve 35 % on 0–10 V → <strong>3.5 V</strong>. On 2–10 V → 2 + 0.35 × 8 = <strong>4.8 V</strong>.</p></div><div class="tool no-abbr" data-tool="scale" data-type="4-20" data-lo="0" data-hi="500" data-u="Pa" data-sig="12"><span class="label">Interactive tool</span><noscript>This tool needs JavaScript.</noscript></div><h3>Wiring transmitters</h3><figure class="diagram"><svg viewBox="0 0 760 240" role="img" aria-label="Two-wire 4–20 mA loop and three-wire 0–10 V transmitter wiring" xmlns="http://www.w3.org/2000/svg"><defs><marker id="lp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="lp-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="lp-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><text x="130" y="16" text-anchor="middle" class="d-t d-tb">2-wire (loop-powered) 4–20 mA</text><rect x="20" y="40" width="90" height="60" rx="8" class="d-warn" /><text x="65.0" y="62.5" text-anchor="middle" class="d-t d-tb">24 V DC</text><text x="65.0" y="77.5" text-anchor="middle" class="d-ts">supply</text><rect x="150" y="150" width="110" height="60" rx="8" class="d-box" /><text x="205.0" y="172.5" text-anchor="middle" class="d-t d-tb">Transmitter</text><text x="205.0" y="187.5" text-anchor="middle" class="d-ts">e.g. 0–500 Pa</text><rect x="150" y="40" width="110" height="60" rx="8" class="d-acc" /><text x="205.0" y="62.5" text-anchor="middle" class="d-t d-tb">Controller AI</text><text x="205.0" y="77.5" text-anchor="middle" class="d-ts">mA input</text><path d="M65,100 L65,170 L148,170" class="d-line" marker-end="url(#lp)"/><text x="60" y="135" text-anchor="end" class="d-t d-tb">+</text><path d="M262,170 L285,170 L285,70 L262,70" class="d-line" marker-end="url(#lp)"/><path d="M148,70 L120,70 L120,55 L110,55" class="d-line" marker-end="url(#lp)"/><text x="118" y="52" text-anchor="end" class="d-t d-tb">−</text><text x="135" y="228" text-anchor="middle" class="d-ts">the same current flows all round the loop</text><text x="470" y="16" text-anchor="middle" class="d-t d-tb">3-wire 0–10 V transmitter</text><rect x="330" y="40" width="90" height="60" rx="8" class="d-warn" /><text x="375.0" y="62.5" text-anchor="middle" class="d-t d-tb">24 V</text><text x="375.0" y="77.5" text-anchor="middle" class="d-ts">AC or DC</text><rect x="420" y="150" width="110" height="60" rx="8" class="d-box" /><text x="475.0" y="172.5" text-anchor="middle" class="d-t d-tb">Transmitter</text><text x="475.0" y="187.5" text-anchor="middle" class="d-ts">e.g. RH</text><rect x="530" y="40" width="110" height="60" rx="8" class="d-acc" /><text x="585.0" y="62.5" text-anchor="middle" class="d-t d-tb">Controller AI</text><text x="585.0" y="77.5" text-anchor="middle" class="d-ts">0–10 V input</text><path d="M375,100 L375,165 L418,165" class="d-line" marker-end="url(#lp)"/><text x="370" y="135" text-anchor="end" class="d-ts">24 V</text><path d="M532,180 L585,180 L585,102" class="d-aline" marker-end="url(#lp-a)"/><text x="592" y="140" text-anchor="start" class="d-ts d-ta">signal</text><path d="M420,195 L340,195 L340,100" class="d-line d-dash"/><text x="400" y="228" text-anchor="middle" class="d-ts">0 V / common shared by supply and signal</text><path d="M475,150 L475,120 L640,120 L640,100" class="d-line d-dash"/></svg><figcaption>Left: a 2-wire transmitter powered by its own loop. Right: a 3-wire transmitter sharing 0 V between supply and signal.</figcaption></figure><div class="tbl-wrap"><table class=""><thead><tr><th>Type</th><th>Wires</th><th>How it is powered</th></tr></thead><tbody><tr><td>2-wire (loop-powered)</td><td>2</td><td>The 4–20 mA loop itself powers the transmitter — supply +, through the transmitter, through the controller input, back to supply −.</td></tr><tr><td>3-wire</td><td>3</td><td>Separate supply; supply and signal share one common (0 V) wire. Common for 0–10 V sensors.</td></tr><tr><td>4-wire</td><td>4</td><td>Separate supply pair and separate signal pair — the signal is isolated from the supply.</td></tr></tbody></table></div><h3>The 4–20 mA loop's voltage budget</h3><p>A controller usually measures loop current as the voltage across an internal resistor (250 Ω turns 4–20 mA into 1–5 V). The transmitter also needs a minimum voltage across it to work. Everything must fit inside the supply voltage:</p><div class="note"><span class="label">Maximum loop resistance</span><p><strong>R<sub>max</sub> = (Supply − Transmitter minimum) ÷ 0.020 A</strong></p><p>24 V supply, transmitter needs 12 V → (24 − 12) ÷ 0.020 = <strong>600 Ω</strong>. Minus a 250 Ω input leaves 350 Ω for the cable — plenty for most buildings.</p></div><h3>Why 0–10 V can be wrong on long cables</h3><p>If a 0–10 V sensor's signal is measured against a 0 V wire that also carries actuator supply current, the voltage drop on that shared wire adds straight onto the reading. For example 0.3 A of actuator current on 50 m of 0.75 mm² cable (about 1.2 Ω) shifts the reference by about 0.37 V — 3.7 % of full scale. Use a separate signal common, keep 0–10 V runs short, or use 4–20 mA for long runs.</p><h3>Using the live zero</h3><div class="tbl-wrap"><table class="plain"><thead><tr><th>Loop current</th><th>Meaning</th></tr></thead><tbody><tr><td>Below about 3.6 mA</td><td>Fault: open circuit, no loop power, failed transmitter</td></tr><tr><td>4 mA</td><td>Bottom of the range</td></tr><tr><td>20 mA</td><td>Top of the range</td></tr><tr><td>Above about 21 mA</td><td>Fault or over-range: short circuit, failed transmitter</td></tr></tbody></table></div><p>These limits follow the widely used NAMUR NE 43 recommendation. Configure the AI to flag readings outside them as a sensor fault, so the program can alarm and use a fallback.</p>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>AHU-01 uses both kinds. Its <strong>duct pressure sensor</strong> is a 2-wire 4–20 mA transmitter for 0–500 Pa, powered from the panel's 24 V DC supply (Lab 4). Its <strong>RH and CO₂ sensors</strong> are 3-wire 0–10 V units, and all three <strong>AOs</strong> (valve, damper, VFD speed) are 0–10 V.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Calculate the expected signal before you measure; then the measurement tells you something.</li><li>Check transmitter range settings (jumpers, DIP switches or menus) against the controller's scaling.</li><li>Measure 0–10 V between signal and the controller's own common terminal, not a nearby earth.</li><li>Some controller inputs need a jumper or configuration change to switch between V and mA.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>4–20 mA input reads below range / fault</td><td>Open loop, no 24 V DC, transmitter wired backwards</td><td>Loop supply; continuity; polarity</td></tr><tr><td>Reading exactly double or half the true value</td><td>Range mismatch between transmitter and controller</td><td>Transmitter setting vs scaling</td></tr><tr><td>0–10 V reading drifts when actuators move</td><td>Shared common carrying actuator current</td><td>Separate signal common; shorter run</td></tr><tr><td>Value flickers</td><td>Electrical noise from VFD or power cables</td><td>Screened twisted pair, cable route, screen earth</td></tr><tr><td>AO valve only opens half way</td><td>2–10 V device driven with 0–10 V (or the reverse)</td><td>Signal range on both sides</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>0–10 V signal</dt><dd>Analogue signal carried as voltage.</dd><dt>4–20 mA signal</dt><dd>Analogue signal carried as current, with 4 mA as the live zero.</dd><dt>Live zero</dt><dd>A non-zero bottom of range, so a dead signal can be told apart from a real minimum.</dd><dt>Loop-powered (2-wire)</dt><dd>Transmitter powered by its own 4–20 mA loop.</dd><dt>Scaling</dt><dd>Converting a signal to engineering units using the range minimum and maximum.</dd><dt>Burden / load resistance</dt><dd>Resistance of the input (e.g. 250 Ω) through which loop current flows.</dd><dt>NAMUR NE 43</dt><dd>Recommendation defining fault levels outside 3.8–20.5 mA, commonly applied as < 3.6 / > 21 mA.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-4-3-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">AHU-01's duct pressure (4–20 mA, 0–500 Pa) reads −31 Pa on the BMS. You measure 3.0 mA in the loop. What is the most likely cause?</p>
+<button type="button" class="s-opt" data-i="0">The duct is under negative pressure.</button><button type="button" class="s-opt" data-i="1">A fault in the loop or transmitter — below 3.6 mA should be treated as a failure.</button><button type="button" class="s-opt" data-i="2">The scaling is wrong.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> 3.0 mA is below the live zero, so the reading is not a real pressure. The transmitter is failing, under-powered or the loop has a high resistance. Configure the AI to flag this as a fault instead of showing −31 Pa.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">A 4–20 mA, 0–1,000 Pa sensor gives 8 mA. What is the pressure?</p><details><summary>Show answer</summary><div class="a">(8 − 4) ÷ 16 × 1,000 = 250 Pa.</div></details></li><li><p class="q">What voltage drives a valve to 70 % on a 2–10 V actuator?</p><details><summary>Show answer</summary><div class="a">2 + 0.7 × 8 = 7.6 V.</div></details></li><li><p class="q">Why is 4–20 mA better than 0–10 V for long cable runs?</p><details><summary>Show answer</summary><div class="a">Current is the same everywhere in a series loop, so cable resistance does not change the reading, and the live zero shows wire breaks.</div></details></li><li><p class="q">A transmitter needs 10 V; the supply is 24 V. What is the maximum loop resistance?</p><details><summary>Show answer</summary><div class="a">(24 − 10) ÷ 0.02 = 700 Ω.</div></details></li><li><p class="q">Describe how a 2-wire transmitter is connected.</p><details><summary>Show answer</summary><div class="a">Supply + → transmitter + ; transmitter − → controller mA input; controller input common → supply −. The loop current powers the transmitter.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-4/4-2-io-types.html"><small>&larr; Previous</small>4.2 The four I/O types: DI, DO, AI, AO</a><a class="next" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><small>Next &rarr;</small>4.4 Dry contacts, relay outputs, NO and NC</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>
