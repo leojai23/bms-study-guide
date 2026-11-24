@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="6-1" data-url="level-1/module-6/6-1-ahu-start-stop-sequence.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.1 AHU start/stop sequence | BMS Study Guide</title>
+<meta name="description" content="A start/stop sequence starts plant in a safe order, proves each step, and stops it cleanly — with a defined response when anything fails along the way.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<a class="" data-progress-id="5-1" href="../../level-1/module-5/5-1-rs485-basics.html"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-2" href="../../level-1/module-5/5-2-addressing-ip-device-id-baud.html"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-3" href="../../level-1/module-5/5-3-modbus-rtu-and-tcp.html"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-4" href="../../level-1/module-5/5-4-bacnet-mstp-and-ip.html"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-5" href="../../level-1/module-5/5-5-communication-troubleshooting.html"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<a class="active" data-progress-id="6-1" href="../../level-1/module-6/6-1-ahu-start-stop-sequence.html"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-2" href="../../level-1/module-6/6-2-fan-interlocks-and-safeties.html"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-3" href="../../level-1/module-6/6-3-pid-control-basics.html"><span class="num">6.3</span><span>PID control basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-4" href="../../level-1/module-6/6-4-valve-and-damper-control.html"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-5" href="../../level-1/module-6/6-5-alarms.html"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-6" href="../../level-1/module-6/6-6-scheduling.html"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tick">&#10003;</span></a>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="FT" href="../../level-1/reviews/final-test.html"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tick">&#10003;</span></a>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-6/index.html">Module 6 · BMS Control Logic</a> &rsaquo; 6.1</div>
+<p class="eyebrow no-abbr">Module 6 · BMS Control Logic</p>
+<h1>6.1&ensp;AHU start/stop sequence</h1>
+<div class="meta no-abbr"><span class="chip">Week 4 · Day 25</span><span class="chip">About 10 min</span><span class="chip">Page 1 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain each step of AHU-01's start and stop sequence and why it is there.</li><li>Define enable conditions, proving, stabilising delays and lockout.</li><li>Handle power return, minimum off times and after-hours requests.</li><li>Test a start/stop sequence step by step, including its failure paths.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>How does divide and conquer work on a bus?<div class="from">from 5.5 Communication troubleshooting</div><details><summary>Show answer</summary><div class="a">Disconnect half of the bus; the half that still shows the fault contains it. Repeat until one device or cable section is left.</div></details></li><li>What does a PICS tell you?<div class="from">from 5.4 BACnet MS/TP and BACnet/IP</div><details><summary>Show answer</summary><div class="a">Which BACnet objects, properties and services a device supports.</div></details></li><li>Which function code reads holding registers?<div class="from">from 5.3 Modbus RTU and Modbus TCP</div><details><summary>Show answer</summary><div class="a">03.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A start/stop sequence starts plant <strong>in a safe order, proves each step, and stops it cleanly</strong> — with a defined response when anything fails along the way.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Starting a fan against a closed damper, opening a valve with no airflow, or restarting forty AHUs at once after a power cut all cause real damage or trips. A good sequence prevents them, and the failure paths in it are what turn a silent fault into a clear alarm. This is the logic you will write and test in Lab 3.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Enable conditions (permissives)</h3><p>AHU-01 may start only when <strong>all</strong> of these are true:</p><div class="tbl-wrap"><table class=""><thead><tr><th>Condition</th><th>Point</th><th>If false</th></tr></thead><tbody><tr><td>Schedule says Occupied, or a timed override is active</td><td>Schedule / override (software)</td><td>Stay off</td></tr><tr><td>HOA switch in Auto</td><td>Auto status DI</td><td>Stay off; “not in Auto” alarm if the schedule wants it running</td></tr><tr><td>No fire signal</td><td>Fire DI (fail-safe)</td><td>Stay off; critical alarm</td></tr><tr><td>No latched fan failure</td><td>Software flag</td><td>Stay off until an operator resets it</td></tr><tr><td>Minimum off time has passed (3 min)</td><td>Timer</td><td>Wait, to avoid short-cycling</td></tr></tbody></table></div><h3>The start sequence</h3><figure class="diagram"><svg viewBox="0 0 760 292" role="img" aria-label="Timing of AHU-01&#x27;s start sequence" xmlns="http://www.w3.org/2000/svg"><defs><marker id="tl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="tl-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="tl-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><text x="158" y="40" text-anchor="end" class="d-ts d-tb">Schedule</text><line x1="170" y1="52" x2="740" y2="52" class="d-line d-thin"/><rect x="170.0" y="30" width="570.0" height="20" rx="4" class="d-acc" /><text x="176.0" y="40" text-anchor="start" class="d-ts">Occupied</text><text x="158" y="74" text-anchor="end" class="d-ts d-tb">Fresh air damper</text><line x1="170" y1="86" x2="740" y2="86" class="d-line d-thin"/><rect x="170.0" y="64" width="570.0" height="20" rx="4" class="d-acc" /><text x="176.0" y="74" text-anchor="start" class="d-ts">20 % min</text><text x="158" y="108" text-anchor="end" class="d-ts d-tb">Fan start (DO)</text><line x1="170" y1="120" x2="740" y2="120" class="d-line d-thin"/><rect x="193.75" y="98" width="546.25" height="20" rx="4" class="d-acc" /><text x="199.75" y="108" text-anchor="start" class="d-ts">ON</text><text x="158" y="142" text-anchor="end" class="d-ts d-tb">Run status (DI)</text><line x1="170" y1="154" x2="740" y2="154" class="d-line d-thin"/><rect x="231.75" y="132" width="508.25" height="20" rx="4" class="d-ok" /><text x="237.75" y="142" text-anchor="start" class="d-ts">proven</text><text x="158" y="176" text-anchor="end" class="d-ts d-tb">Cooling PID</text><line x1="170" y1="188" x2="740" y2="188" class="d-line d-thin"/><rect x="516.75" y="166" width="223.25" height="20" rx="4" class="d-acc" /><text x="522.75" y="176" text-anchor="start" class="d-ts">enabled</text><text x="158" y="210" text-anchor="end" class="d-ts d-tb">Temp alarms</text><line x1="170" y1="222" x2="740" y2="222" class="d-line d-thin"/><text x="736.0" y="210" text-anchor="end" class="d-ts">armed after 15 min →</text><text x="170.0" y="282" text-anchor="middle" class="d-ts">0 s</text><text x="312.5" y="282" text-anchor="middle" class="d-ts">30 s</text><text x="455.0" y="282" text-anchor="middle" class="d-ts">60 s</text><text x="597.5" y="282" text-anchor="middle" class="d-ts">90 s</text><text x="740.0" y="282" text-anchor="middle" class="d-ts">120 s</text><path d="M193.75,244 L231.75,244" class="d-line" marker-end="url(#tl)" marker-start="url(#tl)"/><text x="193.75" y="258" text-anchor="start" class="d-ts d-ta">proven within 30 s</text><path d="M231.75,236 L516.75,236" class="d-line" marker-end="url(#tl)" marker-start="url(#tl)"/><text x="414.25" y="248" text-anchor="middle" class="d-ts d-ta">60 s stabilise</text></svg><figcaption>AHU-01 start: each step waits for the one before it.</figcaption></figure><ol class="steps"><li><strong>Open the fresh air damper to minimum (20 %).</strong> A fan should not start against a closed intake.</li><li><strong>Start the fan.</strong> DO on (via the interposing relay); the VFD ramps to its 42 Hz speed setpoint over about 30 s.</li><li><strong>Prove it.</strong> Run status must arrive within <strong>30 s</strong>. If not: “fan fail” alarm, command off, damper closed, lock out until reset.</li><li><strong>Stabilise (60 s).</strong> The valve stays at 0 % while airflow settles — PID loops started too early react to start-up transients.</li><li><strong>Enable control.</strong> Start the RAT PID loop (bumpless, from 0 %), and CO₂ control of the damper.</li><li><strong>Arm the temperature alarms after 15 min</strong>, so the morning pull-down does not raise high-temperature alarms.</li></ol><h3>The stop sequence</h3><ol class="steps"><li>Disable the PID loop and drive the CHW valve to 0 % — a cold coil without airflow sweats and drips.</li><li>Command the fan off. Run status must clear within 60 s, or raise “fan failed to stop” (welded contactor, drive in Hand).</li><li>Close the fresh air damper (spring-return closes it anyway on power loss).</li><li>Start the minimum off timer.</li></ol><div class="tool no-abbr" data-tool="ahuseq"><span class="label">Interactive tool</span><noscript>This tool needs JavaScript.</noscript></div><h3>The less obvious parts</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Situation</th><th>What the sequence does</th></tr></thead><tbody><tr><td>Power returns after an outage</td><td>Wait a staggered delay (AHU-01: 60 s; each later AHU 20 s more) before re-evaluating the enable conditions, so the generator or supply is not overloaded</td></tr><tr><td>After-hours request</td><td>Timed override for 2 h from a BMS command or a local button; logged for tenant billing</td></tr><tr><td>Fan fails while running</td><td>Status lost for > 10 s → fan fail alarm, stop, lock out — the same path as failing to start</td></tr><tr><td>Return air sensor fails</td><td>Sensor-fault alarm; valve to a fixed safe position (e.g. 50 %) instead of following a bad value</td></tr><tr><td>Controller loses the server</td><td>Nothing changes — the sequence runs in the controller</td></tr></tbody></table></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>This page <em>is</em> AHU-01's sequence. Use the stepper above: tick “fan fails to prove” and step through, then reset and try “fire” halfway through the day. Notice that in both cases the plant ends in a safe, alarmed, locked-out state — the goal of every failure path.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Test the sequence with real failures, not only simulated points: open the status contact, put the HOA in Hand, operate the fire relay.</li><li>Time the proving and stabilising delays with a stopwatch against the specification.</li><li>After a power-return test, check every AHU restarted — and in the planned order.</li><li>Write the as-left delays and setpoints into the commissioning record.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Nuisance “fan fail” on every start</td><td>Proving delay shorter than the VFD's ramp-up time</td><td>Proving delay vs ramp time</td></tr><tr><td>Valve opens before airflow is established</td><td>No stabilising delay or PID enabled with the start command</td><td>Enable condition of the PID loop</td></tr><tr><td>AHU starts and stops every few minutes</td><td>No minimum off/on time; schedule and override fighting</td><td>Timers; override list</td></tr><tr><td>All AHUs restart together after a power cut</td><td>No staggered restart</td><td>Power-return logic</td></tr><tr><td>High-temperature alarms every morning</td><td>Alarm armed immediately at start</td><td>Alarm enable delay</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Permissive</dt><dd>Condition that must be true before plant may start.</dd><dt>Proving delay</dt><dd>Maximum time allowed for status to confirm a command.</dd><dt>Stabilising delay</dt><dd>Wait after start before enabling control loops.</dd><dt>Lockout</dt><dd>State after a failure where plant stays off until reset.</dd><dt>Bumpless transfer</dt><dd>Starting or switching a loop without a sudden jump in output.</dd><dt>Minimum off time</dt><dd>Shortest time plant must stay off before restarting (anti-short-cycle).</dd><dt>Staggered restart</dt><dd>Restarting plant items one after another after a power return.</dd><dt>Timed override</dt><dd>Temporary occupied mode, e.g. 2 h after hours.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-6-1-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">Every morning AHU-01 raises “fan fail” and locks out, but restarts fine when reset. The VFD ramp-up time was recently changed to 45 s. What is wrong?</p>
+<button type="button" class="s-opt" data-i="0">The fan motor is failing.</button><button type="button" class="s-opt" data-i="1">The 30 s proving delay is shorter than the new 45 s ramp, so status arrives too late.</button><button type="button" class="s-opt" data-i="2">The schedule is wrong.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Depending on how the drive's run relay is set, status may only appear near full speed. Set the proving delay longer than the ramp (e.g. 60 s), or use a relay function that closes as soon as the drive runs.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Why is the fresh air damper opened before the fan starts?</p><details><summary>Show answer</summary><div class="a">So the fan does not start against a closed intake, which can over-pressurise or collapse ductwork and stress the fan.</div></details></li><li><p class="q">What happens if run status is not received within the proving delay?</p><details><summary>Show answer</summary><div class="a">“Fan fail” alarm, start command off, damper closed, and the AHU locks out until an operator resets it.</div></details></li><li><p class="q">Why wait 60 s before enabling the PID loop?</p><details><summary>Show answer</summary><div class="a">To let airflow and readings settle; a loop enabled during start-up transients overreacts.</div></details></li><li><p class="q">Why close the CHW valve when the fan stops?</p><details><summary>Show answer</summary><div class="a">A cold coil without airflow cools the casing and condenses water — sweating, dripping and wasted chilled water.</div></details></li><li><p class="q">What is a staggered restart?</p><details><summary>Show answer</summary><div class="a">Restarting plant items one after another after power returns, so their starting currents do not overload the supply or generator.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-5/5-5-communication-troubleshooting.html"><small>&larr; Previous</small>5.5 Communication troubleshooting</a><a class="next" href="../../level-1/module-6/6-2-fan-interlocks-and-safeties.html"><small>Next &rarr;</small>6.2 Fan interlocking and safeties</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

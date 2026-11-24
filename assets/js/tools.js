@@ -243,7 +243,7 @@
       var pv = 27, I = 0, u = 0, hist = [], uBuf = [], prevPv = pv, res = { pv: [], u: [] };
       for (var t = 0; t <= N; t++) {
         var load = t >= 600 ? 2 : 0;
-        var e = pv - SP;                                   // reverse acting: too warm → open valve
+        var e = pv - SP;                                   // cooling loop: output rises as the temperature rises above setpoint
         var P = Kp * e, D = Kp * td * (pv - prevPv) / dt;
         var Inew = ti > 0 ? I + Kp * e * dt / ti : 0;
         var raw = P + Inew + D;

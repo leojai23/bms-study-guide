@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="6-5" data-url="level-1/module-6/6-5-alarms.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.5 Alarms: filter dirty, high and low temperature | BMS Study Guide</title>
+<meta name="description" content="A good alarm fires only when someone needs to act, clears cleanly, and tells the reader what is wrong, where, and what to check first.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<a class="" data-progress-id="5-1" href="../../level-1/module-5/5-1-rs485-basics.html"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-2" href="../../level-1/module-5/5-2-addressing-ip-device-id-baud.html"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-3" href="../../level-1/module-5/5-3-modbus-rtu-and-tcp.html"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-4" href="../../level-1/module-5/5-4-bacnet-mstp-and-ip.html"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-5" href="../../level-1/module-5/5-5-communication-troubleshooting.html"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<a class="" data-progress-id="6-1" href="../../level-1/module-6/6-1-ahu-start-stop-sequence.html"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-2" href="../../level-1/module-6/6-2-fan-interlocks-and-safeties.html"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-3" href="../../level-1/module-6/6-3-pid-control-basics.html"><span class="num">6.3</span><span>PID control basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-4" href="../../level-1/module-6/6-4-valve-and-damper-control.html"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="6-5" href="../../level-1/module-6/6-5-alarms.html"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-6" href="../../level-1/module-6/6-6-scheduling.html"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tick">&#10003;</span></a>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="FT" href="../../level-1/reviews/final-test.html"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tick">&#10003;</span></a>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-6/index.html">Module 6 · BMS Control Logic</a> &rsaquo; 6.5</div>
+<p class="eyebrow no-abbr">Module 6 · BMS Control Logic</p>
+<h1>6.5&ensp;Alarms: filter dirty, high and low temperature</h1>
+<div class="meta no-abbr"><span class="chip">Week 4 · Day 27</span><span class="chip">About 10 min</span><span class="chip">Page 5 of 6</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Name the main types of BMS alarm.</li><li>Set limits, deadbands, delays, enable conditions and priorities correctly.</li><li>Configure filter-dirty and high/low temperature alarms for an AHU.</li><li>Write alarm messages that tell the reader what to do.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>What is cascade control?<div class="from">from 6.4 Temperature-based valve control and damper control</div><details><summary>Show answer</summary><div class="a">An outer loop (room or return temperature) sets the setpoint of an inner loop (supply air), which drives the valve.</div></details></li><li>What is integral windup?<div class="from">from 6.3 PID control basics</div><details><summary>Show answer</summary><div class="a">The integral growing while the output is stuck at a limit, so the loop overshoots badly when conditions recover.</div></details></li><li>Why are most safety trips latching?<div class="from">from 6.2 Fan interlocking and safeties</div><details><summary>Show answer</summary><div class="a">So plant stays off until a person has found and fixed the cause, rather than cycling on and off into a fault.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>A good alarm fires <strong>only when someone needs to act</strong>, clears cleanly, and tells the reader <strong>what is wrong, where, and what to check first</strong>.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Alarms are how the BMS asks for help. Too few and failures go unnoticed; too many and operators stop reading them. The difference lies in a handful of settings — deadband, delay, enable condition, priority — and in how the message is written.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>Types of alarm</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Type</th><th>Example</th></tr></thead><tbody><tr><td>Status / proving</td><td>Fan commanded on but not running; failed to stop</td></tr><tr><td>Analogue limit</td><td>Return air above 27 °C</td></tr><tr><td>Deviation</td><td>Supply air more than 3 K from its setpoint for 20 min</td></tr><tr><td>Equipment fault</td><td>VFD fault, chiller common alarm</td></tr><tr><td>Maintenance</td><td>Filter dirty; run-hours due for service</td></tr><tr><td>Sensor fault</td><td>Reading out of range, open or short circuit</td></tr><tr><td>Communication</td><td>Device offline, Modbus timeouts</td></tr><tr><td>Safety</td><td>Fire shutdown, high-pressure cut-out</td></tr></tbody></table></div><h3>The settings that matter</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Setting</th><th>What it does</th><th>Without it…</th></tr></thead><tbody><tr><td>Limit</td><td>The value that triggers the alarm</td><td>—</td></tr><tr><td>Deadband (hysteresis)</td><td>The value must come back past limit − deadband to clear</td><td>Alarm chatters on and off around the limit</td></tr><tr><td>Delay</td><td>Condition must last this long before the alarm fires</td><td>Every short spike is an alarm</td></tr><tr><td>Enable condition</td><td>Alarm only active when it makes sense (e.g. fan running, occupied)</td><td>Alarms all night when the plant is off by schedule</td></tr><tr><td>Priority</td><td>Critical / high / medium / low — drives display and routing</td><td>Everything looks equally urgent</td></tr><tr><td>Message</td><td>Text shown to the operator</td><td>Operators guess</td></tr><tr><td>Acknowledge required</td><td>Operator must confirm</td><td>Short events vanish unnoticed</td></tr></tbody></table></div><figure class="diagram"><svg viewBox="0 0 760 255" role="img" aria-label="High return air temperature alarm with delay and deadband" xmlns="http://www.w3.org/2000/svg"><defs><marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="at-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="at-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><line x1="70" y1="170" x2="720" y2="170" class="d-line"/><line x1="70" y1="170" x2="70" y2="30" class="d-line"/><line x1="70" y1="76.66666666666667" x2="720" y2="76.66666666666667" class="d-warmline d-dash"/><text x="720" y="68.66666666666667" text-anchor="end" class="d-ts d-tbad">limit 27 °C</text><line x1="70" y1="100.0" x2="720" y2="100.0" class="d-line d-dash d-thin"/><text x="395.0" y="137.33333333333337" text-anchor="middle" class="d-ts">grey dashed line: the alarm clears below 26 °C (1 K deadband)</text><polyline points="70.0,111.7 151.2,76.7 183.8,62.7 313.8,53.3 435.6,67.3 516.9,86.0 557.5,102.3 638.8,114.0 720.0,118.7" class="d-aline"/><rect x="273.125" y="186" width="276.25" height="18" rx="4" class="d-bad" /><text x="411.25" y="195" text-anchor="middle" class="d-ts d-tb d-tbad">ALARM</text><path d="M151.25,214 L273.125,214" class="d-line" marker-end="url(#at)" marker-start="url(#at)"/><text x="212.1875" y="226" text-anchor="middle" class="d-ts">15 min delay</text><text x="70.0" y="244" text-anchor="middle" class="d-ts">0 min</text><text x="232.5" y="244" text-anchor="middle" class="d-ts">20 min</text><text x="395.0" y="244" text-anchor="middle" class="d-ts">40 min</text><text x="557.5" y="244" text-anchor="middle" class="d-ts">60 min</text><text x="720.0" y="244" text-anchor="middle" class="d-ts">80 min</text><text x="62" y="146.66666666666666" text-anchor="end" class="d-ts">24 °C</text><text x="62" y="100.0" text-anchor="end" class="d-ts">26 °C</text><text x="62" y="53.33333333333333" text-anchor="end" class="d-ts">28 °C</text></svg><figcaption>The alarm fires after 15 minutes above 27 °C and clears only below 26 °C.</figcaption></figure><h3>Filter dirty alarm</h3><ol class="steps"><li>Source: the filter ΔP switch (DI), or a ΔP sensor (AI) compared with the filter's recommended final pressure drop.</li><li>Enable only while the fan has been <strong>proven running for 5 minutes</strong> — ΔP is meaningless with the fan off or starting.</li><li>Delay <strong>5 minutes</strong> so gusts and start-up transients do not trigger it.</li><li>Priority <strong>low (maintenance)</strong> — the AHU keeps running.</li><li>With a ΔP sensor, also trend it: the slow rise shows when filters will need changing.</li></ol><h3>High and low temperature alarms</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Alarm</th><th>Condition</th><th>Enable</th><th>Priority</th><th>Why</th></tr></thead><tbody><tr><td>Return air high</td><td>> 27 °C for 15 min, clears < 26 °C</td><td>Fan proven 30 min and occupied</td><td>Medium</td><td>Comfort failure</td></tr><tr><td>Supply air low</td><td>< 10 °C for 5 min, clears > 11 °C</td><td>Fan proven</td><td>Medium</td><td>Condensation on diffusers; control fault</td></tr><tr><td>Insufficient cooling</td><td>Supply air > 18 °C for 15 min while valve > 90 %</td><td>Fan proven</td><td>High</td><td>Points to the chilled water side, not the AHU</td></tr><tr><td>Return air humidity high</td><td>> 65 % RH for 30 min, clears < 60 %</td><td>Fan proven</td><td>Medium</td><td>Comfort and mould risk</td></tr></tbody></table></div><div class="tip"><span class="label">Combine conditions for diagnosis</span><p>“Supply air high <em>and</em> valve fully open” tells the operator the AHU is doing its best and the problem is upstream. One well-designed combined alarm is worth several simple ones.</p></div><h3>Writing alarm messages</h3><div class="tbl-wrap"><table class="plain"><thead><tr><th>Weak message</th><th>Better message</th></tr></thead><tbody><tr><td>AHU01_SF_ALM</td><td>AHU-01 (L3 offices) supply fan failed to start — check VFD display and MCC isolator</td></tr><tr><td>RAT HIGH</td><td>AHU-01 return air 27.8 °C, above 27 °C for 15 min — check CHW valve and chilled water supply</td></tr><tr><td>FILTER</td><td>AHU-01 filter dirty — schedule filter replacement (AHU keeps running)</td></tr></tbody></table></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><div class="tbl-wrap"><table class="plain"><thead><tr><th>AHU-01 alarm</th><th>Source</th><th>Priority</th></tr></thead><tbody><tr><td>Fire shutdown</td><td>Fire DI</td><td>Critical</td></tr><tr><td>Supply fan failed to start / stopped</td><td>Command vs status</td><td>High</td></tr><tr><td>Supply fan failed to stop</td><td>Command off, status on > 60 s</td><td>High</td></tr><tr><td>VFD fault</td><td>Fault DI (+ Modbus fault code)</td><td>High</td></tr><tr><td>Insufficient cooling</td><td>SAT + valve position</td><td>High</td></tr><tr><td>Not in Auto</td><td>Auto DI while the schedule wants it running</td><td>Medium</td></tr><tr><td>Return air high / supply air low / humidity high</td><td>AIs as above</td><td>Medium</td></tr><tr><td>Filter dirty</td><td>ΔP switch DI</td><td>Low</td></tr><tr><td>Sensor fault (any AI)</td><td>Out of range</td><td>Medium</td></tr><tr><td>VFD communication lost</td><td>Modbus timeout 60 s</td><td>Low</td></tr></tbody></table></div></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Review the alarm log weekly during the first months: anything frequent is either a real problem or a badly set alarm.</li><li>Test each alarm by creating the condition, and check it reaches the right person.</li><li>Agree priorities and routing with the facility team — they live with them.</li><li>Check “return to normal” works as well as the alarm itself.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Same alarm dozens of times a day</td><td>No deadband or delay</td><td>Add hysteresis and a delay</td></tr><tr><td>Temperature alarms every night</td><td>No enable condition (plant off by schedule)</td><td>Enable only when running and occupied</td></tr><tr><td>Filter alarm whenever the fan starts</td><td>No running-time enable</td><td>Enable after fan proven 5 min</td></tr><tr><td>Critical alarms missed</td><td>Everything at the same priority / no routing</td><td>Priorities and notification routing</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>Alarm limit</dt><dd>Value at which the alarm condition starts.</dd><dt>Hysteresis (deadband)</dt><dd>Amount the value must return past the limit before the alarm clears.</dd><dt>Alarm delay</dt><dd>Time the condition must persist before the alarm is raised.</dd><dt>Enable condition</dt><dd>Condition under which an alarm is active.</dd><dt>Priority</dt><dd>Importance of an alarm for display and routing.</dd><dt>Return to normal</dt><dd>Event when the alarm condition clears.</dd><dt>Combined alarm</dt><dd>Alarm based on several conditions, e.g. supply air high and valve fully open.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-6-5-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">Operators complain that AHU-05's “return air high” alarm appears and clears 30 times an afternoon, with the value hovering around 27.0 °C. What should you change?</p>
+<button type="button" class="s-opt" data-i="0">Delete the alarm.</button><button type="button" class="s-opt" data-i="1">Add a deadband (e.g. clear below 26 °C) and a time delay (e.g. 15 min).</button><button type="button" class="s-opt" data-i="2">Raise the limit to 35 °C.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Without hysteresis and delay, a value hovering at the limit makes the alarm chatter. Fix the settings — and also look at why the AHU cannot hold 24 °C.<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">What does an alarm deadband do?</p><details><summary>Show answer</summary><div class="a">The value must return past the limit by the deadband before the alarm clears, so it does not chatter around the limit.</div></details></li><li><p class="q">Why is the filter-dirty alarm enabled only after the fan has run for 5 minutes?</p><details><summary>Show answer</summary><div class="a">ΔP across the filter is meaningless when the fan is off or starting; checking too early gives false results.</div></details></li><li><p class="q">Why is “supply air high while valve > 90 %” a useful alarm?</p><details><summary>Show answer</summary><div class="a">It shows the AHU is asking for full cooling and still failing, pointing to the chilled water supply rather than the AHU.</div></details></li><li><p class="q">Name three things a good alarm message contains.</p><details><summary>Show answer</summary><div class="a">What is wrong, where (which plant/area), and what to check first or the impact.</div></details></li><li><p class="q">Why should temperature alarms have an enable condition?</p><details><summary>Show answer</summary><div class="a">So they do not fire when the plant is off by schedule or starting up — when the values are expected to be out of range.</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-6/6-4-valve-and-damper-control.html"><small>&larr; Previous</small>6.4 Temperature-based valve control and damper control</a><a class="next" href="../../level-1/module-6/6-6-scheduling.html"><small>Next &rarr;</small>6.6 Scheduling and time-based logic</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

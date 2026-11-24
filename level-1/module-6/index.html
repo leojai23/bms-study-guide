@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="" data-url="level-1/module-6/index.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 6: BMS Control Logic | BMS Study Guide</title>
+<meta name="description" content="Start/stop sequences, interlocks, PID, valve and damper control, alarms and schedules.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<a class="" data-progress-id="5-1" href="../../level-1/module-5/5-1-rs485-basics.html"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-2" href="../../level-1/module-5/5-2-addressing-ip-device-id-baud.html"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-3" href="../../level-1/module-5/5-3-modbus-rtu-and-tcp.html"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-4" href="../../level-1/module-5/5-4-bacnet-mstp-and-ip.html"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-5" href="../../level-1/module-5/5-5-communication-troubleshooting.html"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<a class="" data-progress-id="6-1" href="../../level-1/module-6/6-1-ahu-start-stop-sequence.html"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-2" href="../../level-1/module-6/6-2-fan-interlocks-and-safeties.html"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-3" href="../../level-1/module-6/6-3-pid-control-basics.html"><span class="num">6.3</span><span>PID control basics</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-4" href="../../level-1/module-6/6-4-valve-and-damper-control.html"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-5" href="../../level-1/module-6/6-5-alarms.html"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="6-6" href="../../level-1/module-6/6-6-scheduling.html"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tick">&#10003;</span></a>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="FT" href="../../level-1/reviews/final-test.html"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tick">&#10003;</span></a>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs"><a href="../../level-1/index.html">Level 1</a> &rsaquo; Module 6</div>
+<p class="eyebrow">Level 1 · Module 6</p>
+<h1>BMS Control Logic</h1>
+<p class="lede">Start/stop sequences, interlocks, PID, valve and damper control, alarms and schedules.</p>
+<div class="progress" data-progress-of="6-1,6-2,6-3,6-4,6-5,6-6"><div class="bar"><i></i></div><span class="plabel"></span></div>
+<p>This module brings everything together: the AHU-01 start/stop sequence, the interlocks and safeties around it, PID loops and how to tune them, the patterns used to control valves and dampers, alarms worth receiving, and schedules. Two interactive tools help — the AHU-01 sequence stepper (6.1) and the PID playground (6.3).</p>
+<h2>Pages in this module</h2>
+<ol class="pagelist"><li data-progress-id="6-1"><a href="../../level-1/module-6/6-1-ahu-start-stop-sequence.html"><span class="n">6.1</span><span>AHU start/stop sequence</span><span class="d">Week 4 · Day 25 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="6-2"><a href="../../level-1/module-6/6-2-fan-interlocks-and-safeties.html"><span class="n">6.2</span><span>Fan interlocking and safeties</span><span class="d">Week 4 · Day 25 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="6-3"><a href="../../level-1/module-6/6-3-pid-control-basics.html"><span class="n">6.3</span><span>PID control basics</span><span class="d">Week 4 · Day 26 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="6-4"><a href="../../level-1/module-6/6-4-valve-and-damper-control.html"><span class="n">6.4</span><span>Temperature-based valve control and damper control</span><span class="d">Week 4 · Day 27 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="6-5"><a href="../../level-1/module-6/6-5-alarms.html"><span class="n">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="d">Week 4 · Day 27 <span class="tick">&#10003;</span></span></a></li><li data-progress-id="6-6"><a href="../../level-1/module-6/6-6-scheduling.html"><span class="n">6.6</span><span>Scheduling and time-based logic</span><span class="d">Week 4 · Day 27 <span class="tick">&#10003;</span></span></a></li></ol>
+<p><a class="btn" href="../../level-1/module-6/6-1-ahu-start-stop-sequence.html">Start with 6.1 &rarr;</a></p>
+<h2 id="quiz">Module 6 quiz</h2><p>10 questions on the whole module. Answer them after finishing the pages; your best score is remembered in this browser.</p><div class="quiz" data-quiz="m6"><div class="scenario quiz-item" data-answer="1" id="scenario-m6-0">
+<span class="label">Module 6 quiz · question 1 of 10</span>
+<p class="s-prompt">AHU-01's fan is commanded on but status does not arrive in 30 s. The sequence…</p>
+<button type="button" class="s-opt" data-i="0">keeps trying forever</button><button type="button" class="s-opt" data-i="1">raises fan fail, stops the fan and locks out</button><button type="button" class="s-opt" data-i="2">opens the valve fully</button><button type="button" class="s-opt" data-i="3">switches to Hand</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Failure to prove → alarm, stop, lockout until reset. <em>(See page 6.1.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-1">
+<span class="label">Module 6 quiz · question 2 of 10</span>
+<p class="s-prompt">Why is the CHW valve closed when the fan stops?</p>
+<button type="button" class="s-opt" data-i="0">To save the actuator</button><button type="button" class="s-opt" data-i="1">A cold coil without airflow sweats and drips</button><button type="button" class="s-opt" data-i="2">BACnet requires it</button><button type="button" class="s-opt" data-i="3">To reset the PID</button>
+<div class="s-feedback" hidden><span class="verdict"></span> No airflow + cold coil = condensation. <em>(See page 6.1.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-2">
+<span class="label">Module 6 quiz · question 3 of 10</span>
+<p class="s-prompt">Where must a fire shutdown contact be wired?</p>
+<button type="button" class="s-opt" data-i="0">Only to a BMS DI</button><button type="button" class="s-opt" data-i="1">In series, upstream of the HOA switch</button><button type="button" class="s-opt" data-i="2">After the HOA switch</button><button type="button" class="s-opt" data-i="3">In the server</button>
+<div class="s-feedback" hidden><span class="verdict"></span> So it stops the fan in Hand as well as Auto. <em>(See page 6.2.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-3">
+<span class="label">Module 6 quiz · question 4 of 10</span>
+<p class="s-prompt">A 4 K proportional band means a 1 K error moves the output by…</p>
+<button type="button" class="s-opt" data-i="0">4 %</button><button type="button" class="s-opt" data-i="1">25 %</button><button type="button" class="s-opt" data-i="2">40 %</button><button type="button" class="s-opt" data-i="3">100 %</button>
+<div class="s-feedback" hidden><span class="verdict"></span> 100 % ÷ 4 K = 25 % per K. <em>(See page 6.3.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-4">
+<span class="label">Module 6 quiz · question 5 of 10</span>
+<p class="s-prompt">A loop settles 1.5 K away from setpoint and stays there. It most likely lacks…</p>
+<button type="button" class="s-opt" data-i="0">derivative</button><button type="button" class="s-opt" data-i="1">integral</button><button type="button" class="s-opt" data-i="2">a sensor</button><button type="button" class="s-opt" data-i="3">a deadband</button>
+<div class="s-feedback" hidden><span class="verdict"></span> P-only control leaves an offset; integral removes it. <em>(See page 6.3.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-5">
+<span class="label">Module 6 quiz · question 6 of 10</span>
+<p class="s-prompt">AHU-01's fresh air damper uses a max select because…</p>
+<button type="button" class="s-opt" data-i="0">it saves energy</button><button type="button" class="s-opt" data-i="1">ventilation must never fall below the minimum</button><button type="button" class="s-opt" data-i="2">it is faster</button><button type="button" class="s-opt" data-i="3">BACnet needs it</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Max(20 %, DCV, economiser). <em>(See page 6.4.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-6">
+<span class="label">Module 6 quiz · question 7 of 10</span>
+<p class="s-prompt">Heating and cooling valves both open for hours. Best fix?</p>
+<button type="button" class="s-opt" data-i="0">Slower loops</button><button type="button" class="s-opt" data-i="1">Split range with a deadband</button><button type="button" class="s-opt" data-i="2">Higher setpoint</button><button type="button" class="s-opt" data-i="3">Bigger valves</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Split range makes simultaneous operation impossible. <em>(See page 6.4.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-7">
+<span class="label">Module 6 quiz · question 8 of 10</span>
+<p class="s-prompt">An alarm chatters on and off around its limit. Add…</p>
+<button type="button" class="s-opt" data-i="0">a higher priority</button><button type="button" class="s-opt" data-i="1">deadband and delay</button><button type="button" class="s-opt" data-i="2">more trend logs</button><button type="button" class="s-opt" data-i="3">a second sensor</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Hysteresis and delay stop chattering. <em>(See page 6.5.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-8">
+<span class="label">Module 6 quiz · question 9 of 10</span>
+<p class="s-prompt">Plant ran on a public holiday although weekly schedules are right. Check…</p>
+<button type="button" class="s-opt" data-i="0">the PID tuning</button><button type="button" class="s-opt" data-i="1">the holiday calendar and its link to the schedules</button><button type="button" class="s-opt" data-i="2">the VFD</button><button type="button" class="s-opt" data-i="3">the sensor</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Weekly schedules need the calendar for holidays. <em>(See page 6.6.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="scenario quiz-item" data-answer="1" id="scenario-m6-9">
+<span class="label">Module 6 quiz · question 10 of 10</span>
+<p class="s-prompt">Which timer keeps a pump running after a chiller stops?</p>
+<button type="button" class="s-opt" data-i="0">On-delay</button><button type="button" class="s-opt" data-i="1">Off-delay</button><button type="button" class="s-opt" data-i="2">Minimum off time</button><button type="button" class="s-opt" data-i="3">Run-hour counter</button>
+<div class="s-feedback" hidden><span class="verdict"></span> Off-delay = run-on. <em>(See page 6.6.)</em><br><button type="button" class="s-retry">Try again</button></div>
+</div><div class="quiz-score no-abbr"><span>Score <b class="qs"></b></span><span class="qn"></span><span class="qbest"></span><button type="button" class="btn ghost quiz-reset">Reset quiz</button></div></div>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>
