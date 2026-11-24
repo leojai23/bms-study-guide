@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../../" data-page="5-2" data-url="level-1/module-5/5-2-addressing-ip-device-id-baud.html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.2 IP address, subnet mask, device ID and baud rate | BMS Study Guide</title>
+<meta name="description" content="Every device needs a unique address on its network, and everything on one bus must share the same communication settings — get either wrong and devices are invisible or collide.">
+<meta name="theme-color" content="#2160a3">
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script>(function(){try{var t=localStorage.getItem('bms-theme');if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open contents"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+  <a class="brand" href="../../index.html"><span class="logo">BMS</span><span class="full">BMS Study Guide</span></a>
+  <div class="top-actions">
+    <span class="search-hint">Press <kbd>/</kbd> to search</span>
+    <button class="icon-btn" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="20.5" y1="20.5" x2="16" y2="16"/></svg></button>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark" title="Light / dark"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="icon-btn" id="printBtn" aria-label="Print" title="Print this page"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+  </div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="Contents"><div class="side-h">Level 1 · BMS Fundamentals</div>
+<a href="../../level-1/index.html"><span class="num">&#9679;</span><span>Overview, schedule &amp; AHU-01</span></a>
+<div class="side-h">Modules</div>
+<details><summary><span class="num">M1</span><span>BMS Architecture</span></summary><div>
+<a class="" data-progress-id="1-1" href="../../level-1/module-1/1-1-what-is-a-bms.html"><span class="num">1.1</span><span>What is a BMS?</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-2" href="../../level-1/module-1/1-2-bms-architecture-levels.html"><span class="num">1.2</span><span>BMS architecture: field, automation and management levels</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-3" href="../../level-1/module-1/1-3-ddc-controller.html"><span class="num">1.3</span><span>The DDC controller and how it works</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-4" href="../../level-1/module-1/1-4-server-workstation-operator-interface.html"><span class="num">1.4</span><span>BMS server, workstation and operator interface</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-5" href="../../level-1/module-1/1-5-control-panel-architecture.html"><span class="num">1.5</span><span>BMS control panel architecture</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="1-6" href="../../level-1/module-1/1-6-hvac-system-integration.html"><span class="num">1.6</span><span>HVAC system integration</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M2</span><span>HVAC Control Fundamentals</span></summary><div>
+<a class="" data-progress-id="2-1" href="../../level-1/module-2/2-1-air-handling-unit.html"><span class="num">2.1</span><span>Air handling unit (AHU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-2" href="../../level-1/module-2/2-2-supply-return-fresh-exhaust-air.html"><span class="num">2.2</span><span>Supply, return, fresh and exhaust air</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-3" href="../../level-1/module-2/2-3-fan-coil-unit.html"><span class="num">2.3</span><span>Fan coil unit (FCU)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-4" href="../../level-1/module-2/2-4-vav-and-cav-systems.html"><span class="num">2.4</span><span>VAV and CAV systems</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-5" href="../../level-1/module-2/2-5-chilled-water-system-chiller-plant.html"><span class="num">2.5</span><span>Chilled water system and chiller plant</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-6" href="../../level-1/module-2/2-6-cooling-tower.html"><span class="num">2.6</span><span>Cooling tower and condenser water</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="2-7" href="../../level-1/module-2/2-7-hvac-control-sequences.html"><span class="num">2.7</span><span>HVAC control sequences — an overview</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M3</span><span>Sensors and Field Devices</span></summary><div>
+<a class="" data-progress-id="3-1" href="../../level-1/module-3/3-1-temperature-sensors.html"><span class="num">3.1</span><span>Temperature sensors (NTC, PT1000)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-2" href="../../level-1/module-3/3-2-humidity-and-co2-sensors.html"><span class="num">3.2</span><span>Humidity and CO₂ sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-3" href="../../level-1/module-3/3-3-differential-pressure-and-airflow.html"><span class="num">3.3</span><span>Differential pressure and airflow sensors</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-4" href="../../level-1/module-3/3-4-water-flow-meters.html"><span class="num">3.4</span><span>Water flow meters</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-5" href="../../level-1/module-3/3-5-damper-actuators.html"><span class="num">3.5</span><span>Damper actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-6" href="../../level-1/module-3/3-6-chilled-water-valve-actuators.html"><span class="num">3.6</span><span>Chilled water valves and actuators</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-7" href="../../level-1/module-3/3-7-variable-frequency-drives.html"><span class="num">3.7</span><span>Variable frequency drives (VFD)</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="3-8" href="../../level-1/module-3/3-8-status-devices.html"><span class="num">3.8</span><span>Status devices: current switches and DP switches</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M4</span><span>Digital and Analog I/O</span></summary><div>
+<a class="" data-progress-id="4-1" href="../../level-1/module-4/4-1-electrical-safety.html"><span class="num">4.1</span><span>Electrical safety for BMS work</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-2" href="../../level-1/module-4/4-2-io-types.html"><span class="num">4.2</span><span>The four I/O types: DI, DO, AI, AO</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-3" href="../../level-1/module-4/4-3-analog-signals.html"><span class="num">4.3</span><span>Analog signals: 0–10 V, 4–20 mA, 0–20 mA</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-4" href="../../level-1/module-4/4-4-digital-signals-contacts-relays.html"><span class="num">4.4</span><span>Dry contacts, relay outputs, NO and NC</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-5" href="../../level-1/module-4/4-5-sensor-wiring-troubleshooting.html"><span class="num">4.5</span><span>Sensor wiring and troubleshooting</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="4-6" href="../../level-1/module-4/4-6-reading-bms-drawings.html"><span class="num">4.6</span><span>Reading BMS drawings and point names</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details open><summary><span class="num">M5</span><span>BMS Communication Protocols</span></summary><div>
+<a class="" data-progress-id="5-1" href="../../level-1/module-5/5-1-rs485-basics.html"><span class="num">5.1</span><span>RS485 communication basics</span><span class="tick">&#10003;</span></a>
+<a class="active" data-progress-id="5-2" href="../../level-1/module-5/5-2-addressing-ip-device-id-baud.html"><span class="num">5.2</span><span>IP address, subnet mask, device ID and baud rate</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-3" href="../../level-1/module-5/5-3-modbus-rtu-and-tcp.html"><span class="num">5.3</span><span>Modbus RTU and Modbus TCP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-4" href="../../level-1/module-5/5-4-bacnet-mstp-and-ip.html"><span class="num">5.4</span><span>BACnet MS/TP and BACnet/IP</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="5-5" href="../../level-1/module-5/5-5-communication-troubleshooting.html"><span class="num">5.5</span><span>Communication troubleshooting</span><span class="tick">&#10003;</span></a>
+</div></details>
+<details><summary><span class="num">M6</span><span>BMS Control Logic</span></summary><div>
+<span class="soon"><span class="num">6.1</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.2</span><span>Fan interlocking and safeties</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.3</span><span>PID control basics</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.4</span><span>Temperature-based valve control and damper control</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.5</span><span>Alarms: filter dirty, high and low temperature</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">6.6</span><span>Scheduling and time-based logic</span><span class="tag-soon">soon</span></span>
+</div></details>
+<div class="side-h">Practical labs</div>
+<span class="soon"><span class="num">L1</span><span>AHU control wiring diagram</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L2</span><span>AHU point list (DI, DO, AI, AO)</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L3</span><span>AHU start/stop sequence</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L4</span><span>4–20 mA pressure sensor wiring</span><span class="tag-soon">soon</span></span>
+<span class="soon"><span class="num">L5</span><span>Reading Modbus registers</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reviews &amp; tests</div>
+<a class="" data-progress-id="R1" href="../../level-1/reviews/week-1-review.html"><span class="num">W1</span><span>Week 1 review + Module 1 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R2" href="../../level-1/reviews/week-2-review.html"><span class="num">W2</span><span>Week 2 review + Module 2 quiz</span><span class="tick">&#10003;</span></a>
+<a class="" data-progress-id="R3" href="../../level-1/reviews/week-3-review.html"><span class="num">W3</span><span>Week 3 review + Modules 3–4 quiz</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9733;</span><span>Level 1 final test</span><span class="tag-soon">soon</span></span>
+<div class="side-h">Reference</div>
+<a class="" data-progress-id="GL" href="../../level-1/glossary.html"><span class="num">&#9679;</span><span>Glossary</span><span class="tick">&#10003;</span></a>
+<span class="soon"><span class="num">&#9679;</span><span>Cheat sheet</span><span class="tag-soon">soon</span></span></nav><div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<div class="crumbs no-abbr"><a href="../../level-1/index.html">Level 1</a> &rsaquo; <a href="../../level-1/module-5/index.html">Module 5 · BMS Communication Protocols</a> &rsaquo; 5.2</div>
+<p class="eyebrow no-abbr">Module 5 · BMS Communication Protocols</p>
+<h1>5.2&ensp;IP address, subnet mask, device ID and baud rate</h1>
+<div class="meta no-abbr"><span class="chip">Week 4 · Day 22</span><span class="chip">About 10 min</span><span class="chip">Page 2 of 5</span><span class="chip ok" id="doneChip" hidden>&#10003; Done</span></div>
+
+<div class="objectives"><span class="label">After this page you can</span><ul><li>Explain IP address, subnet mask and default gateway, and decide whether two devices share a subnet.</li><li>Know the address ranges for Modbus, MS/TP and BACnet device instances.</li><li>Match serial settings — baud rate, data bits, parity, stop bits — across a bus.</li><li>Write a simple numbering plan for a building.</li></ul></div>
+<details class="warmup no-abbr"><summary>Warm-up · 3 quick questions from earlier pages (2 min)</summary><ol><li>Why is a common wire recommended?<div class="from">from 5.1 RS485 communication basics</div><details><summary>Show answer</summary><div class="a">It keeps the devices' signal grounds at nearly the same potential, preventing errors and transceiver damage.</div></details></li><li>Which drawing tells you which network a controller is on?<div class="from">from 4.6 Reading BMS drawings and point names</div><details><summary>Show answer</summary><div class="a">The system architecture / network riser diagram.</div></details></li><li>Calculate the voltage drop for 1 A over 30 m of 1.0 mm² (0.018 Ω/m).<div class="from">from 4.5 Sensor wiring and troubleshooting</div><details><summary>Show answer</summary><div class="a">2 × 30 × 1 × 0.018 = 1.08 V.</div></details></li></ol></details>
+<div class="oneline"><span class="label">In one line</span><p>Every device needs a <strong>unique address</strong> on its network, and everything on one bus must share the same <strong>communication settings</strong> — get either wrong and devices are invisible or collide.</p></div>
+
+<h2 id="why"><span class="h-ico">?</span>Why it matters</h2>
+<p>Address and settings mistakes are the second big source of communication faults after wiring. They are also the easiest to prevent: a written numbering plan, agreed before anyone configures a device, avoids duplicates and makes every device findable for the life of the building.</p>
+
+<h2 id="how"><span class="h-ico">&#9881;</span>How it works</h2>
+<h3>IP addressing in one page</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Setting</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>IP address</td><td>10.1.3.21</td><td>This device's address — unique on the network</td></tr><tr><td>Subnet mask</td><td>255.255.255.0 (/24)</td><td>Which part of the address is the network: here 10.1.3.x</td></tr><tr><td>Default gateway</td><td>10.1.3.1</td><td>The router to send traffic to for other subnets</td></tr><tr><td>DNS / NTP servers</td><td>10.1.0.5</td><td>Name lookup and time synchronisation (if used)</td></tr></tbody></table></div><p>Two devices can talk directly only if they are in the <strong>same subnet</strong> — the network part of their addresses (decided by the mask) is identical. Otherwise traffic must go through the <strong>gateway</strong> (router). With a /24 mask, 10.1.3.21 and 10.1.3.140 are neighbours; 10.1.3.21 and 10.1.4.21 are not.</p><figure class="diagram"><svg viewBox="0 0 760 315" role="img" aria-label="Two IP subnets joined by a router" xmlns="http://www.w3.org/2000/svg"><defs><marker id="sn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker><marker id="sn-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-a"/></marker><marker id="sn-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-arrow-r"/></marker></defs><rect x="20" y="40" width="300" height="150" rx="10" class="d-soft" /><text x="170" y="58" text-anchor="middle" class="d-ts d-tb">Subnet 10.1.3.0 /24 (Level 3)</text><rect x="440" y="40" width="300" height="150" rx="10" class="d-soft" /><text x="590" y="58" text-anchor="middle" class="d-ts d-tb">Subnet 10.1.4.0 /24 (Level 4)</text><rect x="40" y="80" width="120" height="50" rx="8" class="d-acc" /><text x="100.0" y="97.5" text-anchor="middle" class="d-t d-tb">DDC-AHU-01</text><text x="100.0" y="112.5" text-anchor="middle" class="d-ts">10.1.3.21</text><rect x="180" y="80" width="120" height="50" rx="8" class="d-acc" /><text x="240.0" y="97.5" text-anchor="middle" class="d-t d-tb">Supervisory</text><text x="240.0" y="112.5" text-anchor="middle" class="d-ts">10.1.3.10</text><rect x="460" y="80" width="120" height="50" rx="8" class="d-acc" /><text x="520.0" y="97.5" text-anchor="middle" class="d-t d-tb">DDC-AHU-02</text><text x="520.0" y="112.5" text-anchor="middle" class="d-ts">10.1.4.21</text><rect x="600" y="80" width="120" height="50" rx="8" class="d-acc" /><text x="660.0" y="97.5" text-anchor="middle" class="d-t d-tb">Supervisory</text><text x="660.0" y="112.5" text-anchor="middle" class="d-ts">10.1.4.10</text><line x1="30" y1="160" x2="310" y2="160" class="d-aline"/><line x1="450" y1="160" x2="730" y2="160" class="d-aline"/><line x1="100" y1="130" x2="100" y2="160" class="d-aline"/><line x1="240" y1="130" x2="240" y2="160" class="d-aline"/><line x1="520" y1="130" x2="520" y2="160" class="d-aline"/><line x1="660" y1="130" x2="660" y2="160" class="d-aline"/><rect x="320" y="220" width="120" height="50" rx="8" class="d-warn" /><text x="380.0" y="237.5" text-anchor="middle" class="d-t d-tb">Router</text><text x="380.0" y="252.5" text-anchor="middle" class="d-ts">gateway .1 on each</text><path d="M170,160 L170,245 L318,245" class="d-aline"/><path d="M590,160 L590,245 L442,245" class="d-aline"/><text x="380" y="300" text-anchor="middle" class="d-ts">same subnet → direct · different subnets → through the router (default gateway)</text></svg><figcaption>One subnet per floor, joined by a router.</figcaption></figure><div class="tool no-abbr" data-tool="subnet"><span class="label">Interactive tool</span><noscript>This tool needs JavaScript.</noscript></div><ul><li>Give BMS controllers <strong>static</strong> addresses (or DHCP reservations) so they never change.</li><li>Use <strong>private</strong> ranges: 10.x.x.x, 172.16–31.x.x or 192.168.x.x.</li><li>Keep the BMS on its own <strong>VLAN</strong> or physical network, separate from office IT.</li><li>In each subnet, the first address (network) and last (broadcast) cannot be used by devices.</li><li>Know the ports: <strong>BACnet/IP uses UDP 47808</strong> (0xBAC0); <strong>Modbus TCP uses TCP 502</strong>. Firewalls must allow them.</li></ul><h3>Device addresses</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Address</th><th>Range</th><th>Must be unique…</th></tr></thead><tbody><tr><td>Modbus server (slave) address</td><td>1–247 (0 = broadcast)</td><td>on that serial bus</td></tr><tr><td>BACnet MS/TP MAC address</td><td>0–127 for masters; 128–254 for slaves</td><td>on that MS/TP segment</td></tr><tr><td>BACnet device instance (device ID)</td><td>0–4,194,302</td><td>across the <strong>whole BACnet internetwork</strong></td></tr><tr><td>BACnet network number</td><td>1–65,534</td><td>for each network (IP or MS/TP) in the internetwork</td></tr></tbody></table></div><div class="tip"><span class="label">Max_Master</span><p>On MS/TP, each master passes the token only up to the address set in <strong>Max_Master</strong> (default 127). If it is set to 31 on some devices, a device at MAC 40 will never get the token and stays invisible. Set Max_Master on every device to at least the highest MAC on the segment.</p></div><h3>Serial settings</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Setting</th><th>Common values</th><th>Notes</th></tr></thead><tbody><tr><td>Baud rate</td><td>9,600 · 19,200 · 38,400 · 76,800 (MS/TP) · 115,200</td><td>Speed in bits per second; identical on every device of a bus</td></tr><tr><td>Data bits</td><td>8</td><td>Almost always 8</td></tr><tr><td>Parity</td><td>None · Even · Odd</td><td>Modbus RTU's default is Even; many devices ship with None. MS/TP uses None</td></tr><tr><td>Stop bits</td><td>1 (or 2)</td><td>The Modbus specification uses 2 stop bits when parity is None — but many devices use 1. Match the device</td></tr></tbody></table></div><p>Settings are written in short form: <strong>19200 8E1</strong> = 19,200 baud, 8 data bits, Even parity, 1 stop bit. One device with a different setting does not just fail itself — on some buses it corrupts traffic for everyone.</p><h3>A numbering plan</h3><div class="tbl-wrap"><table class=""><thead><tr><th>Item</th><th>Rule</th><th>AHU-01 example</th></tr></thead><tbody><tr><td>IP subnet</td><td>One /24 per floor: 10.1.&lt;floor&gt;.0</td><td>10.1.3.0 /24</td></tr><tr><td>IP address</td><td>.1 router · .10 supervisory · .21–.49 plant controllers</td><td>DDC-AHU-01 = 10.1.3.21</td></tr><tr><td>BACnet device instance</td><td>Building × 100,000 + floor × 1,000 + device number</td><td>103021</td></tr><tr><td>MS/TP MAC on the floor bus</td><td>1–32 in order along the cable</td><td>FCU-301 = MAC 1</td></tr><tr><td>Modbus address on a private bus</td><td>Start at 1</td><td>AHU-01 VFD = 1</td></tr></tbody></table></div>
+
+<div class="ahu01"><span class="label">Follow AHU-01</span><p>DDC-AHU-01: IP <strong>10.1.3.21 /24</strong>, gateway 10.1.3.1, BACnet device instance <strong>103021</strong>. Its private Modbus RTU bus to the VFD: VFD address <strong>1</strong> at <strong>19200 8E1</strong> — the same settings in the controller's port configuration and in the drive's parameters.</p></div>
+<h2 id="on-site"><span class="h-ico">&#9874;</span>On site</h2><ul><li>Agree the numbering plan with IT and every vendor before configuring anything; keep it in the project documents.</li><li>Label each device with its address and device instance.</li><li>Use the ping command to test IP reachability before blaming BACnet.</li><li>When adding a device to an existing bus, read the current settings first — do not assume the defaults.</li></ul>
+<h2 id="faults"><span class="h-ico">!</span>Common faults</h2><p>Read each row left to right: what you see, the usual cause, and what to check first.</p><div class="tbl-wrap"><table class="faults"><thead><tr><th>What you see</th><th>Likely cause</th><th>Check first</th></tr></thead><tbody><tr><td>Device answers ping but not BACnet</td><td>Firewall blocking UDP 47808, or different BACnet/IP port configured</td><td>Port settings; firewall</td></tr><tr><td>Device reachable only from the same floor</td><td>Wrong or missing default gateway</td><td>Gateway setting</td></tr><tr><td>Two devices flip in and out of view</td><td>Duplicate IP address or duplicate device instance</td><td>Address list; scan for duplicates</td></tr><tr><td>MS/TP device at MAC 60 never appears</td><td>Max_Master below 60 on the other devices</td><td>Max_Master on all masters</td></tr><tr><td>Serial device never responds</td><td>Baud, parity or stop-bit mismatch</td><td>Compare settings on both ends</td></tr></tbody></table></div>
+
+<h2 id="terms"><span class="h-ico">A</span>Key terms</h2>
+<dl class="terms"><dt>IP address</dt><dd>Unique address of a device on an IP network.</dd><dt>Subnet mask</dt><dd>Defines which part of an IP address identifies the network.</dd><dt>Default gateway</dt><dd>Router address used to reach other subnets.</dd><dt>VLAN</dt><dd>Virtual LAN — a logically separate network on shared switches.</dd><dt>Device instance</dt><dd>BACnet device identifier, unique across the whole internetwork.</dd><dt>MAC address (MS/TP)</dt><dd>Address of a device on an MS/TP segment, 0–127 for masters.</dd><dt>Max_Master</dt><dd>Highest MS/TP MAC address to which the token is passed.</dd><dt>Baud rate</dt><dd>Serial communication speed in bits per second.</dd><dt>Parity</dt><dd>Simple error check bit: none, even or odd.</dd><dt>8N1 / 8E1</dt><dd>Short form of serial settings: data bits, parity, stop bits.</dd></dl>
+
+<h2 id="check"><span class="h-ico">&#10003;</span>Check yourself</h2>
+<p>Try each one before opening the answer.</p>
+<div class="scenario" data-answer="1" id="scenario-5-2-0">
+<span class="label">Fault scenario · what would you do?</span>
+<p class="s-prompt">A new controller is set to 10.1.3.200 with mask 255.255.255.0 and gateway 10.1.4.1. It can talk to devices on Level 3 but the server on another subnet cannot reach it. Why?</p>
+<button type="button" class="s-opt" data-i="0">The mask is wrong.</button><button type="button" class="s-opt" data-i="1">The gateway is not in the controller's own subnet — it should be 10.1.3.1.</button><button type="button" class="s-opt" data-i="2">The IP address is above 199.</button>
+<div class="s-feedback" hidden><span class="verdict"></span> A device can only reach a gateway inside its own subnet. With 10.1.3.x/24, the gateway must be a 10.1.3.x address (here the router's 10.1.3.1).<br><button type="button" class="s-retry">Try again</button></div>
+</div>
+<ol class="qa"><li><p class="q">Are 192.168.5.20 and 192.168.6.20 in the same subnet with mask 255.255.255.0?</p><details><summary>Show answer</summary><div class="a">No — the network parts are 192.168.5 and 192.168.6.</div></details></li><li><p class="q">What range can a Modbus server address use?</p><details><summary>Show answer</summary><div class="a">1–247 (0 is broadcast).</div></details></li><li><p class="q">Which BACnet identifier must be unique across the whole internetwork?</p><details><summary>Show answer</summary><div class="a">The device instance (device ID).</div></details></li><li><p class="q">What does 9600 8N1 mean?</p><details><summary>Show answer</summary><div class="a">9,600 baud, 8 data bits, no parity, 1 stop bit.</div></details></li><li><p class="q">Which UDP port does BACnet/IP use by default?</p><details><summary>Show answer</summary><div class="a">47808 (0xBAC0).</div></details></li></ol>
+
+
+<div class="done-row"><button type="button" class="btn" id="doneBtn">Mark this page as done</button></div>
+<nav class="pager no-abbr" aria-label="Previous and next"><a class="prev" href="../../level-1/module-5/5-1-rs485-basics.html"><small>&larr; Previous</small>5.1 RS485 communication basics</a><a class="next" href="../../level-1/module-5/5-3-modbus-rtu-and-tcp.html"><small>Next &rarr;</small>5.3 Modbus RTU and Modbus TCP</a></nav>
+</article>
+</main>
+</div>
+<div class="overlay" id="searchOverlay" role="dialog" aria-label="Search">
+  <div class="search-box">
+    <input id="searchInput" type="search" placeholder="Search topics and key terms…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script defer src="../../assets/js/abbr-data.js"></script>
+<script defer src="../../assets/js/search-index.js"></script>
+<script defer src="../../assets/js/site.js"></script>
+<script defer src="../../assets/js/tools.js"></script>
+</body>
+</html>

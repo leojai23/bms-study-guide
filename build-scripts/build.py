@@ -118,7 +118,7 @@ def review_body(rid, week, page_map, built):
     lab_note = ""
     if labs_this_week:
         lab_note = C.callout("note", "Labs this week", "<p>" + ", ".join(
-            f'<a href="{root}{C.item_url(i)}">{C.item_title(i)}</a>' for i in labs_this_week) +
+            item_link(root, i, built) for i in labs_this_week) +
             ". Finish them before moving on — they turn the theory into something you can show.</p>")
     return (f"<p>Week {week} covered <strong>{focus}</strong>. Spend this session consolidating, not "
             "learning new material.</p>"
