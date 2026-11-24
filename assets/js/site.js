@@ -34,7 +34,7 @@
   if (menuBtn) menuBtn.addEventListener('click', function () { setMenu(!side.classList.contains('open')); });
   if (scrim) scrim.addEventListener('click', function () { setMenu(false); });
   var activeLink = side && $('a.active', side);
-  if (activeLink && activeLink.scrollIntoView) activeLink.scrollIntoView({ block: 'center' });
+  if (activeLink) side.scrollTop = Math.max(0, activeLink.offsetTop - side.clientHeight / 2);   // sidebar only, never the page
 
   /* ---------- Progress (stored only in this browser) ---------- */
   var PKEY = 'bms-progress';

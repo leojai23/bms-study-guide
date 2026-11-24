@@ -372,3 +372,17 @@ html[data-theme="dark"] .btn.is-done{color:var(--ok)}
 .progress{margin-bottom:1.4rem}
 .mcard .progress{margin-bottom:0}
 .tool-out .ok,.tool-out .warn,.tool-out .bad{background:none;padding:0;margin:.3rem 0;border-radius:0}
+
+/* ---------- Cheat sheet ---------- */
+.cheat{display:grid;grid-template-columns:repeat(auto-fit,minmax(21rem,1fr));gap:14px;margin:1rem 0}
+.cheat .cs{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;font-size:.88rem}
+.cheat h3{margin:0 0 .5rem;font-size:1rem;display:flex;justify-content:space-between;align-items:baseline}
+.cheat h3 small{font-size:.74rem;font-weight:500}
+.cheat .tbl-wrap{margin:.4rem 0 .6rem}
+.cheat table{font-size:.8rem}
+.cheat th,.cheat td{padding:5px 8px}
+.cheat p,.cheat ul{margin:.3rem 0;font-size:.84rem;line-height:1.5}
+.cheat li{margin:.15rem 0}
+@media print{.cheat{grid-template-columns:1fr 1fr;gap:8px}.cheat .cs{padding:8px 10px;font-size:8.5pt}.cheat table{font-size:8pt}}
+.warmup>summary{width:auto}
+ol.qa summary{max-width:100%}
